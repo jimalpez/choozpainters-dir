@@ -464,7 +464,7 @@ a.btn_1.full-width,
 }
 a.btn_1:hover,
 .btn_1:hover {
-  background: #74d1c6;
+  background: #e35b0b;
 }
 a.btn_1.outline,
 .btn_1.outline {
@@ -759,7 +759,7 @@ ul#additional_links li:after {
   }
 }
 .hero_home.version_1 {
-  background: #3f4079 url(../img/1.png) no-repeat center bottom;
+  background: #1b356c url(../img/1.png) no-repeat center bottom;
   -webkit-background-size: cover;
   -moz-background-size: cover;
   -o-background-size: cover;
@@ -1055,7 +1055,7 @@ ul#additional_links li:after {
   }
 }
 #custom-search-input ul {
-  text-align: center;
+  text-align: left;
   margin-top: 25px;
 }
 #custom-search-input ul li {
@@ -1070,11 +1070,11 @@ ul#additional_links li:after {
 }
 #custom-search-input ul li input[type="radio"]:checked + label,
 #custom-search-input ul li input[type="radio"]:checked + label:hover {
-  background-color: #74d1c6;
-  color: #fff;
+  background-color: #fff;
+  color: #000;
 }
 #custom-search-input ul li input[type="radio"]:hover + label {
-  background-color: #e74e84;
+  background-color: #e35b0b;
   color: #fff;
 }
 #custom-search-input ul li label {
@@ -1122,7 +1122,7 @@ ul#additional_links li:after {
   -moz-border-radius: 0 3px 3px 0;
   -ms-border-radius: 0 3px 3px 0;
   border-radius: 0 3px 3px 0;
-  background-color: #74d1c6;
+  background-color: #e35b0b;
 }
 #custom-search-input input[type="submit"]:hover {
   background-color: #e74e84;
@@ -1131,7 +1131,7 @@ ul#additional_links li:after {
   #custom-search-input input[type="submit"] {
     /* For less than 575px */
     text-indent: -999px;
-    background: #74d1c6 url(../img/search.svg) no-repeat center center;
+    background: #e35b0b url(../img/search.svg) no-repeat center center;
   }
 }
 
@@ -1222,7 +1222,7 @@ ul#additional_links li:after {
   font-size: 18px;
   font-size: 1.125rem;
   margin: 0;
-  color: #74d1c6;
+  color: #e35b0b;
   text-transform: uppercase;
 }
 @media (max-width: 575px) {
@@ -1760,7 +1760,7 @@ iframe {
   -moz-border-radius: 0 3px 3px 0;
   -ms-border-radius: 0 3px 3px 0;
   border-radius: 0 3px 3px 0;
-  background-color: #74d1c6;
+  background-color: #e35b0b;
   -moz-transition: all 0.3s ease-in-out;
   -o-transition: all 0.3s ease-in-out;
   -webkit-transition: all 0.3s ease-in-out;
@@ -2698,7 +2698,7 @@ a.wish_bt:hover:after {
   color: #fff;
 }
 #breadcrumb ul li a:hover {
-  color: #74d1c6;
+  color: #e35b0b;
 }
 #breadcrumb ul li:after {
   content: "\e9ee";
@@ -2874,7 +2874,7 @@ ul.list_edu li strong {
   margin-bottom: 10px;
 }
 .reviews-container .progress-bar {
-  background-color: #74d1c6;
+  background-color: #e35b0b;
 }
 .reviews-container .review-box {
   position: relative;
@@ -3167,7 +3167,7 @@ label.css-label strong {
 }
 .box_profile ul.statistic li {
   display: inline-block;
-  background-color: #74d1c6;
+  background-color: #e35b0b;
   -webkit-border-radius: 3px;
   -moz-border-radius: 3px;
   -ms-border-radius: 3px;
@@ -3237,7 +3237,7 @@ label.css-label strong {
 }
 .profile ul.statistic li {
   display: inline-block;
-  background-color: #74d1c6;
+  background-color: #e35b0b;
   -webkit-border-radius: 3px;
   -moz-border-radius: 3px;
   -ms-border-radius: 3px;
@@ -3357,7 +3357,7 @@ label.css-label strong {
   }
 }
 #secondary_nav ul li a {
-  color: #74d1c6;
+  color: #e35b0b;
 }
 #secondary_nav ul li a:hover {
   color: #fff;
@@ -3657,7 +3657,7 @@ a.social_bt.linkedin:before {
   font-size: 46px;
   font-size: 2.875rem;
   margin-bottom: 10px;
-  color: #74d1c6;
+  color: #e35b0b;
   position: absolute;
   left: 0;
   top: 0;
@@ -3733,7 +3733,7 @@ a.social_bt.linkedin:before {
   -moz-border-radius: 0 3px 3px 0;
   -ms-border-radius: 0 3px 3px 0;
   border-radius: 0 3px 3px 0;
-  background-color: #74d1c6;
+  background-color: #e35b0b;
   -moz-transition: all 0.3s ease-in-out;
   -o-transition: all 0.3s ease-in-out;
   -webkit-transition: all 0.3s ease-in-out;
@@ -4394,7 +4394,7 @@ input[type="file"].valid::-webkit-file-upload-button {
   border: none;
   color: #fff;
   width: 180px;
-  background: #74d1c6;
+  background: #e35b0b;
   outline: none;
   cursor: pointer;
   display: inline-block;
@@ -4933,7 +4933,7 @@ ul.bullets li:before {
 }
 .box_badges ul li {
   display: inline-block;
-  background-color: #74d1c6;
+  background-color: #e35b0b;
   -webkit-border-radius: 5px;
   -moz-border-radius: 5px;
   -ms-border-radius: 5px;
@@ -5084,11 +5084,11 @@ ul.bullets li:before {
   }
 }
 #cookie-bar .cb-enable {
-  background: #74d1c6;
+  background: #e35b0b;
 }
 #cookie-bar .cb-enable:hover {
   background: #fff;
-  color: #74d1c6;
+  color: #e35b0b;
 }
 #cookie-bar .cb-disable {
   background: #990000;
