@@ -745,7 +745,7 @@ ul#additional_links li:after {
 /*============================================================================================*/
 /*-------- 2.1 Home--------*/
 .hero_home {
-  height: 500px;
+  height: 600px;
   width: 100%;
   display: table;
 }
@@ -857,8 +857,8 @@ ul#additional_links li:after {
 }
 .hero_home .content {
   display: table-cell;
-  padding: 0;
-  vertical-align: middle;
+  padding: 120px 0 0;
+  /* vertical-align: middle; */
   text-align: center;
   font-size: 21px;
   font-size: 1.3125rem;
