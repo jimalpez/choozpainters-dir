@@ -887,8 +887,7 @@ ul#additional_links li:after {
 }
 .hero_home .content h3 {
   margin: 0 0 0 0;
-  font-size: 60px;
-  font-size: 3.75rem;
+  font-size: 50px;
   font-weight: 700;
   text-transform: uppercase;
   color: #fff;
