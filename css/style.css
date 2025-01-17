@@ -748,7 +748,7 @@ ul#additional_links li:after {
 /*============================================================================================*/
 /*-------- 2.1 Home--------*/
 .hero_home {
-  height: 700px;
+  height: 620px;
   width: 100%;
   display: table;
 }
@@ -763,7 +763,7 @@ ul#additional_links li:after {
   -webkit-background-size: cover;
   -moz-background-size: cover;
   -o-background-size: cover;
-  background-size: 85%;
+  background-size: 95%;
 }
 @media (max-width: 767px) {
   .hero_home.version_1 {
