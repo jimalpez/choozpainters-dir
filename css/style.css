@@ -748,7 +748,7 @@ ul#additional_links li:after {
 /*============================================================================================*/
 /*-------- 2.1 Home--------*/
 .hero_home {
-  height: 680px;
+  height: 770px;
   width: 100%;
   display: table;
 }
@@ -762,7 +762,7 @@ ul#additional_links li:after {
   }
 }
 .hero_home.version_1 {
-  background: #1b356c url(../img/Header_City_background_one_dark_blue_building.png) no-repeat center bottom;
+  background: #1b356c url(../img/choozpainters-home-header.png) no-repeat center bottom;
   -webkit-background-size: cover;
   -moz-background-size: cover;
   -o-background-size: cover;
