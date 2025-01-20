@@ -47,6 +47,9 @@
 
     <!-- YOUR CUSTOM CSS -->
     <link href="css/custom.css" rel="stylesheet" />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
   </head>
 
   <body>
@@ -210,8 +213,106 @@
           </form>
         </div>
       </div>
-      <!-- /Hero -->
+      <!-- Categories -->
+      <div class="container margin_120_95">
+        <div class="row">
+          <div class="col">
+            <div class="categories_inline">
+              <a href="#" class="category_item">
+                <div class="category_image">
+                  <img
+                    src="./img/categories/paint-roller-icon-wht-trbg.png"
+                    alt="Residential Painting" />
+                </div>
+                <p>Residential Painting</p>
+              </a>
+              <a href="#" class="category_item">
+                <div class="category_image">
+                  <img
+                    src="./img/categories/paint-sprayer-icon-wht-trbg.png"
+                    alt="Residential Painting" />
+                </div>
+                <p>Commercial Painting</p>
+              </a>
+              <a href="#" class="category_item">
+                <div class="category_image">
+                  <img
+                    src="./img/categories/paint-brush-icon-wht-trbg.png"
+                    alt="Residential Painting" />
+                </div>
+                <p>Cabinet Painting</p>
+              </a>
+              <a href="#" class="category_item">
+                <div class="category_image">
+                  <img
+                    src="./img/categories/paint-brush-small-icon-wht-trbg.png"
+                    alt="Residential Painting" />
+                </div>
+                <p>Custom Painting</p>
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
 
+      <!-- Slider -->
+      <div class="container margin_120_95">
+        <h2>Featured Painting Contractors</h2>
+        <div class="slider_controls">
+          <button class="prev-btn" style="display: none">Previous</button>
+          <button class="next-btn" style="display: none">Next</button>
+        </div>
+        <div class="slider_wrapper">
+          <div class="slider_home">
+            <div class="slide-item">
+              <a href="#" class="slide_info_image">
+                <img
+                  src="./img/painting_contractors/painter-scout-pending-listing-logo.png"
+                  alt="Image" />
+              </a>
+              <div class="slide_info">
+                <a href="#" class="slide_info_title">Astra Painting LLC</a>
+                <div class="slide_info_location">Ballwin, Missouri</div>
+              </div>
+            </div>
+            <div class="slide-item">
+              <a href="#" class="slide_info_image">
+                <img
+                  src="./img/painting_contractors/painter-scout-pending-listing-logo.png"
+                  alt="Image" />
+              </a>
+              <div class="slide_info">
+                <a href="#" class="slide_info_title">Astra Painting LLC</a>
+                <div class="slide_info_location">Ballwin, Missouri</div>
+              </div>
+            </div>
+            <div class="slide-item">
+              <a href="#" class="slide_info_image">
+                <img
+                  src="./img/painting_contractors/painter-scout-pending-listing-logo.png"
+                  alt="Image" />
+              </a>
+              <div class="slide_info">
+                <a href="#" class="slide_info_title">Astra Painting LLC</a>
+                <div class="slide_info_location">Ballwin, Missouri</div>
+              </div>
+            </div>
+            <div class="slide-item">
+              <a href="#" class="slide_info_image">
+                <img
+                  src="./img/painting_contractors/painter-scout-pending-listing-logo.png"
+                  alt="Image" />
+              </a>
+              <div class="slide_info">
+                <a href="#" class="slide_info_title">Astra Painting LLC</a>
+                <div class="slide_info_location">Ballwin, Missouri</div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- /Hero -->
       <div class="container margin_120_95">
         <div class="main_title">
           <h2>Discover the <strong>online</strong> appointment!</h2>
@@ -220,6 +321,7 @@
             cu pri. In eum omnes molestie. Sed ad debet scaevola, ne mel.
           </p>
         </div>
+
         <div class="row add_bottom_30">
           <div class="col-lg-4">
             <div class="box_feat" id="icon_1">
@@ -578,7 +680,12 @@
 
     <!-- COMMON SCRIPTS -->
     <script src="js/jquery-3.7.1.min.js"></script>
+    <link
+      href="https://cdn.jsdelivr.net/npm/swiper@11.2.1/swiper-bundle.min.css
+"
+      rel="stylesheet" />
     <script src="js/common_scripts.min.js"></script>
     <script src="js/functions.js"></script>
+    <script src="js/slider.js" type="module"></script>
   </body>
 </html>
