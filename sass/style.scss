@@ -853,8 +853,8 @@ ul#additional_links {
     ul {
       li {
         label {
-          @include rgba(bg, $primary-color, 1);
-          color: #fff;
+          @include rgba(bg, #f4f4f4, 1);
+          color: $primary-color;
         }
       }
     }
