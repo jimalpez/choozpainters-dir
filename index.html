@@ -47,9 +47,6 @@
 
     <!-- YOUR CUSTOM CSS -->
     <link href="css/custom.css" rel="stylesheet" />
-    <link
-      rel="stylesheet"
-      href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
   </head>
 
   <body>
@@ -65,8 +62,10 @@
       <div class="container">
         <div class="row">
           <div class="col-lg-3 col-6">
-            <div id="logo_home">
-              <h1><a href="index.html" title="Findoctor">Findoctor</a></h1>
+            <div class="main-logo">
+              <a href="/">
+                <img src="./img/choozpainters-logo-5_stars.png" alt="" />
+              </a>
             </div>
           </div>
           <nav class="col-lg-9 col-6">
@@ -191,12 +190,15 @@
           <p>Find the best painters near you</p>
           <form method="post" action="list.html">
             <div id="custom-search-input">
-              <div class="input-group">
+              <div class="input-group input-rounded">
                 <input
                   type="text"
                   class="search-query"
                   placeholder="Ex. Name, Specialization ...." />
-                <input type="submit" class="btn_search" value="Search" />
+                <label for="search-query-submit" class="btn_search-label">
+                  <i class="pe-7s-search"></i>
+                </label>
+                <input type="submit" id="search-query-submit" class="" />
               </div>
               <ul>
                 <li>
@@ -214,7 +216,7 @@
         </div>
       </div>
       <!-- Categories -->
-      <div class="container margin_120_95">
+      <div class="container margin_90">
         <div class="row">
           <div class="col">
             <div class="categories_inline">
@@ -680,10 +682,6 @@
 
     <!-- COMMON SCRIPTS -->
     <script src="js/jquery-3.7.1.min.js"></script>
-    <link
-      href="https://cdn.jsdelivr.net/npm/swiper@11.2.1/swiper-bundle.min.css
-"
-      rel="stylesheet" />
     <script src="js/common_scripts.min.js"></script>
     <script src="js/functions.js"></script>
     <script src="js/slider.js" type="module"></script>
