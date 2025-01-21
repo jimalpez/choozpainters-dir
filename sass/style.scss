@@ -665,6 +665,21 @@ ul#additional_links {
       @include rgba(bg, $primary-color, 0);
     }
   }
+  &.home_2 {
+    background: #fff url(../img/choozpainters-home-header-2.png) no-repeat
+      center bottom;
+    @include background-size(85%);
+    @include mobile {
+      height: 550px;
+    }
+    .content {
+      @include rgba(bg, $primary-color, 0);
+      color: $primary-color;
+      h3 {
+        color: $primary-color;
+      }
+    }
+  }
   &.version_2 {
     background: none;
     position: relative;
@@ -824,6 +839,27 @@ ul#additional_links {
   }
 }
 
+.home_2 {
+  #custom-search-input {
+    .input-rounded {
+      .search-query {
+        border: 2px solid $primary-color;
+      }
+      .btn_search-label {
+        background-color: #fff;
+        border: 2px solid $primary-color;
+      }
+    }
+    ul {
+      li {
+        label {
+          @include rgba(bg, $primary-color, 1);
+          color: #fff;
+        }
+      }
+    }
+  }
+}
 #custom-search-input {
   margin: 0;
   top: 0;
@@ -867,7 +903,7 @@ ul#additional_links {
   .search-query {
     width: 100%;
     height: 60px;
-    padding-left: 20px;
+    padding-left: 30px;
     border: 0;
     @include border-radius(3px);
     @include box-shadow(0px 0px 50px 0px rgba(0, 0, 0, 0.35));
@@ -884,6 +920,7 @@ ul#additional_links {
   ul {
     text-align: left;
     margin-top: 25px;
+    padding-left: 30px;
     li {
       display: inline-block;
       margin-right: 5px;
@@ -903,7 +940,7 @@ ul#additional_links {
       label {
         @include transition-default;
         @include rgba(bg, #fff, 1);
-        @include border-radius(999px);
+        @include border-radius(3px);
         color: #000;
         padding: 8px 10px;
         line-height: $line-height-none;
