@@ -1,0 +1,79 @@
+/* slider */
+.slider_wrapper {
+  overflow: hidden; /* Ensure only visible slides are displayed */
+  width: 100%;
+}
+.slider_home {
+  display: flex;
+  transition: transform 0.5s ease-in-out;
+}
+
+.slide-item {
+  flex: 1 0 33.33%; /* Default: 3 columns */
+  box-sizing: border-box;
+  padding: 12px;
+}
+
+.slider_controls {
+  text-align: center;
+  margin-bottom: 10px;
+}
+
+.slider_controls button {
+  padding: 10px 20px;
+  margin: 0 5px;
+  border: none;
+  background-color: #007bff;
+  color: white;
+  cursor: pointer;
+  border-radius: 5px;
+}
+
+.slider_controls button:disabled {
+  background-color: #ccc;
+  cursor: not-allowed;
+}
+
+.slider_controls button:hover:not(:disabled) {
+  background-color: #0056b3;
+}
+
+/* For tablet (768px or less), use 2 columns */
+@media (max-width: 768px) {
+  .slide-item {
+    flex: 1 0 50%; /* Tablet: 2 columns */
+  }
+}
+
+/* For mobile (480px or less), use 1 column */
+@media (max-width: 480px) {
+  .slide-item {
+    flex: 1 0 100%; /* Mobile: 1 column */
+  }
+}
+
+.slide_info_image {
+  display: block;
+  max-height: 220px;
+  height: 100%;
+  width: 100%;
+  margin-bottom: 10px;
+}
+.slide_info_image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 15px;
+}
+.slide_info_title {
+  color: #000000;
+  font-size: 18px;
+  font-weight: 500;
+  line-height: 1.5;
+}
+.slide_info_location {
+  font-size: 12px;
+  font-weight: 400;
+  line-height: 1.5;
+  color: #000000;
+}
