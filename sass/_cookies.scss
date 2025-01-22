@@ -1,0 +1,67 @@
+/*-------- 3.7 Cookie bar --------*/
+#cookie-bar {
+  background: rgba(0, 0, 0, 0.8);
+  height: auto;
+  line-height: 24px;
+  color: #eeeeee;
+  text-align: center;
+  padding: 15px 0;
+  font-weight: 400;
+  @include fontSize(13px);
+  font-weight: 500;
+  p {
+    margin: 0;
+    padding: 0;
+  }
+  a {
+    color: #fff;
+    display: inline-block;
+    @include border-radius(3px);
+    text-decoration: none;
+    padding: 2px 10px;
+    margin-left: 8px;
+    @include mobile {
+      display: block;
+      max-width: 150px;
+      margin: auto;
+      margin-bottom: 5px;
+    }
+  }
+  .cb-enable,
+  .cb-disable,
+  .cb-policy {
+    background: #fff;
+    color: $primary-color;
+    &:hover {
+      background: #fff;
+      color: $third-color;
+    }
+  }
+  //   .cb-disable {
+  //     background: #990000;
+  //     &:hover {
+  //       background: #bb0000;
+  //     }
+  //   }
+  //   .cb-policy {
+  //     background: $secondary-color;
+  //     &:hover {
+  //       background: #fff;
+  //       color: $secondary-color;
+  //     }
+  //   }
+  &.fixed {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 999999;
+    &.bottom {
+      bottom: 0;
+      top: auto;
+    }
+  }
+  @include mobile {
+    padding: 5px 0;
+  }
+}

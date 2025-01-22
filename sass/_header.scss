@@ -1,0 +1,37 @@
+/* Header */
+header {
+  background-color: #fff;
+  min-height: 55px;
+  padding: 10px 0;
+  border-bottom: 1px solid transparent;
+  &.header_sticky {
+    width: 100%;
+    z-index: 999;
+    position: relative;
+    @include transition-default;
+    &.sticky {
+      border-bottom: 1px solid $border-color;
+      position: fixed;
+      left: 0;
+      top: 0;
+      z-index: 999;
+    }
+  }
+  &.header_sticky2 {
+    background-color: #f4f4f4;
+  }
+  &.header_map {
+    width: 100%;
+    border-bottom: 1px solid $border-color;
+    position: fixed;
+    left: 0;
+    top: 0;
+    z-index: 999;
+  }
+  &.static {
+    position: static;
+    border-bottom: 1px solid $border-color;
+    z-index: 999;
+    position: relative;
+  }
+}
