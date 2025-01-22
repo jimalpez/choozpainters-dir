@@ -422,6 +422,17 @@ ul#top_access {
     position: relative;
     padding: 0;
     margin-left: 15px;
+    &.only-desktop {
+      @include mobile {
+        display: none;
+      }
+    }
+    &.only-mobile {
+      display: none;
+      @include mobile {
+        display: inline-block;
+      }
+    }
     i {
       @include fontSize(34px);
     }
@@ -628,6 +639,7 @@ ul#additional_links {
     @include background-size(85%);
     @include mobile {
       height: 550px;
+      @include background-size(100%);
     }
     .content {
       @include rgba(bg, $primary-color, 0);
@@ -639,6 +651,7 @@ ul#additional_links {
     @include background-size(85%);
     @include mobile {
       height: 550px;
+      @include background-size(100%);
     }
     .content {
       @include rgba(bg, $primary-color, 0);
@@ -717,11 +730,11 @@ ul#additional_links {
     text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.25);
     @include rgba(bg, $primary-color, 0.9);
     @include tablet {
-      padding: 120px 30px 0;
+      padding: 100px 30px 0;
     }
     @include mobile {
       @include fontSize(16px);
-      padding: 120px 15px 0;
+      padding: 100px 15px 0;
     }
     h3 {
       margin: 0 0 0 0;
