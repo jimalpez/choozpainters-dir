@@ -1,0 +1,46 @@
+.social_group {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 15px;
+  &--separate {
+    justify-content: space-between;
+    gap: 25px;
+  }
+}
+
+.social_icons {
+  &-inline {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 15px;
+    &--right {
+      justify-content: flex-end;
+    }
+    &--center {
+      justify-content: center;
+    }
+  }
+  &-btn {
+    border: none;
+    border-radius: 5px;
+    @include fontSize(15px);
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    i {
+      display: flex;
+    }
+    &--primary {
+      @include rgba(bg, $primary-color, 1);
+      color: #fff;
+      padding: 3px 6px;
+      min-width: 27px;
+      min-height: 27px;
+    }
+    &--transparent {
+      background-color: transparent;
+    }
+  }
+}

@@ -1,0 +1,10 @@
+.btn_full {
+    border: none;
+    width: 100%;
+    height: 46px;
+    @include fontSize(16px);
+    @include border-radius(8px);
+    @include transition-default;
+    background-color: $third-color;
+    color: #fff;
+}
