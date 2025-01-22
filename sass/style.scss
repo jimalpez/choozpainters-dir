@@ -643,7 +643,7 @@ ul#additional_links {
   &.version_1 {
     background: $primary-color url(../img/choozpainters-hero-backgorund.png)
       no-repeat center bottom;
-    @include background-size(85%);
+    @include background-size(70%);
     @include mobile {
       height: 550px;
       @include background-size(100%);
@@ -655,7 +655,7 @@ ul#additional_links {
   &.version_white {
     background: #fff url(../img/choozpainters-hero-backgorund.png) no-repeat
       center bottom;
-    @include background-size(85%);
+    @include background-size(70%);
     @include mobile {
       height: 550px;
       @include background-size(100%);
