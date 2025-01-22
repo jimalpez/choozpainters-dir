@@ -55,6 +55,7 @@ Author URI: http://themeforest.net/user/Ansonika/
 @import "social-icons";
 
 @import "gallery";
+@import "map";
 
 /*-------- Preloader --------*/
 #preloader {
@@ -1883,18 +1884,6 @@ a.wish_bt {
   padding: 0px;
   @include tablet {
     height: 400px;
-  }
-}
-
-#map_listing {
-  height: 100%;
-  width: 100%;
-  &.normal_list {
-    height: 495px;
-    width: auto;
-    border: 3px solid #fff;
-    @include border-radius-default;
-    margin-bottom: 25px;
   }
 }
 
@@ -4030,6 +4019,12 @@ ul.bullets {
   margin: 0 !important;
 }
 
+.padding_r_50_desktop {
+  padding-right: 50px;
+  @include mobile {
+    padding-right: 0;
+  }
+}
 .margin_t_30 {
   margin-top: 30px;
 }
@@ -4043,7 +4038,7 @@ ul.bullets {
 .margin_60 {
   padding-top: 60px;
   padding-bottom: 60px;
-  @include mobile {
+  @include tablet {
     padding-top: 30px;
     padding-bottom: 30px;
   }

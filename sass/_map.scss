@@ -1,0 +1,16 @@
+#map_listing {
+  height: 100%;
+  width: 100%;
+  &.normal_list {
+    height: 495px;
+    width: auto;
+    border: 3px solid #fff;
+    @include border-radius-default;
+    margin-bottom: 25px;
+  }
+  &.contactor_page_map {
+    height: 350px;
+    width: 350px;
+    margin-bottom: 25px;
+  }
+}
