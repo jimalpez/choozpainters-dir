@@ -640,7 +640,7 @@ ul#additional_links {
     height: 550px;
   }
   &.version_1 {
-    background: $primary-color url(../img/choozpainters-home-header-2.png)
+    background: $primary-color url(../img/choozpainters-hero-backgorund.png)
       no-repeat center bottom;
     @include background-size(85%);
     @include mobile {
@@ -652,7 +652,7 @@ ul#additional_links {
     }
   }
   &.version_white {
-    background: #fff url(../img/choozpainters-home-header-2.png) no-repeat
+    background: #fff url(../img/choozpainters-hero-backgorund.png) no-repeat
       center bottom;
     @include background-size(85%);
     @include mobile {
