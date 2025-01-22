@@ -1,8 +1,14 @@
 .post-gallery {
   &-main {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
     img {
-      width: 90%;
-      height: auto;
+      height: 100%;
+      width: auto;
+      max-height: 300px;
+      object-fit: contain;
     }
   }
   &-list {
@@ -11,8 +17,10 @@
     flex-wrap: wrap;
     gap: 15px;
     img {
-      width: calc(40% - 15px);
-      height: auto;
+      height: 100%;
+      width: auto;
+      max-height: 150px;
+      object-fit: contain;
     }
   }
 }
