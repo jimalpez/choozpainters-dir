@@ -491,6 +491,18 @@ ul#top_access {
     width: 110px;
     height: auto;
   }
+  &--desktop {
+    @include mobile {
+      display: none;
+    }
+  }
+  &--mobile {
+    width: 50px !important;
+    display: none;
+    @include mobile {
+      display: block;
+    }
+  }
 }
 /* logo home with h1 */
 #logo_home {
@@ -634,7 +646,7 @@ ul#additional_links {
 
 /*-------- 2.1 Home--------*/
 .hero_home {
-  height: 720px;
+  height: 760px;
   width: 100%;
   display: table;
   position: relative;
@@ -642,10 +654,14 @@ ul#additional_links {
     height: 550px;
   }
   &.version_1 {
-    background: $primary-color url(../img/choozpainters-hero-backgorund.png)
-      no-repeat center bottom;
-    @include background-size(70%);
+    background: $primary-color
+      url(../img/hero_images/choozpainters-city-header-laptop-1.png) no-repeat
+      center bottom;
+    @include background-size(90%);
     @include mobile {
+      background: #fff
+        url(../img/hero_images/choozpainters-city-header-mobile-1.png) no-repeat
+        center bottom;
       height: 550px;
       @include background-size(100%);
     }
@@ -654,12 +670,14 @@ ul#additional_links {
     }
   }
   &.version_white {
-    background: #fff url(../img/hero_images/choozpainters_background_desktop.png) no-repeat
+    background: #fff
+      url(../img/hero_images/choozpainters-city-header-laptop-1.png) no-repeat
       center bottom;
-    @include background-size(80%);
+    @include background-size(90%);
     @include mobile {
-      background: #fff url(../img/hero_images/choozpainters_background_mobile.png) no-repeat
-      center bottom;
+      background: #fff
+        url(../img/hero_images/choozpainters-city-header-mobile-1.png) no-repeat
+        center bottom;
       height: 550px;
       @include background-size(100%);
     }
