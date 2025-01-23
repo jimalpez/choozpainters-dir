@@ -56,6 +56,7 @@ Author URI: http://themeforest.net/user/Ansonika/
 
 @import "gallery";
 @import "map";
+@import "listing";
 
 /*-------- Preloader --------*/
 #preloader {
@@ -653,10 +654,12 @@ ul#additional_links {
     }
   }
   &.version_white {
-    background: #fff url(../img/choozpainters-hero-backgorund.png) no-repeat
+    background: #fff url(../img/hero_images/choozpainters_background_desktop.png) no-repeat
       center bottom;
-    @include background-size(70%);
+    @include background-size(80%);
     @include mobile {
+      background: #fff url(../img/hero_images/choozpainters_background_mobile.png) no-repeat
+      center bottom;
       height: 550px;
       @include background-size(100%);
     }
