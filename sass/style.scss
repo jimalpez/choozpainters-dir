@@ -4045,6 +4045,15 @@ ul.bullets {
     padding-right: 0;
   }
 }
+.padding_60 {
+  padding-top: 60px;
+  padding-bottom: 60px;
+  @include mobile {
+    padding-top: 30px;
+    padding-bottom: 30px;
+  }
+}
+
 .margin_t_30 {
   margin-top: 30px;
 }
