@@ -23,4 +23,12 @@
       @include fontSize(24px);
     }
   }
+  &_listing {
+    @include fontSize(26px);
+    font-weight: 600;
+    margin-bottom: 10px;
+    @include mobile {
+      @include fontSize(21px);
+    }
+  }
 }
