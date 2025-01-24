@@ -669,12 +669,12 @@ ul#additional_links {
   }
   &.version_1 {
     background: $primary-color
-      url(../img/hero_images/choozpainters-city-header-laptop-1.png) no-repeat
+      url(../img/hero_images/choozpainters-city-header-laptop-3.png) no-repeat
       center bottom;
     @include background-size(88%);
     @include mobile {
       background: $primary-color
-        url(../img/hero_images/choozpainters-city-header-mobile-1.png) no-repeat
+        url(../img/hero_images/choozpainters-city-header-mobile-3.png) no-repeat
         center bottom;
       height: 650px;
       @include background-size(100%);
@@ -685,12 +685,12 @@ ul#additional_links {
   }
   &.version_white {
     background: #fff
-      url(../img/hero_images/choozpainters-city-header-laptop-2.png) no-repeat
+      url(../img/hero_images/choozpainters-city-header-laptop-3.png) no-repeat
       center bottom;
     @include background-size(88%);
     @include mobile {
       background: #fff
-        url(../img/hero_images/choozpainters-city-header-mobile-2.png) no-repeat
+        url(../img/hero_images/choozpainters-city-header-mobile-3.png) no-repeat
         center bottom;
       height: 650px;
       @include background-size(100%);
