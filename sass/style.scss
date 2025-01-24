@@ -483,26 +483,40 @@ ul#top_access {
 }
 
 // Main Logo
+header.header_sticky.sticky {
+  .main-logo {
+    @include mobile {
+      width: 35px;
+      background-image: url(../img/choozpainters-small-logo_trp_back.png);
+    }
+  }
+}
 .main-logo {
+  background-image: url(../img/choozpainters-logo-5_stars.png);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: contain;
   height: 100%;
-  display: flex;
-  align-items: center;
-  img {
-    width: 110px;
-    height: auto;
-  }
-  &--desktop {
-    @include mobile {
-      display: none;
-    }
-  }
-  &--mobile {
-    width: 35px !important;
-    display: none;
-    @include mobile {
-      display: block;
-    }
-  }
+  width: 110px;
+  // height: 100%;
+  // display: flex;
+  // align-items: center;
+  // img {
+  //   width: 110px;
+  //   height: auto;
+  // }
+  // &--desktop {
+  //   @include mobile {
+  //     display: none;
+  //   }
+  // }
+  // &--mobile {
+  //   width: 35px !important;
+  //   display: none;
+  //   @include mobile {
+  //     display: block;
+  //   }
+  // }
 }
 /* logo home with h1 */
 #logo_home {
