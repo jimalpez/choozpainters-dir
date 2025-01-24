@@ -16,9 +16,10 @@
 .heading {
   color: $heading-color;
   &_secondary {
-    @include fontSize(32px);
-    font-weight: 500;
+    @include fontSize(28px);
+    font-weight: 700;
     margin-bottom: 30px;
+    margin-left: 15px;
     @include mobile {
       @include fontSize(24px);
     }
@@ -28,7 +29,7 @@
     font-weight: 600;
     margin-bottom: 10px;
     @include mobile {
-      @include fontSize(21px);
+      @include fontSize(22px);
     }
   }
 }
