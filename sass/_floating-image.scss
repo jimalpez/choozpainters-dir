@@ -1,27 +1,40 @@
 .floating-images {
+  @include mobile {
+    display: none;
+  }
+  img {
+    position: absolute;
+    height: auto;
     @include mobile {
-        display: none;
+      width: 50px;
     }
-    img {
-        position: absolute;
-        height: auto;
-        @include mobile {
-            width: 50px;
-        }
-    }
-    .home-hot-air-ballon {
-        right: 18%;
-        bottom: 40%;
-        width: 50px;
-    }
-    .home-cloud-left {
-        left: 18%;
+    &.float-cloud {
+      width: 70px;
+      &-top-left {
+        top: 25%;
+        left: 5%;
+      }
+      &-center-left {
+        top: 50%;
+        left: 8%;
+      }
+      &-bottom-left {
         bottom: 37%;
-        width: 70px;
-    }
-    .home-cloud-right {
-        right: 28%;
+        left: 18%;
+      }
+      &-top-right {
+        top: 10%;
+        right: 10%;
+      }
+      &-bottom-right {
         bottom: 33%;
-        width: 70px;
+        right: 28%;
+      }
     }
+    &.float-hot-air-ballon {
+      right: 18%;
+      bottom: 40%;
+      width: 50px;
+    }
+  }
 }

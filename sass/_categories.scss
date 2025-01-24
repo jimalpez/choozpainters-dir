@@ -19,6 +19,14 @@
       }
     }
   }
+  &.categories_light_blue {
+    .category_item {
+      background-color: #7ba4ce;
+      span {
+        color: $primary-color;
+      }
+    }
+  }
   .category_item {
     display: flex;
     flex-direction: column;
