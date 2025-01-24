@@ -1,23 +1,23 @@
 //-------------------- Base Colors --------------------//
-$body-color: 					#f5f8fa;
-$body-text-color:               #555;
-$heading-color:                 #333;
+$body-color: #f5f8fa;
+$body-text-color: #555;
+$heading-color: #1b356d;
 
-$primary-color: 				#1b356c;
-$secondary-color: 				#e74e84;
-$third-color: 					#e35b0b;
-$fourth-color: 					#fff02a;
+$primary-color: #1b356c;
+$secondary-color: #e74e84;
+$third-color: #e35b0b;
+$fourth-color: #fff02a;
 
-$border-color: 			        #ededed;
-$border-color-2: 			    #e1e8ed;
+$border-color: #ededed;
+$border-color-2: #e1e8ed;
 
 //-------------------- Line Height Variables --------------------//
-$line-height-base:              1.4;
-$line-height-large:           	1.8;
-$line-height-none:           	1;
+$line-height-base: 1.4;
+$line-height-large: 1.8;
+$line-height-none: 1;
 
 //-------------------- Font Families --------------------//
-$font-main: 					'Poppins', Helvetica, sans-serif;
+$font-main: "Poppins", Helvetica, sans-serif;
 
 //-------------------- Pricing tables -------------------- //
 $pt-number: 3; // number of pricing tables
@@ -29,5 +29,5 @@ $pt-feature-mobile-width: 100px;
 //-------------------- Responsive sizes -------------------- //
 $large-device-width: 1199px; // Large devices (desktops, less than 1119px)
 $medium-device-width: 991px; // Medium devices (tablets, less than 991px)
-$small-device-width: 767px;	// Small devices (landscape phones, less than 767px)
+$small-device-width: 767px; // Small devices (landscape phones, less than 767px)
 $extra-small-device-width: 575px; // Extra small devices (portrait phones, less than 575px)

@@ -12,3 +12,15 @@
 .contactor_address {
   margin-block-end: 10px;
 }
+
+.heading {
+  color: $heading-color;
+  &_secondary {
+    @include fontSize(32px);
+    font-weight: 500;
+    margin-bottom: 30px;
+    @include mobile {
+      @include fontSize(24px);
+    }
+  }
+}

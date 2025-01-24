@@ -27,6 +27,14 @@
       }
     }
   }
+  &.categories_light_gray {
+    .category_item {
+      background-color: #f4f4f4;
+      span {
+        color: $primary-color;
+      }
+    }
+  }
   .category_item {
     display: flex;
     flex-direction: column;
