@@ -15,13 +15,27 @@
     }
     figure {
       width: 35%;
+      height: 100%;
+      max-height: 170px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      overflow: hidden;
       img {
         width: 100%;
+        max-width: 220px;
         height: 100%;
+      }
+      @include mobile {
+        width: 100%;
+        max-height: 150px;
       }
     }
     &_content {
       width: 65%;
+      @include mobile {
+        width: 100%;
+      }
       ul {
         li {
           &:not(:last-child) {
@@ -47,6 +61,58 @@
   &_footer {
     background-color: #f5f6f8;
     border-radius: 15px;
-    padding: 30px;
+    display: flex;
+    padding: 15px;
+    h5 {
+      @include fontSize(16px);
+      font-weight: 500;
+      color: #000;
+    }
+    i {
+      color: $third-color;
+    }
+    @include mobile {
+      flex-direction: column;
+    }
+    &_ratings {
+      padding: 15px;
+      text-align: center;
+      padding-right: 50px;
+      border-right: 2px solid #e4e5e7;
+      a {
+        color: $third-color;
+      }
+      @include mobile {
+        padding-right: 15px;
+        border-right: none;
+        border-bottom: 2px solid #e4e5e7;
+        padding-bottom: 30px;
+      }
+    }
+    &_reviews {
+      padding: 10px 20px;
+      flex: 1;
+      @include mobile {
+        padding-top: 30px;
+      }
+      .ratings {
+        flex: 1;
+        &_rate {
+          font-weight: 500;
+        }
+        &_total {
+        }
+      }
+      .rating_placeholder {
+        flex: 1;
+      }
+      ul {
+        margin: 0;
+        li {
+          display: flex;
+          align-items: center;
+        }
+      }
+    }
   }
 }
