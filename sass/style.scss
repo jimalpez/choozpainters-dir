@@ -659,10 +659,10 @@ ul#additional_links {
       center bottom;
     @include background-size(88%);
     @include mobile {
-      background: #fff
+      background: $primary-color
         url(../img/hero_images/choozpainters-city-header-mobile-1.png) no-repeat
         center bottom;
-      height: 550px;
+      height: 600px;
       @include background-size(100%);
     }
     .content {
