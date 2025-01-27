@@ -74,19 +74,45 @@
     @include mobile {
       flex-direction: column;
     }
-    &_ratings {
-      padding: 15px;
+    &_images {
+      position: relative;
+      width: 36%;
+      padding-right: 15px;
       text-align: center;
-      padding-right: 50px;
       border-right: 2px solid #e4e5e7;
-      a {
-        color: $third-color;
-      }
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      grid-template-rows: repeat(2, 1fr);
+      gap: 15px;
       @include mobile {
-        padding-right: 15px;
+        width: 100%;
         border-right: none;
         border-bottom: 2px solid #e4e5e7;
         padding-bottom: 30px;
+      }
+      img {
+        width: 100%;
+        height: 70px;
+        object-fit: cover;
+        border-radius: 5px;
+      }
+      &_button {
+        @include fontSize(14px);
+        position: absolute;
+        top: 50%;
+        transform: translateY(-50%);
+        right: 5px;
+        width: 35px;
+        height: 35px;
+        border-radius: 40px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        background-color: #fff;
+        color: $third-color;
+        @include mobile {
+          top: 43%;
+        }
       }
     }
     &_reviews {
