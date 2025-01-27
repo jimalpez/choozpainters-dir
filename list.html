@@ -297,11 +297,33 @@
               </div>
               <div class="listing_footer">
                 <div class="listing_footer_images">
-                  <img src="./img/contractors/Astra-1.png" alt="" />
-                  <img src="./img/contractors/Astra-1.png" alt="" />
-                  <img src="./img/contractors/Astra-1.png" alt="" />
-                  <img src="./img/contractors/Astra-1.png" alt="" />
-                  <button class="listing_footer_images_button">+4</button>
+                  <img
+                    src="./img/contractors/Astra-1.png"
+                    alt=""
+                    data-toggle="modal"
+                    data-target="#ImagesModal" />
+                  <img
+                    src="./img/contractors/Astra-1.png"
+                    alt=""
+                    data-toggle="modal"
+                    data-target="#ImagesModal" />
+                  <img
+                    src="./img/contractors/Astra-1.png"
+                    alt=""
+                    data-toggle="modal"
+                    data-target="#ImagesModal" />
+                  <img
+                    src="./img/contractors/Astra-1.png"
+                    alt=""
+                    data-toggle="modal"
+                    data-target="#ImagesModal" />
+                  <button
+                    type="button"
+                    class="listing_footer_images_button"
+                    data-toggle="modal"
+                    data-target="#ImagesModal">
+                    +4
+                  </button>
                 </div>
                 <div class="listing_footer_reviews">
                   <h5>Review Sources</h5>
@@ -700,11 +722,25 @@
     </footer>
     <!--/footer-->
 
+    <div
+      class="modal fade"
+      id="ImagesModal"
+      tabindex="-1"
+      role="dialog"
+      aria-labelledby="exampleModalCenterTitle"
+      aria-hidden="true">
+      <div class="modal-dialog modal-dialog-centered" role="document">
+        <img src="./img/contractors/Astra-1.png" alt="" />
+      </div>
+    </div>
+
     <div id="toTop"></div>
     <!-- Back to top button -->
 
     <!-- COMMON SCRIPTS -->
     <script src="js/jquery-3.7.1.min.js"></script>
+    <script src="js/popper.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
     <script src="js/common_scripts.min.js"></script>
     <script src="js/functions.js"></script>
 
