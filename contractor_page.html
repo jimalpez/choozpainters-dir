@@ -7,12 +7,13 @@
       name="description"
       content="Find easily a doctor and book online an appointment" />
     <meta name="author" content="Ansonika" />
-    <title>
-      Chooz Painters
-    </title>
+    <title>Chooz Painters</title>
 
     <!-- Favicons-->
-    <link rel="shortcut icon" href="img/choozpainters_favicon.ico" type="image/x-icon" />
+    <link
+      rel="shortcut icon"
+      href="img/choozpainters_favicon.ico"
+      type="image/x-icon" />
     <link
       rel="apple-touch-icon"
       type="image/x-icon"
@@ -62,11 +63,9 @@
       <div class="container">
         <div class="row">
           <div class="col-lg-3 col-6">
-            <div class="main-logo">
-              <a href="/">
-                <img src="./img/choozpainters-logo-5_stars.png" alt="" />
-              </a>
-            </div>
+            <a href="/">
+              <div class="main-logo"></div>
+            </a>
           </div>
           <nav class="col-lg-9 col-6">
             <a
@@ -78,7 +77,12 @@
               <li>
                 <a href="login.html"><i class="pe-7s-user"></i></a>
               </li>
-              <li>
+              <li class="only-mobile">
+                <a href="register-doctor.html"
+                  ><i class="pe-7s-add-user"></i
+                ></a>
+              </li>
+              <li class="only-desktop">
                 <a href="register-doctor.html" class="btn_1 small white">
                   <span class="plus">+</span> <span> Add You Company </span>
                 </a>
@@ -178,7 +182,6 @@
           </nav>
         </div>
       </div>
-      <!-- /container -->
     </header>
     <!-- /Header -->
 
