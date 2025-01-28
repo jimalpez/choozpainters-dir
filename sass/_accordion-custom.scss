@@ -22,11 +22,15 @@
           padding: 0.5rem 0.3rem;
           @include fontSize(16px);
           text-transform: uppercase;
-          font-weight: 500;
-          .orange-gradient {
+          font-weight: 600;
+          color: #fff;
+          border-top-left-radius: 8px;
+          border-bottom-right-radius: 8px;
+          margin-bottom: 8px;
+          &.orange-gradient {
             background: linear-gradient(to right, #ec2709, #f98756);
           }
-          .dark-blue {
+          &.dark-blue-gradient {
             background: linear-gradient(to right, #1a2429, #53899b);
           }
         }
