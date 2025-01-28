@@ -18,12 +18,19 @@
   .nav-link {
     padding: 15px 32px;
     @include fontSize(19.2px);
-    line-height: 18px;
-    border: 2px solid $primary-color;
+    line-height: 24px;
+    border: 2px solid #254176;
     border-radius: 0;
+    color: #fff;
+    z-index: 1;
+    &:hover {
+      background-color: #041c4e;
+      border-color: #26448b;
+    }
     &.active {
-      border: 2px solid $primary-color;
-      z-index: 1;
+      border: 2px solid #2b4cc5 !important;
+      color: #fff;
+      background-color: #0a2daa;
     }
   }
 }

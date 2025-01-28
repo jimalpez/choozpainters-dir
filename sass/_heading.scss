@@ -19,6 +19,9 @@
     @include fontSize(72px);
     font-weight: 500;
     margin-bottom: 15px;
+    @include mobile {
+      @include fontSize(48px);
+    }
   }
   &_secondary {
     @include fontSize(28px);
