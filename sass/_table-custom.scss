@@ -1,0 +1,50 @@
+.table-custom {
+  border: 1px solid #dfe5eb;
+  border-collapse: separate;
+  border-spacing: 0;
+  width: 100%;
+  thead {
+    background-color: #f2f5f7;
+    .features {
+      @include fontSize(32px);
+      font-weight: 500;
+      color: #080808;
+    }
+    .have-button {
+      text-align: center;
+      color: #080808;
+      span {
+        display: block;
+        margin: 0 auto;
+        @include fontSize(24px);
+        font-weight: 500;
+        margin-bottom: 5px;
+      }
+      button {
+        display: block;
+        margin: 0 auto;
+        border: none;
+        @include fontSize(16px);
+        font-weight: 500;
+        color: #fff;
+        background-color: $third-color;
+        padding: 6px 30px;
+        @include border-radius(8px);
+      }
+    }
+  }
+  th,
+  td {
+    padding: 16px 24px;
+    border: 1px solid #dfe5eb;
+    text-align: left;
+    @include fontSize(17.92px);
+    color: #080808;
+    center {
+        @include fontSize(16px);
+    }
+  }
+  th {
+    background-color: #f2f5f7;
+  }
+}

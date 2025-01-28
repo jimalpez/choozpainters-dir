@@ -61,6 +61,7 @@ Author URI: http://themeforest.net/user/Ansonika/
 @import "pricing";
 @import "nav-tabs-custom";
 @import "accordion-custom";
+@import "table-custom";
 
 /*-------- Preloader --------*/
 #preloader {
@@ -688,7 +689,12 @@ ul#additional_links {
     }
   }
   &.version_gradient {
-    background: linear-gradient(to bottom, $primary-color, $primary-color, #3f67bc);
+    background: linear-gradient(
+      to bottom,
+      $primary-color,
+      $primary-color,
+      #3f67bc
+    );
     @include mobile {
       height: 650px;
     }

@@ -13,6 +13,23 @@
         border-color: #1b73f0;
       }
       .item-left {
+        .highlight_label {
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          width: 18rem;
+          margin-bottom: 0.3rem;
+          padding: 0.5rem 0.3rem;
+          @include fontSize(16px);
+          text-transform: uppercase;
+          font-weight: 500;
+          .orange-gradient {
+            background: linear-gradient(to right, #ec2709, #f98756);
+          }
+          .dark-blue {
+            background: linear-gradient(to right, #1a2429, #53899b);
+          }
+        }
         h3 {
           @include fontSize(32px);
           color: #000;
