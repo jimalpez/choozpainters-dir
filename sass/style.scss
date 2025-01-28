@@ -58,6 +58,7 @@ Author URI: http://themeforest.net/user/Ansonika/
 @import "map";
 @import "listing";
 @import "modal";
+@import "pricing";
 
 /*-------- Preloader --------*/
 #preloader {
@@ -679,6 +680,31 @@ ul#additional_links {
         center bottom;
       height: 650px;
       @include background-size(100%);
+    }
+    .content {
+      @include rgba(bg, $primary-color, 0);
+    }
+  }
+  &.version_gradient {
+    background: linear-gradient(to bottom, $primary-color, $primary-color, #3f67bc);
+    @include mobile {
+      height: 650px;
+    }
+    .version_gradient_background_image {
+      height: 100%;
+      width: 88%;
+      position: absolute;
+      bottom: 0;
+      left: 50%;
+      transform: translateX(-50%);
+      background-image: url(../img/hero_images/choozpainters-city-header-laptop-3.png);
+      background-size: contain;
+      background-position: center bottom;
+      background-repeat: no-repeat;
+      @include mobile {
+        width: 100%;
+        background-image: url(../img/hero_images/choozpainters-city-header-mobile-3.png);
+      }
     }
     .content {
       @include rgba(bg, $primary-color, 0);

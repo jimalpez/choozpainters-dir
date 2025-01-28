@@ -1,0 +1,122 @@
+.pricing {
+  &-wrapper {
+    display: flex;
+    justify-content: space-between;
+    gap: 16px;
+  }
+  &-card {
+    border: 2px solid #dfe5eb;
+    border-radius: 15px;
+    background-color: #fff;
+    padding: 32px 20px;
+    width: 25%;
+    transition: all 1s ease;
+    &:hover {
+      border-color: $primary-color;
+    }
+    &.active {
+      border-color: $primary-color;
+    }
+  }
+  &-header {
+    text-align: center;
+    &-icon {
+      margin-bottom: 15px;
+    }
+    h2 {
+      color: #080808;
+      text-align: center;
+      letter-spacing: 0;
+      font-size: 1.8rem;
+      font-weight: 600;
+      line-height: 100%;
+      margin-bottom: 15px;
+    }
+    .sub-title {
+      font-size: 1.12rem;
+      font-weight: 500;
+      line-height: 130%;
+      margin-bottom: 30px;
+    }
+    .price {
+      color: #080808;
+      margin-bottom: 20px;
+      .currency {
+        @include fontSize(24px);
+        font-weight: 500;
+      }
+      .price-value {
+        @include fontSize(56px);
+        font-weight: 400;
+        line-height: 100%;
+      }
+      .price-duration {
+        @include fontSize(24px);
+        font-weight: 500;
+      }
+    }
+  }
+  &-billed {
+    color: #7a92a5;
+    font-weight: 400;
+    font-size: 1.12rem;
+    margin-bottom: 10px;
+  }
+  &-fee {
+    border-top: 2px solid #dfe5eb;
+    border-bottom: 2px solid #dfe5eb;
+    width: 100%;
+    margin-top: 1rem;
+    padding-top: 1rem;
+    padding-bottom: 1rem;
+    font-size: 1.12rem;
+    color: #080808;
+    margin-bottom: 15px;
+    .price-old {
+      color: #fe0532;
+      text-decoration: line-through;
+    }
+  }
+  &-body {
+    &-button {
+      background-color: $third-color;
+      color: #fff;
+      border: none;
+      width: 100%;
+      @include fontSize(18.4px);
+      border-radius: 10px;
+      padding: 16px 48px;
+      font-weight: 600;
+      margin-bottom: 20px;
+      &-save-bill {
+        background-color: transparent;
+        border: none;
+        padding: 0;
+        text-align: center;
+        width: 100%;
+        @include fontSize(14.4px);
+        font-weight: 500;
+        margin-bottom: 30px;
+        &:hover {
+          text-decoration: underline;
+        }
+      }
+    }
+    .label-list {
+      color: #7a92a5;
+      font-weight: 500;
+      font-size: 1.12rem;
+      text-align: center;
+      margin-bottom: 15px;
+    }
+    &-features {
+      li {
+        @include fontSize(17.92px);
+        margin-bottom: 10px;
+        display: flex;
+        gap: 10px;
+        align-items: start;
+      }
+    }
+  }
+}
