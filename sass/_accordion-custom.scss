@@ -1,0 +1,42 @@
+.accordion-custom {
+  &-item {
+    margin-top: 3rem;
+    &-trigger {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      cursor: pointer;
+      padding-bottom: 32px;
+      border-bottom: 2px solid #dfe5eb;
+      transition: border-color 0.5s ease;
+      &:hover {
+        border-color: #1b73f0;
+      }
+      .item-left {
+        h3 {
+          @include fontSize(32px);
+          color: #000;
+          margin-bottom: 5px;
+        }
+        p {
+          margin: 0;
+          @include fontSize(18px);
+          color: #717171;
+        }
+      }
+      .item-right {
+        @include fontSize(19.2px);
+        display: flex;
+        align-items: center;
+        gap: 10px;
+        color: #1b73f0;
+        i {
+          @include fontSize(26px);
+        }
+      }
+    }
+    &-target {
+      display: none;
+    }
+  }
+}
