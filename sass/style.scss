@@ -45,6 +45,7 @@ Author URI: http://themeforest.net/user/Ansonika/
 @import "mixins";
 
 @import "header";
+@import "footer";
 @import "cookies";
 @import "categories";
 @import "slider";
@@ -539,121 +540,6 @@ header.header_sticky.sticky {
     }
   }
 }
-
-/* Footer */
-footer {
-  background-color: #fff;
-  color: #555;
-  h5 {
-    @include fontSize(14px);
-    font-weight: 600;
-    text-transform: uppercase;
-    color: #999;
-    margin-bottom: 20px;
-    @include mobile {
-      margin-bottom: 10px;
-    }
-  }
-  ul {
-    @include mobile {
-      margin-bottom: 35px;
-    }
-    li {
-      margin-bottom: 10px;
-      a {
-        @include transition-default;
-        display: inline-block;
-        position: relative;
-        color: $body-text-color;
-        &:hover {
-          color: $secondary-color;
-        }
-        i {
-          margin-right: 10px;
-          color: #fff;
-        }
-      }
-    }
-    &.links li a {
-      &:hover {
-        @include transform(translate(5px, 0));
-        &:after {
-          opacity: 1;
-        }
-      }
-      &:after {
-        font-family: "ElegantIcons";
-        content: "\24";
-        position: absolute;
-        margin-left: 5px;
-        top: 1px;
-        opacity: 0;
-        @include transition-default(all, 0.5s);
-      }
-    }
-    &.contacts li a i {
-      margin-right: 10px;
-      color: $secondary-color;
-    }
-  }
-  #copy {
-    text-align: right;
-    @include fontSize(13px);
-    color: #999;
-    @include mobile {
-      text-align: left;
-      margin-bottom: 25px;
-    }
-  }
-}
-
-.follow_us {
-  ul {
-    margin: 0;
-    li {
-      display: inline-block;
-      margin-right: 10px;
-      @include fontSize(16px);
-      a i {
-        color: #555;
-        &:hover {
-          color: $secondary-color;
-        }
-      }
-    }
-  }
-}
-
-/* Addtional links / Footer */
-ul#additional_links {
-  margin: 0;
-  @include fontSize(13px);
-  color: #999;
-  li {
-    display: inline-block;
-    margin-right: 15px;
-    &:first-child {
-      margin-right: 20px;
-    }
-    &:last-child:after {
-      content: "";
-    }
-    a {
-      opacity: 0.5;
-      @include transition-default;
-      &:hover {
-        opacity: 1;
-      }
-    }
-    &:after {
-      content: "|";
-      font-weight: 300;
-      position: relative;
-      left: 10px;
-    }
-  }
-}
-
 /* Wow on scroll event */
 .wow {
   visibility: hidden;
