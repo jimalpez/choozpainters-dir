@@ -1,0 +1,29 @@
+.nav-tabs-custom {
+  border: none;
+  justify-content: center;
+  li:last-child {
+    .nav-link {
+      border-top-right-radius: 8px;
+      border-bottom-right-radius: 8px;
+      margin-left: -2px;
+    }
+  }
+  li:first-child {
+    .nav-link {
+      border-top-left-radius: 8px;
+      border-bottom-left-radius: 8px;
+      margin-right: -2px;
+    }
+  }
+  .nav-link {
+    padding: 15px 32px;
+    @include fontSize(19.2px);
+    line-height: 18px;
+    border: 2px solid $primary-color;
+    border-radius: 0;
+    &.active {
+      border: 2px solid $primary-color;
+      z-index: 1;
+    }
+  }
+}

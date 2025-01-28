@@ -3,6 +3,7 @@
     display: flex;
     justify-content: space-between;
     gap: 16px;
+    margin-top: 50px;
   }
   &-card {
     border: 2px solid #dfe5eb;
@@ -49,6 +50,10 @@
         @include fontSize(56px);
         font-weight: 400;
         line-height: 100%;
+        &-decimal {
+          @include fontSize(32px);
+          font-weight: 500;
+        }
       }
       .price-duration {
         @include fontSize(24px);
