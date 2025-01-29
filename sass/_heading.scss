@@ -32,6 +32,15 @@
       @include fontSize(24px);
     }
   }
+  &_sub_title {
+    @include fontSize(18px);
+    font-weight: 700;
+    margin-bottom: 30px;
+    margin-left: 15px;
+    @include mobile {
+      @include fontSize(16px);
+    }
+  }
   &_listing {
     @include fontSize(26px);
     font-weight: 600;
