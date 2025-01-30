@@ -1,7 +1,4 @@
 .floating-images {
-  @include mobile {
-    display: none;
-  }
   img {
     position: absolute;
     height: auto;
@@ -10,6 +7,9 @@
     }
     &.float-cloud {
       width: 70px;
+      @include mobile {
+        display: none;
+      }
       &-top-left {
         top: 25%;
         left: 5%;
@@ -39,6 +39,18 @@
       right: 18%;
       bottom: 40%;
       width: 50px;
+      @include mobile {
+        display: none;
+      }
+      &-mobile-right {
+        display: none;
+        @include mobile {
+          display: block;
+          right: 18%;
+          bottom: 25%;
+          width: 50px;
+        }
+      }
     }
   }
 }
