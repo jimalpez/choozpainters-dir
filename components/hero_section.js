@@ -1,7 +1,10 @@
-export class HeroSection extends HTMLElement {
+class HeroSection extends HTMLElement {
   constructor() {
     super();
-    this.categories = [];
+  }
+
+  connectedCallback() {
+    this.render();
   }
 
   get classes() {
@@ -10,28 +13,56 @@ export class HeroSection extends HTMLElement {
 
   render() {
     this.innerHTML = `
-          <div class="container margin_120">
-              <div class="row">
-                  <div class="col-12">
-                      <h2 class="heading heading_secondary">Browse by project type</h2>
-                      <div class="categories_inline ${this.classes}">
-                          ${this.categories
-                            .map(
-                              (category) => `
-                              <a href="#" class="category_item">
-                                  <div class="category_image">
-                                      <img src="${category.image}" alt="${category.name}" />
-                                  </div>
-                                  <span>${category.name}</span>
-                              </a>
-                          `,
-                            )
-                            .join("")}
-                      </div>
-                  </div>
-              </div>
-          </div>
-        `;
+    <div class="hero_home ${this.classes}">
+        <div class="version_gradient_background_image"></div>
+            <div class="content">
+                <h3>Looking For A Painter?</h3>
+                <p>Find the best painters near you</p>
+                <form method="post" action="list.html">
+                    <div id="custom-search-input">
+                        <div class="input-group input-rounded">
+                            <input type="text" class="search-query" placeholder="Location Search" />
+                            <label for="search-query-submit" class="btn_search-label">
+                                <i class="pe-7s-search"></i>
+                            </label>
+                            <input type="submit" id="search-query-submit" class="" />
+                        </div>
+                        <ul>
+                            <li>
+                                <input type="radio" id="all" name="radio_search" value="all" checked />
+                                <label for="all">Search by Company</label>
+                            </li>
+                        </ul>
+                    </div>
+                </form>
+
+                <!-- Floated Images -->
+                <div class="floating-images">
+                    <!-- left Images -->
+                    <img
+                        src="./img/floating_images/cloud-medium-light-blue-border-1.png"
+                        alt="Cloud"
+                        class="float-cloud-bottom-left float-cloud" />
+
+                    <!-- Right Images -->
+                    <img
+                        src="./img/floating_images/cloud-medium-light-blue-border-1.png"
+                        alt="Cloud"
+                        class="float-cloud-top-right float-cloud" />
+                    <img
+                        src="./img/floating_images/choozpainters-balloon-2.png"
+                        alt="Hot Air Balloon"
+                        class="float-hot-air-ballon" />
+
+                    <!-- Mobile Right Images -->
+                    <img
+                        src="./img/floating_images/choozpainters-balloon-2.png"
+                        alt="Hot Air Balloon"
+                        class="float-hot-air-ballon float-hot-air-ballon-mobile-right" />
+                </div>
+            </div>
+        </div>
+    `;
   }
 }
 
