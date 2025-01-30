@@ -25,7 +25,7 @@ class Categories extends HTMLElement {
 
   render() {
     this.innerHTML = `
-          <div class="container margin_120">
+          <<div class="container margin_120">
               <div class="row">
                   <div class="col-12">
                       <h2 class="heading heading_secondary">Browse by project type</h2>
@@ -45,7 +45,7 @@ class Categories extends HTMLElement {
                       </div>
                   </div>
               </div>
-          </div>
+          </div>>
       `;
   }
 }

@@ -1,3 +1,3 @@
 import "./footer.js";
 import "./header.js";
-import "./categories.js";
+import "./categories/categories_white.js";
