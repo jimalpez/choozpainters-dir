@@ -1,4 +1,7 @@
 .curve-custom {
+  @include mobile {
+    display: none;
+  }
   .added-bar {
     height: 50px;
     width: 100%;

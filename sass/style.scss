@@ -569,7 +569,7 @@ header.header_sticky.sticky {
       background: $primary-color
         url(../img/hero_images/choozpainters-city-header-mobile-3.png) no-repeat
         center bottom;
-      height: 650px;
+      height: 600px;
       @include background-size(100%);
     }
     .content {
@@ -584,7 +584,7 @@ header.header_sticky.sticky {
       #3f67bc
     );
     @include mobile {
-      height: 650px;
+      height: 600px;
     }
     .version_gradient_background_image {
       height: 100%;
@@ -615,7 +615,7 @@ header.header_sticky.sticky {
       background: #fff
         url(../img/hero_images/choozpainters-city-header-mobile-3.png) no-repeat
         center bottom;
-      height: 650px;
+      height: 600px;
       @include background-size(100%);
     }
     .content {
@@ -1826,7 +1826,9 @@ a.wish_bt {
     height: auto;
   }
 }
-
+.row {
+  width: 100%;
+}
 .row-height {
   height: 100%;
   min-height: 100%;

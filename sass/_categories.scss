@@ -20,6 +20,15 @@
       }
     }
   }
+  &.categories_white {
+    .category_item {
+      background-color: #fff;
+      box-shadow: 0px 0px 15px 0px rgba(0, 0, 0, 0.05);
+      span {
+        color: $primary-color;
+      }
+    }
+  }
   &.categories_light_blue {
     .category_item {
       background-color: #7ba4ce;
@@ -44,7 +53,7 @@
     background-color: $primary-color;
     max-width: 130px;
     padding: 15px;
-    @include border-radius(15px);
+    // @include border-radius(15px);
     .category_image {
       width: auto;
       height: 50px;
