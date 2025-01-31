@@ -9,27 +9,27 @@ export class CategoriesWhite extends HTMLElement {
   get categoriesData() {
     return [
       {
-        image: "./img/categories/exterior-painting-blue-1.png",
+        image: "./img/categories/exterior-painting-purple_blue.png",
         name: "Exterior Painting",
       },
       {
-        image: "./img/categories/interior-painting-blue-1.png",
+        image: "./img/categories/interior-painting-purple_blue.png",
         name: "Interior Painting",
       },
       {
-        image: "./img/categories/commercial-painting-blue-1.png",
+        image: "./img/categories/commercial-painting-purple_blue.png",
         name: "Commercial Painting",
       },
       {
-        image: "./img/categories/cabinet-painting-blue-1.png",
+        image: "./img/categories/cabinet-painting-purple_blue.png",
         name: "Cabinet Painting",
       },
       {
-        image: "./img/categories/pressure-washing-blue-1.png",
+        image: "./img/categories/pressure-washing-purple_blue.png",
         name: "Pressure Washing",
       },
       {
-        image: "./img/categories/deck-fence-blue-1.png",
+        image: "./img/categories/deck-fence-purple_blue.png",
         name: "Deck & Fence Staining",
       },
     ];

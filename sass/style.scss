@@ -4030,6 +4030,20 @@ ul.bullets {
   }
 }
 
+.margin_t_90 {
+  margin-top: 90px;
+  @include mobile {
+    margin-top: 60px;
+  }
+}
+
+.margin_b_120 {
+  margin-bottom: 120px;
+  @include tablet {
+    margin-bottom: 35px;
+  }
+}
+
 .margin_120 {
   margin-top: 120px;
   margin-bottom: 120px;
