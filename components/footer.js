@@ -11,7 +11,7 @@ class Footer extends HTMLElement {
                 <div class="col-lg-6">
                     <div class="row">
                     <div class="col-md-5">
-                        <img class="footer-logo" src="./img/choozpainters-logo-5_stars.png" alt="">
+                        <img class="footer-logo" src="./img/logo/choozpainters-logo_white.png" alt="Logo Footer">
                         <ul class="footer-list">
                         <li>
                             <i class="bi bi-envelope"></i>
