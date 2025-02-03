@@ -1,0 +1,46 @@
+{
+  "Contractors": [
+    {
+      "name": "Techwest Services",
+      "description": "<p>Techwest Services - Painting Contractor in the United States.</p> <p>Call to request an estimate: (307) 875-6555</p>",
+      "company_phone": "307-875-6555",
+      "company_email": "",
+      "category": "Painting Contractor",
+      "address": "United States",
+      "region": "Wyoming",
+      "city": "Green River",
+      "post_code": "82935",
+      "location_latitude": 41.283839,
+      "location_longitude": -110.972395,
+      "website": "",
+      "google_bp": "",
+      "facebook": "",
+      "instagram": "",
+      "google_reviews": "",
+      "facebook_reviews": "",
+      "company_logo": "img/doctor_listing_1.jpg",
+      "url_detail": "#"
+    },
+    {
+      "name": "Mandros Painting Inc",
+      "description": "<p>Mandros Painting Inc - Painter in Green River, Wyoming.</p> <p>Call to request an estimate: (307) 875-6555</p><p>Since 1965 we've been a leader in maintaining and protecting heavy industrial equipment and assets. Schedule a call today.</p>",
+      "company_phone": "(307) 875-6555",
+      "company_email": "kirt@mandros.net",
+      "category": "Painting Contractor",
+      "address": "4996 WY-374",
+      "county": "United States",
+      "region": "Wyoming",
+      "city": "Green River",
+      "post_code": "82935",
+      "location_latitude": 41.5571937,
+      "location_longitude": -109.5238037,
+      "website": "http://mandros.net/",
+      "google_bp": "",
+      "facebook": "https://www.facebook.com/MandrosPainting/",
+      "instagram": "",
+      "google_reviews": "",
+      "facebook_reviews": "",
+      "url_detail": "#"
+    }
+  ]
+}
