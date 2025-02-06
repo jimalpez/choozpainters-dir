@@ -25,7 +25,12 @@
     margin-inline: auto;
   }
   &-background {
-    background-image: linear-gradient(to right, #041962, #000003);
+    background: linear-gradient(
+      to bottom,
+      $primary-color,
+      $primary-color,
+      #3f67bc
+    );
     position: absolute;
     width: 100%;
     height: 100%;

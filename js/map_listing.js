@@ -101,7 +101,7 @@ function getInfoBox(item) {
   return new InfoBox({
     content: `
       <div class="marker_info">
-        <h3><a href="${item.url_detail}">${item.name}</a></h3>
+        <h3><a href="${item.url_detail}">${item.title}</a></h3>
         ${
           item.company_logo
             ? `<a href="${item.url_detail}" class="marker_info_logo">

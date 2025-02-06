@@ -1,7 +1,7 @@
 {
   "Contractors": [
     {
-      "name": "Techwest Services",
+      "title": "Techwest Services",
       "description": "<p>Techwest Services - Painting Contractor in the United States.</p> <p>Call to request an estimate: (307) 875-6555</p>",
       "company_phone": "307-875-6555",
       "company_email": "",
@@ -22,7 +22,7 @@
       "url_detail": "#"
     },
     {
-      "name": "Mandros Painting Inc",
+      "title": "Mandros Painting Inc",
       "description": "<p>Mandros Painting Inc - Painter in Green River, Wyoming.</p> <p>Call to request an estimate: (307) 875-6555</p><p>Since 1965 we've been a leader in maintaining and protecting heavy industrial equipment and assets. Schedule a call today.</p>",
       "company_phone": "(307) 875-6555",
       "company_email": "kirt@mandros.net",
