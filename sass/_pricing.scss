@@ -1,4 +1,14 @@
 .pricing {
+  &-full {
+    width: 100%;
+    padding: 50px;
+    background: #fff;
+    box-shadow: 0px 0px 15px 0px rgba(0, 0, 0, 0.05);
+
+    .tab-content {
+      margin-top: -92px;
+    }
+  }
   &-header {
     text-align: center;
     color: #fff;
@@ -45,6 +55,9 @@
     justify-content: space-between;
     gap: 16px;
     margin-top: 50px;
+
+    &-full {
+    }
   }
   &-card {
     border: 2px solid #dfe5eb;
@@ -229,6 +242,65 @@
       @include fontSize(24px);
       color: #717171;
       text-align: center;
+    }
+  }
+}
+
+.pricing-card {
+  &-full {
+    display: flex;
+    gap: 50px;
+    @include mobile {
+      flex-direction: column;
+    }
+    .pricing-bills {
+      flex: 1;
+      margin-top: 92px;
+      .price-save {
+        color: $third-color;
+        font-weight: 500;
+      }
+      .price {
+        margin-top: 30px;
+        margin-bottom: 10px;
+        &-value {
+          @include fontSize(56px);
+          font-weight: 400;
+          line-height: 100%;
+        }
+        &-duration {
+          @include fontSize(16px);
+          font-weight: 500;
+        }
+      }
+      &-button {
+        background-color: $primary-color;
+        color: #fff;
+        border: none;
+        @include fontSize(18px);
+        padding: 20px 25px;
+        margin-bottom: 20px;
+        line-height: 16px;
+      }
+    }
+    .pricing-plans {
+      flex: 1;
+      h5 {
+        @include fontSize(22px);
+        margin-bottom: 30px;
+      }
+      ul {
+        list-style: none;
+        padding: 0;
+        li {
+          &:not(:last-child) {
+            margin-bottom: 20px;
+          }
+          i {
+            color: $primary-color;
+          }
+        }
+      }
     }
   }
 }

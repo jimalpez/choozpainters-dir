@@ -33,4 +33,42 @@
       background-color: #0a2daa;
     }
   }
+
+  &-white {
+    border: none;
+    li:last-child {
+      .nav-link {
+        border-top-right-radius: 8px;
+        border-bottom-right-radius: 8px;
+        margin-left: -1px;
+      }
+    }
+    li:first-child {
+      .nav-link {
+        border-top-left-radius: 8px;
+        border-bottom-left-radius: 8px;
+        margin-right: -1px;
+      }
+    }
+    .nav-link {
+      padding: 15px 20px;
+      @include fontSize(18px);
+      line-height: 24px;
+      border: 2px solid #808080;
+      border-radius: 0;
+      color: #808080;
+      position: relative;
+      &:hover {
+        border-color: #0000ff70;
+        color: #0000ff;
+        background-color: #0000ff20;
+      }
+      &.active {
+        border: 2px solid #0000ff !important;
+        color: #0000ff;
+        background-color: #0000ff30;
+        z-index: 1;
+      }
+    }
+  }
 }

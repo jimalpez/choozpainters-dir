@@ -87,180 +87,970 @@
           </ul>
         </div>
 
-        <!-- Pricing Choices -->
-        <div class="pricing-full">
-          <ul
-            class="nav nav-tabs nav-tabs-custom-white"
-            id="myTab"
-            role="tablist">
-            <li class="nav-item" role="presentation">
-              <button
-                class="nav-link active"
-                id="annual-tab"
-                data-bs-toggle="tab"
-                data-bs-target="#annual-tab-pane"
-                type="button"
-                role="tab"
-                aria-controls="annual-tab-pane"
-                aria-selected="false">
-                Annual
-              </button>
-            </li>
-            <li class="nav-item" role="presentation">
-              <button
-                class="nav-link"
-                id="monthly-tab"
-                data-bs-toggle="tab"
-                data-bs-target="#monthly-tab-pane"
-                type="button"
-                role="tab"
-                aria-controls="monthly-tab-pane"
-                aria-selected="true">
-                Monthly
-              </button>
-            </li>
-          </ul>
-          <!-- Pricing Tabs -->
-          <div class="tab-content" id="myTabContent">
-            <!-- Annual -->
-            <div
-              class="tab-pane fade show active"
-              id="annual-tab-pane"
-              role="tabpanel"
-              aria-labelledby="annual-tab"
-              tabindex="0">
-              <div class="margin_30">
-                <div class="pricing-wrapper-full">
-                  <div class="pricing-card-full">
-                    <div class="pricing-bills">
-                      <h2>Premium Annual</h2>
-                      <p class="sub-title">
-                        Show social proof notifications to increase leads and
-                        sales
-                      </p>
-                      <div class="price">
-                        <span class="price-value">$166</span>
-                        <span class="price-duration">/mo billed annually</span>
-                      </div>
-                      <p class="price-save">You save $398 per year</p>
-                      <button class="pricing-bills-button">
-                        Start your free 14-days trial
-                      </button>
+        <!-- Pricing Tabs -->
+        <ul class="nav nav-tabs nav-tabs-custom" id="myTab" role="tablist">
+          <li class="nav-item" role="presentation">
+            <button
+              class="nav-link"
+              id="monthly-tab"
+              data-bs-toggle="tab"
+              data-bs-target="#monthly-tab-pane"
+              type="button"
+              role="tab"
+              aria-controls="monthly-tab-pane"
+              aria-selected="true">
+              Monthly
+            </button>
+          </li>
+          <li class="nav-item" role="presentation">
+            <button
+              class="nav-link active"
+              id="yearly-tab"
+              data-bs-toggle="tab"
+              data-bs-target="#yearly-tab-pane"
+              type="button"
+              role="tab"
+              aria-controls="yearly-tab-pane"
+              aria-selected="false">
+              Yearly
+            </button>
+          </li>
+          <li class="nav-item" role="presentation">
+            <button
+              class="nav-link"
+              id="yearly-tab"
+              data-bs-toggle="tab"
+              data-bs-target="#two-year-tab-pane"
+              type="button"
+              role="tab"
+              aria-controls="two-year-tab-pane"
+              aria-selected="false">
+              Two-year
+            </button>
+          </li>
+        </ul>
+        <div class="tab-content" id="myTabContent">
+          <!-- Monthly -->
+          <div
+            class="tab-pane fade"
+            id="monthly-tab-pane"
+            role="tabpanel"
+            aria-labelledby="monthly-tab"
+            tabindex="0">
+            <div class="margin_30">
+              <div class="pricing-wrapper">
+                <!-- Platinum -->
+                <div class="pricing-card">
+                  <header class="pricing-header">
+                    <img
+                      class="pricing-header-icon"
+                      src="./img/pricing/Platinum.svg"
+                      alt="" />
+                    <h2>Platinum</h2>
+                    <p class="sub-title">
+                      We help you scale your <br />
+                      E-commerce business
+                    </p>
+                    <div class="price">
+                      <span class="currency">$</span>
+                      <span class="price-value">199</span>
+                      <span class="price-duration">/mo</span>
                     </div>
-                    <div class="pricing-plans">
-                      <h5>Premium plans visitors:</h5>
-                      <ul class="pricing-body-features">
-                        <li>
-                          <i class="bi bi-check-circle-fill"></i>
-                          <span>100,000 unique visitors</span>
-                        </li>
-                        <li>
-                          <i class="bi bi-check-circle-fill"></i>
-                          <span>Unlimited domains</span>
-                        </li>
-                        <li>
-                          <i class="bi bi-check-circle-fill"></i>
-                          <span>Unlimited notifications</span>
-                        </li>
-                        <li>
-                          <i class="bi bi-check-circle-fill"></i>
-                          <span>A/B testing</span>
-                        </li>
-                        <li>
-                          <i class="bi bi-check-circle-fill"></i>
-                          <span>Conversion analytics</span>
-                        </li>
-                        <li>
-                          <i class="bi bi-check-circle-fill"></i>
-                          <span>Live chat support</span>
-                        </li>
-                        <li>
-                          <i class="bi bi-check-circle-fill"></i>
-                          <span>Recent Activity notifications</span>
-                        </li>
-                        <li>
-                          <i class="bi bi-check-circle-fill"></i>
-                          <span>Live Visitor Count notifications</span>
-                        </li>
-                        <li>
-                          <i class="bi bi-check-circle-fill"></i>
-                          <span>Hot Streaks notifications</span>
-                        </li>
-                      </ul>
+
+                    <p class="pricing-billed">Billed monthly</p>
+
+                    <div class="pricing-fee">
+                      +
+                      <span class="price-old">$599</span>
+                      $199 setup fee
                     </div>
+                  </header>
+                  <div class="pricing-body">
+                    <button class="pricing-body-button">Contact Us</button>
+                    <button
+                      class="pricing-body-button-save-bill button-nav-tab"
+                      data-target-id="yearly-tab-pane">
+                      Save $398 with yearly billing
+                      <i class="bi bi-arrow-up-right"></i>
+                    </button>
+                    <p class="label-list">Everything in Growth, and:</p>
+                    <ul class="pricing-body-features">
+                      <li>
+                        <img src="./img/pricing/circle_check.svg" alt="" />
+                        <span>Advanced e-commerce</span>
+                      </li>
+                      <li>
+                        <img src="./img/pricing/circle_check.svg" alt="" />
+                        <span>Full webstore built for you</span>
+                      </li>
+                      <li>
+                        <img src="./img/pricing/circle_check.svg" alt="" />
+                        <span>Unlimited edits</span>
+                      </li>
+                      <li>
+                        <img src="./img/pricing/circle_check.svg" alt="" />
+                        <span>Unlimited products</span>
+                      </li>
+                      <li>
+                        <img src="./img/pricing/circle_check.svg" alt="" />
+                        <span>Sell subscriptions & digital products</span>
+                      </li>
+                      <li>
+                        <img src="./img/pricing/circle_check.svg" alt="" />
+                        <span>Manage multi-seat bookings</span>
+                      </li>
+                      <li>
+                        <img src="./img/pricing/circle_check.svg" alt="" />
+                        <span>Enhanced marketing integrations</span>
+                      </li>
+                    </ul>
                   </div>
                 </div>
+                <!-- End Platinum -->
+
+                <!-- Growth -->
+                <div class="pricing-card">
+                  <header class="pricing-header">
+                    <img
+                      class="pricing-header-icon"
+                      src="./img/pricing/Growth.svg"
+                      alt="" />
+                    <h2>Growth</h2>
+                    <p class="sub-title">
+                      We grow your <br />
+                      business online
+                    </p>
+                    <div class="price">
+                      <span class="currency">$</span>
+                      <span class="price-value">99</span>
+                      <span class="price-duration">/mo</span>
+                    </div>
+
+                    <p class="pricing-billed">Billed monthly</p>
+
+                    <div class="pricing-fee">
+                      +
+                      <span class="price-old">$599</span>
+                      $79 setup fee
+                    </div>
+                  </header>
+                  <div class="pricing-body">
+                    <button class="pricing-body-button">Contact Growth</button>
+                    <button
+                      class="pricing-body-button-save-bill button-nav-tab"
+                      data-target-id="yearly-tab-pane">
+                      Save $309 with yearly billing
+                      <i class="bi bi-arrow-up-right"></i>
+                    </button>
+                    <p class="label-list">Everything in Plus, and:</p>
+                    <ul class="pricing-body-features">
+                      <li>
+                        <img src="./img/pricing/circle_check.svg" alt="" />
+                        <span>Dedicated VIP Growth Team</span>
+                      </li>
+                      <li>
+                        <img src="./img/pricing/circle_check.svg" alt="" />
+                        <span>Marketing plan for your business</span>
+                      </li>
+                      <li>
+                        <img src="./img/pricing/circle_check.svg" alt="" />
+                        <span>1-on-1 monthly marketing sessions</span>
+                      </li>
+                      <li>
+                        <img src="./img/pricing/circle_check.svg" alt="" />
+                        <span
+                          >Marketing advice: email, social media, online ads,
+                          SEO, reputation, and more
+                        </span>
+                      </li>
+                      <li>
+                        <img src="./img/pricing/circle_check.svg" alt="" />
+                        <span
+                          >2,000 words of fresh content created for you</span
+                        >
+                      </li>
+                    </ul>
+                  </div>
+                </div>
+                <!-- End Growth -->
+
+                <!-- Plus -->
+                <div class="pricing-card active">
+                  <header class="pricing-header">
+                    <img
+                      class="pricing-header-icon"
+                      src="./img/pricing/Plus.svg"
+                      alt="" />
+                    <h2>Plus</h2>
+                    <p class="sub-title">
+                      We manage your <br />
+                      online presence
+                    </p>
+                    <div class="price">
+                      <span class="currency">$</span>
+                      <span class="price-value">59</span>
+                      <span class="price-duration">/mo</span>
+                    </div>
+
+                    <p class="pricing-billed">Billed monthly</p>
+
+                    <div class="pricing-fee">
+                      +
+                      <span class="price-old">$599</span>
+                      $79 setup fee
+                    </div>
+                  </header>
+                  <div class="pricing-body">
+                    <button class="pricing-body-button">Contact Plus</button>
+                    <button
+                      class="pricing-body-button-save-bill button-nav-tab"
+                      data-target-id="yearly-tab-pane">
+                      Save $179 with yearly billing
+                      <i class="bi bi-arrow-up-right"></i>
+                    </button>
+                    <p class="label-list">Everything in Launch, and:</p>
+                    <ul class="pricing-body-features">
+                      <li>
+                        <img src="./img/pricing/circle_check.svg" alt="" />
+                        <span>4 email addresses</span>
+                      </li>
+                      <li>
+                        <img src="./img/pricing/circle_check.svg" alt="" />
+                        <span>Advanced SEO to rank on Google</span>
+                      </li>
+                      <li>
+                        <img src="./img/pricing/circle_check.svg" alt="" />
+                        <span>Unlimited done-for-you edits</span>
+                      </li>
+                      <li>
+                        <img src="./img/pricing/circle_check.svg" alt="" />
+                        <span
+                          >Integrations to convert visitors into customers: 3rd
+                          party integrations such as live chat, advanced
+                          designs, lead forms, multimedia & more
+                        </span>
+                      </li>
+                      <li>
+                        <img src="./img/pricing/circle_check.svg" alt="" />
+                        <span
+                          >Promote your products on Google, Facebook & Instagram
+                        </span>
+                      </li>
+                      <li>
+                        <img src="./img/pricing/circle_check.svg" alt="" />
+                        <span>VIP phone support</span>
+                      </li>
+                    </ul>
+                  </div>
+                </div>
+                <!-- End Plus -->
+
+                <!-- Website Launch -->
+                <div class="pricing-card">
+                  <header class="pricing-header">
+                    <img
+                      class="pricing-header-icon"
+                      src="./img/pricing/Website_Launch.svg"
+                      alt="" />
+                    <h2>Website Launch</h2>
+                    <p class="sub-title">
+                      We build & launch <br />
+                      your website
+                    </p>
+                    <div class="price">
+                      <span class="currency">$</span>
+                      <span class="price-value">
+                        16<span class="price-value-decimal">.99</span>
+                      </span>
+                      <span class="price-duration">/mo</span>
+                    </div>
+
+                    <p class="pricing-billed">Billed monthly</p>
+
+                    <div class="pricing-fee">
+                      +
+                      <span class="price-old">$599</span>
+                      $79 setup fee
+                    </div>
+                  </header>
+                  <div class="pricing-body">
+                    <button class="pricing-body-button">Contact Launch</button>
+                    <button
+                      class="pricing-body-button-save-bill button-nav-tab"
+                      data-target-id="yearly-tab-pane">
+                      Save $54 with yearly billing
+                      <i class="bi bi-arrow-up-right"></i>
+                    </button>
+                    <p class="label-list">Included in all plans:</p>
+                    <ul class="pricing-body-features">
+                      <li>
+                        <img src="./img/pricing/circle_check.svg" alt="" />
+                        <span>Built-for-you website / online store</span>
+                      </li>
+                      <li>
+                        <img src="./img/pricing/circle_check.svg" alt="" />
+                        <span>Personalized design & copy</span>
+                      </li>
+                      <li>
+                        <img src="./img/pricing/circle_check.svg" alt="" />
+                        <span>Fast loading to rank on Google</span>
+                      </li>
+                      <li>
+                        <img src="./img/pricing/circle_check.svg" alt="" />
+                        <span>Ready in 7 days</span>
+                      </li>
+                      <li>
+                        <img src="./img/pricing/circle_check.svg" alt="" />
+                        <span
+                          >Custom domain name or connect one you already have
+                        </span>
+                      </li>
+                      <li>
+                        <img src="./img/pricing/circle_check.svg" alt="" />
+                        <span>Professional email address</span>
+                      </li>
+                      <li>
+                        <img src="./img/pricing/circle_check.svg" alt="" />
+                        <span>Easy-to-use editor</span>
+                      </li>
+                      <li>
+                        <img src="./img/pricing/circle_check.svg" alt="" />
+                        <span>0% fees on sales & bookings</span>
+                      </li>
+                      <li>
+                        <img src="./img/pricing/circle_check.svg" alt="" />
+                        <span>1-to-1 launch & training call</span>
+                      </li>
+                      <li>
+                        <img src="./img/pricing/circle_check.svg" alt="" />
+                        <span>Secure hosting & SSL certificate</span>
+                      </li>
+                      <li>
+                        <img src="./img/pricing/circle_check.svg" alt="" />
+                        <span>30-Day Money-back Guarantee</span>
+                      </li>
+                    </ul>
+                  </div>
+                </div>
+                <!-- End Website Launch -->
               </div>
             </div>
+          </div>
 
-            <!-- Monthly -->
-            <div
-              class="tab-pane fade"
-              id="monthly-tab-pane"
-              role="tabpanel"
-              aria-labelledby="monthly-tab"
-              tabindex="0">
-              <div class="margin_30">
-                <div class="pricing-wrapper-full">
-                  <div class="pricing-card-full">
-                    <div class="pricing-bills">
-                      <h2>Premium Monthly</h2>
-                      <p class="sub-title">
-                        Show social proof notifications to increase leads and
-                        sales
-                      </p>
-                      <div class="price">
-                        <span class="price-value">$166</span>
-                        <span class="price-duration">/mo billed annually</span>
-                      </div>
-                      <p class="price-save">You save $398 per year</p>
-                      <button class="pricing-bills-button">
-                        Start your free 14-days trial
-                      </button>
+          <!-- Yearly -->
+          <div
+            class="tab-pane fade show active"
+            id="yearly-tab-pane"
+            role="tabpanel"
+            aria-labelledby="yearly-tab"
+            tabindex="0">
+            <div class="margin_30">
+              <div class="pricing-wrapper">
+                <!-- Platinum -->
+                <div class="pricing-card">
+                  <header class="pricing-header">
+                    <img
+                      class="pricing-header-icon"
+                      src="./img/pricing/Platinum.svg"
+                      alt="" />
+                    <h2>Platinum</h2>
+                    <p class="sub-title">
+                      We help you scale your <br />
+                      E-commerce business
+                    </p>
+                    <div class="price">
+                      <span class="currency">$</span>
+                      <span class="price-value">
+                        165<span class="price-value-decimal">.88</span>
+                      </span>
+                      <span class="price-duration">/mo</span>
                     </div>
-                    <div class="pricing-plans">
-                      <h5>Premium plans visitors:</h5>
-                      <ul class="pricing-body-features">
-                        <li>
-                          <i class="bi bi-check-circle-fill"></i>
-                          <span>100,000 unique visitors</span>
-                        </li>
-                        <li>
-                          <i class="bi bi-check-circle-fill"></i>
-                          <span>Unlimited domains</span>
-                        </li>
-                        <li>
-                          <i class="bi bi-check-circle-fill"></i>
-                          <span>Unlimited notifications</span>
-                        </li>
-                        <li>
-                          <i class="bi bi-check-circle-fill"></i>
-                          <span>A/B testing</span>
-                        </li>
-                        <li>
-                          <i class="bi bi-check-circle-fill"></i>
-                          <span>Conversion analytics</span>
-                        </li>
-                        <li>
-                          <i class="bi bi-check-circle-fill"></i>
-                          <span>Live chat support</span>
-                        </li>
-                        <li>
-                          <i class="bi bi-check-circle-fill"></i>
-                          <span>Recent Activity notifications</span>
-                        </li>
-                        <li>
-                          <i class="bi bi-check-circle-fill"></i>
-                          <span>Live Visitor Count notifications</span>
-                        </li>
-                        <li>
-                          <i class="bi bi-check-circle-fill"></i>
-                          <span>Hot Streaks notifications</span>
-                        </li>
-                      </ul>
+
+                    <p class="pricing-billed">Billed monthly</p>
+
+                    <div class="pricing-fee">
+                      +
+                      <span class="price-old">$599</span>
+                      $199 setup fee
                     </div>
+                  </header>
+                  <div class="pricing-body">
+                    <button class="pricing-body-button">Contact Us</button>
+                    <button
+                      class="pricing-body-button-save-bill button-nav-tab"
+                      data-target-id="two-year-tab-pane">
+                      Save $1,277 with two-year billing
+                      <i class="bi bi-arrow-up-right"></i>
+                    </button>
+                    <p class="label-list">Everything in Growth, and:</p>
+                    <ul class="pricing-body-features">
+                      <li>
+                        <img src="./img/pricing/circle_check.svg" alt="" />
+                        <span>Advanced e-commerce</span>
+                      </li>
+                      <li>
+                        <img src="./img/pricing/circle_check.svg" alt="" />
+                        <span>Full webstore built for you</span>
+                      </li>
+                      <li>
+                        <img src="./img/pricing/circle_check.svg" alt="" />
+                        <span>Unlimited edits</span>
+                      </li>
+                      <li>
+                        <img src="./img/pricing/circle_check.svg" alt="" />
+                        <span>Unlimited products</span>
+                      </li>
+                      <li>
+                        <img src="./img/pricing/circle_check.svg" alt="" />
+                        <span>Sell subscriptions & digital products</span>
+                      </li>
+                      <li>
+                        <img src="./img/pricing/circle_check.svg" alt="" />
+                        <span>Manage multi-seat bookings</span>
+                      </li>
+                      <li>
+                        <img src="./img/pricing/circle_check.svg" alt="" />
+                        <span>Enhanced marketing integrations</span>
+                      </li>
+                    </ul>
                   </div>
                 </div>
+                <!-- End Platinum -->
+
+                <!-- Growth -->
+                <div class="pricing-card">
+                  <header class="pricing-header">
+                    <img
+                      class="pricing-header-icon"
+                      src="./img/pricing/Growth.svg"
+                      alt="" />
+                    <h2>Growth</h2>
+                    <p class="sub-title">
+                      We grow your <br />
+                      business online
+                    </p>
+                    <div class="price">
+                      <span class="currency">$</span>
+                      <span class="price-value">
+                        73<span class="price-value-decimal">.25</span>
+                      </span>
+                      <span class="price-duration">/mo</span>
+                    </div>
+
+                    <p class="pricing-billed">Billed monthly</p>
+
+                    <div class="pricing-fee">
+                      +
+                      <span class="price-old">$599</span>
+                      $79 setup fee
+                    </div>
+                  </header>
+                  <div class="pricing-body">
+                    <button class="pricing-body-button">Contact Growth</button>
+                    <button
+                      class="pricing-body-button-save-bill button-nav-tab"
+                      data-target-id="two-year-tab-pane">
+                      Save $877 with two-year billing
+                      <i class="bi bi-arrow-up-right"></i>
+                    </button>
+                    <p class="label-list">Everything in Plus, and:</p>
+                    <ul class="pricing-body-features">
+                      <li>
+                        <img src="./img/pricing/circle_check.svg" alt="" />
+                        <span>Dedicated VIP Growth Team</span>
+                      </li>
+                      <li>
+                        <img src="./img/pricing/circle_check.svg" alt="" />
+                        <span>Marketing plan for your business</span>
+                      </li>
+                      <li>
+                        <img src="./img/pricing/circle_check.svg" alt="" />
+                        <span>1-on-1 monthly marketing sessions</span>
+                      </li>
+                      <li>
+                        <img src="./img/pricing/circle_check.svg" alt="" />
+                        <span
+                          >Marketing advice: email, social media, online ads,
+                          SEO, reputation, and more
+                        </span>
+                      </li>
+                      <li>
+                        <img src="./img/pricing/circle_check.svg" alt="" />
+                        <span
+                          >2,000 words of fresh content created for you</span
+                        >
+                      </li>
+                    </ul>
+                  </div>
+                </div>
+                <!-- End Growth -->
+
+                <!-- Plus -->
+                <div class="pricing-card active">
+                  <header class="pricing-header">
+                    <img
+                      class="pricing-header-icon"
+                      src="./img/pricing/Plus.svg"
+                      alt="" />
+                    <h2>Plus</h2>
+                    <p class="sub-title">
+                      We manage your <br />
+                      online presence
+                    </p>
+                    <div class="price">
+                      <span class="currency">$</span>
+                      <span class="price-value">
+                        44<span class="price-value-decimal">.08</span>
+                      </span>
+                      <span class="price-duration">/mo</span>
+                    </div>
+
+                    <p class="pricing-billed">Billed monthly</p>
+
+                    <div class="pricing-fee">
+                      +
+                      <span class="price-old">$599</span>
+                      $79 setup fee
+                    </div>
+                  </header>
+                  <div class="pricing-body">
+                    <button class="pricing-body-button">Contact Plus</button>
+                    <button
+                      class="pricing-body-button-save-bill button-nav-tab"
+                      data-target-id="two-year-tab-pane">
+                      Save $517 with two-year billing
+                      <i class="bi bi-arrow-up-right"></i>
+                    </button>
+                    <p class="label-list">Everything in Launch, and:</p>
+                    <ul class="pricing-body-features">
+                      <li>
+                        <img src="./img/pricing/circle_check.svg" alt="" />
+                        <span>4 email addresses</span>
+                      </li>
+                      <li>
+                        <img src="./img/pricing/circle_check.svg" alt="" />
+                        <span>Advanced SEO to rank on Google</span>
+                      </li>
+                      <li>
+                        <img src="./img/pricing/circle_check.svg" alt="" />
+                        <span>Unlimited done-for-you edits</span>
+                      </li>
+                      <li>
+                        <img src="./img/pricing/circle_check.svg" alt="" />
+                        <span
+                          >Integrations to convert visitors into customers: 3rd
+                          party integrations such as live chat, advanced
+                          designs, lead forms, multimedia & more
+                        </span>
+                      </li>
+                      <li>
+                        <img src="./img/pricing/circle_check.svg" alt="" />
+                        <span
+                          >Promote your products on Google, Facebook & Instagram
+                        </span>
+                      </li>
+                      <li>
+                        <img src="./img/pricing/circle_check.svg" alt="" />
+                        <span>VIP phone support</span>
+                      </li>
+                    </ul>
+                  </div>
+                </div>
+                <!-- End Plus -->
+
+                <!-- Website Launch -->
+                <div class="pricing-card">
+                  <header class="pricing-header">
+                    <img
+                      class="pricing-header-icon"
+                      src="./img/pricing/Website_Launch.svg"
+                      alt="" />
+                    <h2>Website Launch</h2>
+                    <p class="sub-title">
+                      We build & launch <br />
+                      your website
+                    </p>
+                    <div class="price">
+                      <span class="currency">$</span>
+                      <span class="price-value">
+                        12<span class="price-value-decimal">.42</span>
+                      </span>
+                      <span class="price-duration">/mo</span>
+                    </div>
+
+                    <p class="pricing-billed">Billed monthly</p>
+
+                    <div class="pricing-fee">
+                      +
+                      <span class="price-old">$599</span>
+                      $79 setup fee
+                    </div>
+                  </header>
+                  <div class="pricing-body">
+                    <button class="pricing-body-button">Contact Launch</button>
+                    <button
+                      class="pricing-body-button-save-bill button-nav-tab"
+                      data-target-id="two-year-tab-pane">
+                      Save $110 with two-year billing
+                      <i class="bi bi-arrow-up-right"></i>
+                    </button>
+                    <p class="label-list">Included in all plans:</p>
+                    <ul class="pricing-body-features">
+                      <li>
+                        <img src="./img/pricing/circle_check.svg" alt="" />
+                        <span>Built-for-you website / online store</span>
+                      </li>
+                      <li>
+                        <img src="./img/pricing/circle_check.svg" alt="" />
+                        <span>Personalized design & copy</span>
+                      </li>
+                      <li>
+                        <img src="./img/pricing/circle_check.svg" alt="" />
+                        <span>Fast loading to rank on Google</span>
+                      </li>
+                      <li>
+                        <img src="./img/pricing/circle_check.svg" alt="" />
+                        <span>Ready in 7 days</span>
+                      </li>
+                      <li>
+                        <img src="./img/pricing/circle_check.svg" alt="" />
+                        <span
+                          >Custom domain name or connect one you already have
+                        </span>
+                      </li>
+                      <li>
+                        <img src="./img/pricing/circle_check.svg" alt="" />
+                        <span>Professional email address</span>
+                      </li>
+                      <li>
+                        <img src="./img/pricing/circle_check.svg" alt="" />
+                        <span>Easy-to-use editor</span>
+                      </li>
+                      <li>
+                        <img src="./img/pricing/circle_check.svg" alt="" />
+                        <span>0% fees on sales & bookings</span>
+                      </li>
+                      <li>
+                        <img src="./img/pricing/circle_check.svg" alt="" />
+                        <span>1-to-1 launch & training call</span>
+                      </li>
+                      <li>
+                        <img src="./img/pricing/circle_check.svg" alt="" />
+                        <span>Secure hosting & SSL certificate</span>
+                      </li>
+                      <li>
+                        <img src="./img/pricing/circle_check.svg" alt="" />
+                        <span>30-Day Money-back Guarantee</span>
+                      </li>
+                    </ul>
+                  </div>
+                </div>
+                <!-- End Website Launch -->
+              </div>
+            </div>
+          </div>
+
+          <!-- Two-year -->
+          <div
+            class="tab-pane fade"
+            id="two-year-tab-pane"
+            role="tabpanel"
+            aria-labelledby="two-year-tab"
+            tabindex="0">
+            <div class="margin_30">
+              <div class="pricing-wrapper">
+                <!-- Platinum -->
+                <div class="pricing-card">
+                  <header class="pricing-header">
+                    <img
+                      class="pricing-header-icon"
+                      src="./img/pricing/Platinum.svg"
+                      alt="" />
+                    <h2>Platinum</h2>
+                    <p class="sub-title">
+                      We help you scale your <br />
+                      E-commerce business
+                    </p>
+                    <div class="price">
+                      <span class="currency">$</span>
+                      <span class="price-value">
+                        145<span class="price-value-decimal">.78</span>
+                      </span>
+                      <span class="price-duration">/mo</span>
+                    </div>
+
+                    <p class="pricing-billed">Billed monthly</p>
+
+                    <div class="pricing-fee">
+                      +
+                      <span class="price-old">$599</span>
+                      $199 setup fee
+                    </div>
+                  </header>
+                  <div class="pricing-body">
+                    <button class="pricing-body-button">Contact Us</button>
+                    <button class="pricing-body-button-save-bill">
+                      Your biggest savings
+                      <i class="bi bi-arrow-up-right"></i>
+                    </button>
+                    <p class="label-list">Everything in Growth, and:</p>
+                    <ul class="pricing-body-features">
+                      <li>
+                        <img src="./img/pricing/circle_check.svg" alt="" />
+                        <span>Advanced e-commerce</span>
+                      </li>
+                      <li>
+                        <img src="./img/pricing/circle_check.svg" alt="" />
+                        <span>Full webstore built for you</span>
+                      </li>
+                      <li>
+                        <img src="./img/pricing/circle_check.svg" alt="" />
+                        <span>Unlimited edits</span>
+                      </li>
+                      <li>
+                        <img src="./img/pricing/circle_check.svg" alt="" />
+                        <span>Unlimited products</span>
+                      </li>
+                      <li>
+                        <img src="./img/pricing/circle_check.svg" alt="" />
+                        <span>Sell subscriptions & digital products</span>
+                      </li>
+                      <li>
+                        <img src="./img/pricing/circle_check.svg" alt="" />
+                        <span>Manage multi-seat bookings</span>
+                      </li>
+                      <li>
+                        <img src="./img/pricing/circle_check.svg" alt="" />
+                        <span>Enhanced marketing integrations</span>
+                      </li>
+                    </ul>
+                  </div>
+                </div>
+                <!-- End Platinum -->
+
+                <!-- Growth -->
+                <div class="pricing-card">
+                  <header class="pricing-header">
+                    <img
+                      class="pricing-header-icon"
+                      src="./img/pricing/Growth.svg"
+                      alt="" />
+                    <h2>Growth</h2>
+                    <p class="sub-title">
+                      We grow your <br />
+                      business online
+                    </p>
+                    <div class="price">
+                      <span class="currency">$</span>
+                      <span class="price-value">
+                        62<span class="price-value-decimal">.46</span>
+                      </span>
+                      <span class="price-duration">/mo</span>
+                    </div>
+
+                    <p class="pricing-billed">Billed monthly</p>
+
+                    <div class="pricing-fee">
+                      +
+                      <span class="price-old">$599</span>
+                      $79 setup fee
+                    </div>
+                  </header>
+                  <div class="pricing-body">
+                    <button class="pricing-body-button">Contact Growth</button>
+                    <button class="pricing-body-button-save-bill">
+                      Your biggest savings
+                      <i class="bi bi-arrow-up-right"></i>
+                    </button>
+                    <p class="label-list">Everything in Plus, and:</p>
+                    <ul class="pricing-body-features">
+                      <li>
+                        <img src="./img/pricing/circle_check.svg" alt="" />
+                        <span>Dedicated VIP Growth Team</span>
+                      </li>
+                      <li>
+                        <img src="./img/pricing/circle_check.svg" alt="" />
+                        <span>Marketing plan for your business</span>
+                      </li>
+                      <li>
+                        <img src="./img/pricing/circle_check.svg" alt="" />
+                        <span>1-on-1 monthly marketing sessions</span>
+                      </li>
+                      <li>
+                        <img src="./img/pricing/circle_check.svg" alt="" />
+                        <span
+                          >Marketing advice: email, social media, online ads,
+                          SEO, reputation, and more
+                        </span>
+                      </li>
+                      <li>
+                        <img src="./img/pricing/circle_check.svg" alt="" />
+                        <span
+                          >2,000 words of fresh content created for you</span
+                        >
+                      </li>
+                    </ul>
+                  </div>
+                </div>
+                <!-- End Growth -->
+
+                <!-- Plus -->
+                <div class="pricing-card active">
+                  <header class="pricing-header">
+                    <img
+                      class="pricing-header-icon"
+                      src="./img/pricing/Plus.svg"
+                      alt="" />
+                    <h2>Plus</h2>
+                    <p class="sub-title">
+                      We manage your <br />
+                      online presence
+                    </p>
+                    <div class="price">
+                      <span class="currency">$</span>
+                      <span class="price-value">
+                        37<span class="price-value-decimal">.46</span>
+                      </span>
+                      <span class="price-duration">/mo</span>
+                    </div>
+
+                    <p class="pricing-billed">Billed monthly</p>
+
+                    <div class="pricing-fee">
+                      +
+                      <span class="price-old">$599</span>
+                      $79 setup fee
+                    </div>
+                  </header>
+                  <div class="pricing-body">
+                    <button class="pricing-body-button">Contact Plus</button>
+                    <button class="pricing-body-button-save-bill">
+                      Your biggest savings
+                      <i class="bi bi-arrow-up-right"></i>
+                    </button>
+                    <p class="label-list">Everything in Launch, and:</p>
+                    <ul class="pricing-body-features">
+                      <li>
+                        <img src="./img/pricing/circle_check.svg" alt="" />
+                        <span>4 email addresses</span>
+                      </li>
+                      <li>
+                        <img src="./img/pricing/circle_check.svg" alt="" />
+                        <span>Advanced SEO to rank on Google</span>
+                      </li>
+                      <li>
+                        <img src="./img/pricing/circle_check.svg" alt="" />
+                        <span>Unlimited done-for-you edits</span>
+                      </li>
+                      <li>
+                        <img src="./img/pricing/circle_check.svg" alt="" />
+                        <span
+                          >Integrations to convert visitors into customers: 3rd
+                          party integrations such as live chat, advanced
+                          designs, lead forms, multimedia & more
+                        </span>
+                      </li>
+                      <li>
+                        <img src="./img/pricing/circle_check.svg" alt="" />
+                        <span
+                          >Promote your products on Google, Facebook & Instagram
+                        </span>
+                      </li>
+                      <li>
+                        <img src="./img/pricing/circle_check.svg" alt="" />
+                        <span>VIP phone support</span>
+                      </li>
+                    </ul>
+                  </div>
+                </div>
+                <!-- End Plus -->
+
+                <!-- Website Launch -->
+                <div class="pricing-card">
+                  <header class="pricing-header">
+                    <img
+                      class="pricing-header-icon"
+                      src="./img/pricing/Website_Launch.svg"
+                      alt="" />
+                    <h2>Website Launch</h2>
+                    <p class="sub-title">
+                      We build & launch <br />
+                      your website
+                    </p>
+                    <div class="price">
+                      <span class="currency">$</span>
+                      <span class="price-value">
+                        10<span class="price-value-decimal">.80</span>
+                      </span>
+                      <span class="price-duration">/mo</span>
+                    </div>
+
+                    <p class="pricing-billed">Billed monthly</p>
+
+                    <div class="pricing-fee">
+                      +
+                      <span class="price-old">$599</span>
+                      $79 setup fee
+                    </div>
+                  </header>
+                  <div class="pricing-body">
+                    <button class="pricing-body-button">Contact Launch</button>
+                    <button class="pricing-body-button-save-bill">
+                      Your biggest savings
+                      <i class="bi bi-arrow-up-right"></i>
+                    </button>
+                    <p class="label-list">Included in all plans:</p>
+                    <ul class="pricing-body-features">
+                      <li>
+                        <img src="./img/pricing/circle_check.svg" alt="" />
+                        <span>Built-for-you website / online store</span>
+                      </li>
+                      <li>
+                        <img src="./img/pricing/circle_check.svg" alt="" />
+                        <span>Personalized design & copy</span>
+                      </li>
+                      <li>
+                        <img src="./img/pricing/circle_check.svg" alt="" />
+                        <span>Fast loading to rank on Google</span>
+                      </li>
+                      <li>
+                        <img src="./img/pricing/circle_check.svg" alt="" />
+                        <span>Ready in 7 days</span>
+                      </li>
+                      <li>
+                        <img src="./img/pricing/circle_check.svg" alt="" />
+                        <span
+                          >Custom domain name or connect one you already have
+                        </span>
+                      </li>
+                      <li>
+                        <img src="./img/pricing/circle_check.svg" alt="" />
+                        <span>Professional email address</span>
+                      </li>
+                      <li>
+                        <img src="./img/pricing/circle_check.svg" alt="" />
+                        <span>Easy-to-use editor</span>
+                      </li>
+                      <li>
+                        <img src="./img/pricing/circle_check.svg" alt="" />
+                        <span>0% fees on sales & bookings</span>
+                      </li>
+                      <li>
+                        <img src="./img/pricing/circle_check.svg" alt="" />
+                        <span>1-to-1 launch & training call</span>
+                      </li>
+                      <li>
+                        <img src="./img/pricing/circle_check.svg" alt="" />
+                        <span>Secure hosting & SSL certificate</span>
+                      </li>
+                      <li>
+                        <img src="./img/pricing/circle_check.svg" alt="" />
+                        <span>30-Day Money-back Guarantee</span>
+                      </li>
+                    </ul>
+                  </div>
+                </div>
+                <!-- End Website Launch -->
               </div>
             </div>
           </div>
