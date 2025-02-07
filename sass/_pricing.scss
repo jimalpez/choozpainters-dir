@@ -312,14 +312,17 @@
   box-shadow: 0px 0px 15px 0px rgba(0, 0, 0, 0.05);
   .pricing-title {
   }
+  .pricing-price-features {
+    background-color: #f5f8fa;
+    padding: 20px 30px;
+    margin: 0 -30px;
+  }
   .pricing-price {
     display: flex;
     justify-content: space-between;
     align-items: center;
     gap: 20px;
-    background-color: #f5f8fa;
-    padding: 20px 30px;
-    margin: 0 -30px 30px -30px;
+    margin-bottom: 30px;
     @include mobile {
       flex-direction: column;
     }
