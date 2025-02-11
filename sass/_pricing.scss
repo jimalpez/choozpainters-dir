@@ -382,7 +382,8 @@
   }
   .pricing-features {
     display: flex;
-    gap: 20px;
+    row-gap: 20px;
+    column-gap: 60px;
     @include mobile {
       flex-direction: column;
     }
