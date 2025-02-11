@@ -1,3 +1,5 @@
+import { getData } from "./api/api";
+
 class Header extends HTMLElement {
   constructor() {
     super();
@@ -9,6 +11,18 @@ class Header extends HTMLElement {
         header.classList.remove("sticky");
       }
     });
+
+    this.loadData();
+  }
+
+  async loadData() {
+    const data = await getData(); // This should use the correct URL from api.js
+    if (data && data.address && data.city) {
+      console.log("Address:", data.address);
+      console.log("City:", data.city);
+    } else {
+      console.log("Required data not found.");
+    }
   }
 
   get classes() {
