@@ -1,4 +1,4 @@
-import { getData } from "./api/api";
+const getData = "http://127.0.0.1:8000/";
 
 class Header extends HTMLElement {
   constructor() {
@@ -16,12 +16,16 @@ class Header extends HTMLElement {
   }
 
   async loadData() {
-    const data = await getData(); // This should use the correct URL from api.js
-    if (data && data.address && data.city) {
-      console.log("Address:", data.address);
-      console.log("City:", data.city);
-    } else {
-      console.log("Required data not found.");
+    try {
+      const response = await fetch(getData);
+      const data = await response.json(); // Assuming the response is in JSON format
+      console.log("All data:", data);
+
+      // Filter and log the city values
+      const cities = data.filter((item) => item.city).map((item) => item.city);
+      console.log("Cities:", cities); // This will display an array of city names
+    } catch (error) {
+      console.error("Error fetching data:", error);
     }
   }
 

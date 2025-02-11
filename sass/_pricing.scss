@@ -329,7 +329,13 @@
       flex-direction: column;
     }
     &-text {
-      flex: 1;
+      width: 65%;
+      @include mobile {
+        width: 100%;
+      }
+      h2 {
+        @include fontSize(38px);
+      }
     }
     &-button {
       flex: 1;
