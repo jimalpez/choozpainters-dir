@@ -200,6 +200,8 @@
         <div id="map_listing" class="normal_list"></div>
       </div>
       <!-- /app_section -->
+
+      <ul id="contractor-list"></ul>
     </main>
     <!-- /main content -->
 
@@ -236,6 +238,34 @@
         $.cookieBar({
           fixed: true,
         });
+      });
+    </script>
+
+    <script>
+      // Sample contractor data (you can fetch this from your FastAPI backend)
+      const contractors = [
+        { state: "missouri", business_name: "Astra Painters LLC" },
+        { state: "missouri", business_name: "Ultimate Painting & More LLC" },
+      ];
+
+      // Function to convert business name into slug
+      function slugify(text) {
+        return text
+          .toLowerCase()
+          .replace(/\s+/g, "-")
+          .replace(/&/g, "-")
+          .replace(/---/g, "-");
+      }
+
+      // Get the list element
+      const contractorList = document.getElementById("contractor-list");
+
+      // Loop through contractors and create links
+      contractors.forEach((contractor) => {
+        const li = document.createElement("li");
+        const slug = slugify(contractor.business_name);
+        li.innerHTML = `<a href="/contractor/${contractor.state}/${slug}/">${contractor.business_name}</a>`;
+        contractorList.appendChild(li);
       });
     </script>
   </body>
