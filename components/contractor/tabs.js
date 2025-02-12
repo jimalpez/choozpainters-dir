@@ -68,27 +68,27 @@ export class ContractorTabs extends HTMLElement {
                 <div class="gallery-equal">
                     <div class="gallery-equal-item">
                     <img
-                        src="./img/contractors/Astra-logo.jpg"
+                        src="/img/contractors/Astra-logo.jpg"
                         alt="Astra Logo" />
                     </div>
                     <div class="gallery-equal-item">
                     <img
-                        src="./img/contractors/Astra-1.png"
+                        src="/img/contractors/Astra-1.png"
                         alt="Astra Logo" />
                     </div>
                     <div class="gallery-equal-item">
                     <img
-                        src="./img/contractors/Astra-2.png"
+                        src="/img/contractors/Astra-2.png"
                         alt="Astra Logo" />
                     </div>
                     <div class="gallery-equal-item">
                     <img
-                        src="./img/contractors/Astra-4.png"
+                        src="/img/contractors/Astra-4.png"
                         alt="Astra Logo" />
                     </div>
                     <div class="gallery-equal-item">
                     <img
-                        src="./img/contractors/Astra-5.png"
+                        src="/img/contractors/Astra-5.png"
                         alt="Astra Logo" />
                     </div>
                 </div>

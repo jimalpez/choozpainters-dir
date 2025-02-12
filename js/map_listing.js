@@ -108,7 +108,7 @@ function getInfoBox(item) {
           <img src="${item.company_logo}" alt="Logo" />
         </a>`
             : `<a href="${item.url_detail}" class="marker_info_placeholder">
-              <img src="./img/logo/choozpainters-logo_white.png" alt="Logo White" />
+              <img src="/img/logo/choozpainters-logo_white.png" alt="Logo White" />
             </a>`
         }
       </div>`,

@@ -67,7 +67,7 @@
     <main>
       <hero-section class="version_gradient"></hero-section>
 
-      <div class="curve-custom">
+      <!-- <div class="curve-custom">
         <div class="added-bar"></div>
         <svg
           class="curve-top-in"
@@ -79,7 +79,7 @@
           <path d="M50,50h50V0C100,0,77.6,50,50,50z"></path>
           <path d="M0,0v50h50C22.4,50,0,0,0,0z"></path>
         </svg>
-      </div>
+      </div> -->
 
       <!-- Categories -->
       <categories-white></categories-white>
@@ -94,11 +94,11 @@
         <div class="slider_wrapper">
           <div class="slider_home">
             <div class="slide-item card-custom-rounded">
-              <a href="/contractor_page.html" class="slide_info_image">
+              <a
+                href="/contractor_page.html"
+                class="slide_info_image slide_info_image_full">
                 <div class="logo_image">
-                  <img
-                    src="./img/logo/choozpainters-logo_white.png"
-                    alt="Logo White" />
+                  <img src="/img/contractors/Astra-logo.jpg" alt="Logo White" />
                 </div>
               </a>
               <div class="slide_info">
@@ -109,11 +109,11 @@
               </div>
             </div>
             <div class="slide-item card-custom-rounded">
-              <a href="/contractor_page.html" class="slide_info_image">
+              <a
+                href="/contractor_page.html"
+                class="slide_info_image slide_info_image_full">
                 <div class="logo_image">
-                  <img
-                    src="./img/logo/choozpainters-logo_white.png"
-                    alt="Logo White" />
+                  <img src="/img/contractors/Astra-logo.jpg" alt="Logo White" />
                 </div>
               </a>
               <div class="slide_info">
@@ -124,11 +124,11 @@
               </div>
             </div>
             <div class="slide-item card-custom-rounded">
-              <a href="/contractor_page.html" class="slide_info_image">
+              <a
+                href="/contractor_page.html"
+                class="slide_info_image slide_info_image_full">
                 <div class="logo_image">
-                  <img
-                    src="./img/logo/choozpainters-logo_white.png"
-                    alt="Logo White" />
+                  <img src="/img/contractors/Astra-logo.jpg" alt="Logo White" />
                 </div>
               </a>
               <div class="slide_info">
@@ -139,11 +139,11 @@
               </div>
             </div>
             <div class="slide-item card-custom-rounded">
-              <a href="/contractor_page.html" class="slide_info_image">
+              <a
+                href="/contractor_page.html"
+                class="slide_info_image slide_info_image_full">
                 <div class="logo_image">
-                  <img
-                    src="./img/logo/choozpainters-logo_white.png"
-                    alt="Logo White" />
+                  <img src="/img/contractors/Astra-logo.jpg" alt="Logo White" />
                 </div>
               </a>
               <div class="slide_info">
@@ -166,7 +166,7 @@
             <div class="card-custom">
               <div class="logo_image">
                 <img
-                  src="./img/logo/choozpainters-logo_white.png"
+                  src="/img/logo/choozpainters-logo_white.png"
                   alt="Logo White" />
               </div>
               <h5>BBB Tip: How to spot and avoid identify theft</h5>
@@ -176,7 +176,7 @@
             <div class="card-custom">
               <div class="logo_image">
                 <img
-                  src="./img/logo/choozpainters-logo_white.png"
+                  src="/img/logo/choozpainters-logo_white.png"
                   alt="Logo White" />
               </div>
               <h5>BBB's identity theft HQ</h5>
@@ -186,7 +186,7 @@
             <div class="card-custom">
               <div class="logo_image">
                 <img
-                  src="./img/logo/choozpainters-logo_white.png"
+                  src="/img/logo/choozpainters-logo_white.png"
                   alt="Logo White" />
               </div>
               <h5>BBB Tip: Data Privacy</h5>
@@ -210,22 +210,25 @@
     <!-- Back to top button -->
 
     <!-- COMMON SCRIPTS -->
-    <script src="js/jquery-3.7.1.min.js"></script>
-    <script src="js/common_scripts.min.js"></script>
-    <script src="js/functions.js"></script>
-    <script src="js/slider.js" type="module"></script>
+    <script src="/js/jquery-3.7.1.min.js"></script>
+    <script src="/js/common_scripts.min.js"></script>
+    <script src="/js/functions.js"></script>
+    <script src="/js/slider.js" type="module"></script>
 
     <!-- COMPONENTS -->
-    <script src="components/app.js" type="module"></script>
+    <script type="module" src="/components/app.js"></script>
+    <script
+      type="module"
+      src="/components/categories/categories_white.js"></script>
 
     <!-- SPECIFIC SCRIPTS -->
-    <script src="js/jquery.cookiebar.js"></script>
+    <script src="/js/jquery.cookiebar.js"></script>
 
     <!-- MAP -->
     <!-- <script src="http://maps.googleapis.com/maps/api/js"></script> -->
-    <script src="js/map_listing.js"></script>
-    <script src="js/markerclusterer.js"></script>
-    <script src="js/infobox.js"></script>
+    <script src="/js/map_listing.js"></script>
+    <script src="/js/markerclusterer.js"></script>
+    <script src="/js/infobox.js"></script>
 
     <script>
       $(document).ready(function () {

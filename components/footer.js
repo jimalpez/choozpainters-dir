@@ -11,7 +11,7 @@ class Footer extends HTMLElement {
                 <div class="col-lg-6">
                     <div class="row">
                     <div class="col-md-5">
-                        <img class="footer-logo" src="./img/logo/choozpainters-logo_white.png" alt="Logo Footer">
+                        <img class="footer-logo" src="/img/logo/choozpainters-logo_white.png" alt="Logo Footer">
                         <ul class="footer-list">
                         <li>
                             <i class="bi bi-envelope"></i>
@@ -66,7 +66,7 @@ class Footer extends HTMLElement {
                     <div class="post-wrapper"">
                     <h5>Recent Posts</h5>
                     <div class="post-item">
-                        <img src="./img/painter-scout-bg-home1.jpg" alt="" />
+                        <img src="/img/painter-scout-bg-home1.jpg" alt="" />
                         <div class="post-item-info">
                         <h5>Finding Trusted Painters in Your Area</h5>
                         <p>

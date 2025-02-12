@@ -40,23 +40,23 @@ class HeroSection extends HTMLElement {
                 <div class="floating-images">
                     <!-- left Images -->
                     <img
-                        src="./img/floating_images/cloud-medium-light-blue-border-1.png"
+                        src="/img/floating_images/cloud-medium-light-blue-border-1.png"
                         alt="Cloud"
                         class="float-cloud-bottom-left float-cloud" />
 
                     <!-- Right Images -->
                     <img
-                        src="./img/floating_images/cloud-medium-light-blue-border-1.png"
+                        src="/img/floating_images/cloud-medium-light-blue-border-1.png"
                         alt="Cloud"
                         class="float-cloud-top-right float-cloud" />
                     <img
-                        src="./img/floating_images/choozpainters-balloon-2.png"
+                        src="/img/floating_images/choozpainters-balloon-2.png"
                         alt="Hot Air Balloon"
                         class="float-hot-air-ballon" />
 
                     <!-- Mobile Right Images -->
                     <img
-                        src="./img/floating_images/choozpainters-balloon-2.png"
+                        src="/img/floating_images/choozpainters-balloon-2.png"
                         alt="Hot Air Balloon"
                         class="float-hot-air-ballon float-hot-air-ballon-mobile-right" />
                 </div>
