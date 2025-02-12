@@ -49,4 +49,7 @@
       @include fontSize(22px);
     }
   }
+  &_result {
+    @include fontSize(18px);
+  }
 }
