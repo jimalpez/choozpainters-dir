@@ -191,37 +191,53 @@
     <!-- /Header -->
 
     <main>
+      <div id="breadcrumb">
+        <div class="container">
+          <ul>
+            <li><a href="#">Home</a></li>
+            <li><a href="#">Category</a></li>
+            <li>Page active</li>
+          </ul>
+        </div>
+      </div>
+      <!-- /breadcrumb -->
+       
       <div id="results">
         <div class="container">
           <div class="row">
             <div class="col-12">
+              <h3 class="heading-list-small">
+                Enter information in at least one field (required)
+              </h3>
               <div class="list_search_bar">
                 <div class="list_search_bar_group">
-                  <label for="find">Find</label>
+                  <label for="find">
+                    Search for legal issue or attorney name
+                  </label>
                   <input
                     id="find"
                     type="search"
                     class="list_search_bar_group_search"
-                    placeholder="businesses, category" />
+                    placeholder="Personal Injury" />
                 </div>
                 <div class="list_search_bar_group">
-                  <label for="near">Near</label>
+                  <label for="near">Location (city/state or ZIP code)</label>
                   <input
                     id="near"
                     type="search"
                     class="list_search_bar_group_search"
-                    placeholder="Cheney, KS" />
-                  <select id="country" name="country">
+                    placeholder="Saint Louis, MO" />
+                  <!-- <select id="country" name="country">
                     <option value="US">🇺🇸 US</option>
                     <option value="GB">🇬🇧 GB</option>
                     <option value="CA">🇨🇦 CA</option>
                     <option value="AU">🇦🇺 AU</option>
                     <option value="IN">🇮🇳 IN</option>
-                  </select>
+                  </select> -->
                 </div>
                 <input
                   type="button"
-                  value="Search"
+                  value="Find Painters"
                   class="list_search_bar_group_search_button" />
               </div>
             </div>

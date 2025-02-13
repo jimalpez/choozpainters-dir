@@ -53,4 +53,10 @@
   &_result {
     @include fontSize(18px);
   }
+  &-list-small {
+    color: #fff;
+    @include fontSize(16px);
+    margin-bottom: 10px;
+    font-weight: 400;
+  }
 }
