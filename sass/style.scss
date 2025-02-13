@@ -1364,7 +1364,7 @@ iframe {
 #results {
   padding: 20px 0;
   color: #fff;
-  background: $primary-color;
+  background: #395fb0;
   @include mobile {
     padding: 10px 0;
   }
@@ -2196,10 +2196,10 @@ a.wish_bt {
 
 /*-------- 2.4 Detail page  --------*/
 #breadcrumb {
-  background-color: $primary-color;
+  // background-color: $primary-color;
   padding: 25px 0;
   line-height: $line-height-none;
-  color: #fff;
+  color: #000;
   @include mobile {
     padding: 15px 0;
   }
@@ -2212,7 +2212,7 @@ a.wish_bt {
       margin-right: 3px;
       position: relative;
       a {
-        color: #fff;
+        color: #000;
         &:hover {
           color: $third-color;
         }
