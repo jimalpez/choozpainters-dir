@@ -11,8 +11,8 @@
     position: relative;
     max-width: 42%;
     width: 100%;
-    // display: flex;
-    // align-items: center;
+    display: flex;
+    flex-direction: column;
     label {
       // position: absolute;
       // top: 50%;
@@ -45,6 +45,23 @@
         outline: none;
       }
     }
+    select {
+      padding-left: 15px;
+      padding-right: 15px;
+      border: none;
+      border-radius: 0;
+      width: 100%;
+      height: 40px;
+      @include border-radius(8px);
+      @include mobile {
+        max-width: 100%;
+      }
+      &:focus {
+        box-shadow: none;
+        border: none;
+        outline: none;
+      }
+    }
     &_search_button {
       border: none;
       background: $third-color;
@@ -55,7 +72,7 @@
       display: flex;
       justify-content: center;
       align-items: center;
-      border-radius: 999px;
+      @include border-radius(8px);
     }
   }
 }

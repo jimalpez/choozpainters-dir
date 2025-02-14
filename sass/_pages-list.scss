@@ -1,0 +1,32 @@
+.pages_list {
+  margin: 0;
+  padding-bottom: 30px;
+  list-style: none;
+  li {
+    margin: 0;
+    padding: 0;
+    border-bottom: 1px solid $border-color-2;
+  }
+  li:last-child {
+    border-bottom: none;
+  }
+  li a {
+    display: block;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    color: $body-text-color;
+    &:hover {
+      color: $third-color;
+      h5 {
+        color: $third-color;
+      }
+    }
+    h5 {
+      margin: 0;
+    }
+    p {
+      margin: 0;
+      @include fontSize(14px);
+    }
+  }
+}

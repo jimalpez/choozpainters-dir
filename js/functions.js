@@ -103,7 +103,7 @@
 	// Sticky horizontal results list page
 	$("#results").stick_in_parent({
 		spacer: false,
-		offset_top: 0
+		offset_top: 60
 	});
 
 	// Sticky sidebar
