@@ -68,7 +68,12 @@ class Header extends HTMLElement {
                                 <a href="#0" class="show-submenu">Blog</a>
                             </li>
                             <li class="submenu">
-                                <a href="#0" class="show-submenu">Pages</a>
+                                <a href="#" class="show-submenu">Pages</a>
+                                <ul class="submenu-dropdown">
+                                    <li><a href="/pricing.html">Pricing</a></li>
+                                    <li><a href="/list.html">Listing</a></li>
+                                    <li><a href="/contractor_page.html">Profile</a></li>
+                                </ul>
                             </li>
                           </ul>
                       </div>
