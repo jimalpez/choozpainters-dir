@@ -1,4 +1,4 @@
-const getData = "http://127.0.0.1:8000/";
+const getData = "https://nrroyfmyiff6qhks7i2xdmgcxu0erbid.lambda-url.us-east-1.on.aws/";
 
 class Header extends HTMLElement {
   constructor() {

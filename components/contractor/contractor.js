@@ -28,7 +28,7 @@ class Contractor extends HTMLElement {
     const slug = pathSegments[2];
 
     try {
-      const response = await fetch("http://127.0.0.1:8000/");
+      const response = await fetch("https://nrroyfmyiff6qhks7i2xdmgcxu0erbid.lambda-url.us-east-1.on.aws/");
       if (!response.ok) {
         throw new Error("Failed to fetch contractors");
       }
