@@ -64,6 +64,8 @@ class Contractor extends HTMLElement {
   render() {
     if (this.contractorData) {
       this.innerHTML = `
+        <div class="layer"></div>
+      
         <header-component></header-component>
 
         <main>
@@ -83,14 +85,21 @@ class Contractor extends HTMLElement {
                     <div class="col-xl-8 col-lg-8 padding_r_50_desktop">
                         <contractor-gallery></contractor-gallery>
                         <contractor-tabs></contractor-tabs>
-                        <contractor-map></contractor-map>
+                        <contractor-map
+                          data-latitude="${this.contractorData.location_latitude}"
+                          data-longitude="${this.contractorData.location_longitude}"
+                        ></contractor-map>
                     </div>
                     <aside class="col-xl-4 col-lg-4" id="sidebar">
                         <contractor-sidebar
                           data-address="${this.contractorData.address}"
-                          data-company_phone="${this.contractorData.company_phone}"
+                          data-company_phone="${
+                            this.contractorData.company_phone
+                          }"
                           data-website="${this.contractorData.website}"
-                          data-services='${JSON.stringify(this.contractorData.services)}'
+                          data-services='${JSON.stringify(
+                            this.contractorData.services,
+                          )}'
                         ></contractor-sidebar>
                     </aside>
                 </div>
