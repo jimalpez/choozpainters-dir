@@ -5,7 +5,7 @@ export class ContractorHeading extends HTMLElement {
 
   connectedCallback() {
     // Get attributes from the parent component
-    const name = this.getAttribute("data-title") || "TItle";
+    const title = this.getAttribute("data-title") || "TItle";
     const city = this.getAttribute("data-city") || "City";
     const region = this.getAttribute("data-region") || "Region";
     const country = this.getAttribute("data-country") || "Country";
@@ -13,10 +13,22 @@ export class ContractorHeading extends HTMLElement {
     const website = this.getAttribute("data-website") || "N/A";
     const facebook = this.getAttribute("data-facebook") || "N/A";
     const google_bp = this.getAttribute("data-google_bp") || "N/A";
+    const category = this.getAttribute("data-category") || "Category";
 
     this.innerHTML = `
-          <div class="padding_t_30 margin_b_30">
-              <h1 class="heading_contractor">${name}</h1>
+        <div id="breadcrumb">
+            <div class="container">
+                <ul>
+                    <li><a href="/">Home</a></li>
+                    <li><a href="#">${region}</a></li>
+                    <li><a href="#">${city}</a></li>
+                    <li><a href="#">${category}</a></li>
+                    <li>${title}</li>
+                </ul>
+            </div>
+        </div>
+          <div class="margin_b_30">
+              <h1 class="heading_contractor">${title}</h1>
               <p class="contactor_address">
                   <i class="bi bi-geo-alt-fill"></i>
                   <span>${city}, ${region}, ${country}</span>

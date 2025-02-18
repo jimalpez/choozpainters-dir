@@ -11,7 +11,7 @@ export class ContractorMap extends HTMLElement {
     this.innerHTML = `
       <div class="margin_60">
         <h4 class="heading_contractor-sm">Map</h4>
-        <div id="map_listing" class="contactor_page_map" style="height: 500px;"></div>
+        <div id="map_listing" class="contactor_page_map"></div>
       </div>
     `;
 
