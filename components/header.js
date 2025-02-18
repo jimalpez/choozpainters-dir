@@ -58,7 +58,8 @@ class Header extends HTMLElement {
                           </li>
                           <li class="only-desktop">
                             <a href="register-doctor.html" class="btn_1 small white">
-                              <span class="plus">+</span> <span> Add You Company </span>
+                              <!-- <span class="plus">+</span> <span> Add You Company </span> -->
+                              Claim Page
                             </a>
                           </li>
                       </ul>

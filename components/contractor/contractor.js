@@ -3,6 +3,8 @@ import "./gallery.js";
 import "./tabs.js";
 import "./map.js";
 import "./sidebar.js";
+import "./../header.js";
+import "./../footer.js";
 
 class Contractor extends HTMLElement {
   constructor() {
@@ -11,12 +13,20 @@ class Contractor extends HTMLElement {
   }
 
   async connectedCallback() {
+    this.renderPreloader(); // Show preloader initially
     await this.fetchContractorData();
     this.render();
   }
 
+  renderPreloader() {
+    this.innerHTML = `
+      <div id="preloader">
+        <div data-loader="circle-side"></div>
+      </div>
+    `;
+  }
+
   async fetchContractorData() {
-    // Get region and slug from the URL (e.g., "/contractor/missouri/astra-painters-llc/")
     const pathSegments = window.location.pathname.split("/").filter(Boolean);
 
     if (pathSegments.length < 3 || pathSegments[0] !== "contractor") {
@@ -28,14 +38,14 @@ class Contractor extends HTMLElement {
     const slug = pathSegments[2];
 
     try {
-      const response = await fetch("https://nrroyfmyiff6qhks7i2xdmgcxu0erbid.lambda-url.us-east-1.on.aws/");
+      const response = await fetch(
+        "https://nrroyfmyiff6qhks7i2xdmgcxu0erbid.lambda-url.us-east-1.on.aws/",
+      );
       if (!response.ok) {
         throw new Error("Failed to fetch contractors");
       }
 
       const contractors = await response.json();
-
-      // Find the contractor that matches region and slug
       this.contractorData = contractors.find(
         (contractor) =>
           contractor.region.toLowerCase() === region.toLowerCase() &&
@@ -54,14 +64,20 @@ class Contractor extends HTMLElement {
   render() {
     if (this.contractorData) {
       this.innerHTML = `
+        <header-component></header-component>
+
         <main>
             <div class="container">
                 <contractor-heading 
-                  data-name="${this.contractorData.title}" 
+                  data-title="${this.contractorData.title}" 
                   data-city="${this.contractorData.city}" 
-                  data-state="${this.contractorData.region}" 
-                  data-phone="${this.contractorData.company_phone}">
-                </contractor-heading>
+                  data-region="${this.contractorData.region}" 
+                  data-country="${this.contractorData.country}" 
+                  data-company_phone="${this.contractorData.company_phone}"
+                  data-website="${this.contractorData.website}"
+                  data-facebook="${this.contractorData.facebook}"
+                  data-google_bp="${this.contractorData.google_bp}"
+                ></contractor-heading>
 
                 <div class="row">
                     <div class="col-xl-8 col-lg-8 padding_r_50_desktop">
@@ -70,11 +86,18 @@ class Contractor extends HTMLElement {
                         <contractor-map></contractor-map>
                     </div>
                     <aside class="col-xl-4 col-lg-4" id="sidebar">
-                        <contractor-sidebar></contractor-sidebar>
+                        <contractor-sidebar
+                          data-address="${this.contractorData.address}"
+                          data-company_phone="${this.contractorData.company_phone}"
+                          data-website="${this.contractorData.website}"
+                          data-services='${JSON.stringify(this.contractorData.services)}'
+                        ></contractor-sidebar>
                     </aside>
                 </div>
             </div>
         </main>
+
+        <footer-component></footer-component>
       `;
     } else {
       this.innerHTML = `<p>Contractor not found.</p>`;
