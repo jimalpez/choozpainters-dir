@@ -22,7 +22,7 @@ export class ContractorHeading extends HTMLElement {
                     <li><a href="/">Home</a></li>
                     <li><a href="#">${region}</a></li>
                     <li><a href="#">${city}</a></li>
-                    <li><a href="#">${category}</a></li>
+                    <li><a href="#">${category.replace(/-/g, ' ')}</a></li>
                     <li>${title}</li>
                 </ul>
             </div>
