@@ -29,27 +29,38 @@ class Contractor extends HTMLElement {
   async fetchContractorData() {
     const pathSegments = window.location.pathname.split("/").filter(Boolean);
 
-    if (pathSegments.length < 3 || pathSegments[0] !== "contractor") {
+    let queryParams = {};
+
+    if (pathSegments.length === 3 && pathSegments[0] === "contractor") {
+      queryParams = { region: pathSegments[1], slug: pathSegments[2] };
+    } else if (pathSegments.length === 4) {
+      queryParams = {
+        region: pathSegments[0],
+        city: pathSegments[1],
+        category: pathSegments[2],
+        slug: pathSegments[3],
+      };
+    } else {
       console.error("Invalid contractor URL format.");
       return;
     }
 
-    const region = pathSegments[1];
-    const slug = pathSegments[2];
-
     try {
+      const queryString = new URLSearchParams(queryParams).toString();
       const response = await fetch(
-        "https://nrroyfmyiff6qhks7i2xdmgcxu0erbid.lambda-url.us-east-1.on.aws/",
+        `https://nrroyfmyiff6qhks7i2xdmgcxu0erbid.lambda-url.us-east-1.on.aws/?${queryString}`,
       );
+
       if (!response.ok) {
-        throw new Error("Failed to fetch contractors");
+        throw new Error("Failed to fetch contractor data");
       }
 
       const contractors = await response.json();
-      this.contractorData = contractors.find(
-        (contractor) =>
-          contractor.region.toLowerCase() === region.toLowerCase() &&
-          contractor.slug === slug,
+      this.contractorData = contractors.find((contractor) =>
+        Object.keys(queryParams).every(
+          (key) =>
+            contractor[key]?.toLowerCase() === queryParams[key].toLowerCase(),
+        ),
       );
 
       if (!this.contractorData) {
@@ -87,8 +98,12 @@ class Contractor extends HTMLElement {
                         <contractor-gallery></contractor-gallery>
                         <contractor-tabs></contractor-tabs>
                         <contractor-map
-                          data-latitude="${this.contractorData.location_latitude}"
-                          data-longitude="${this.contractorData.location_longitude}"
+                          data-latitude="${
+                            this.contractorData.location_latitude
+                          }"
+                          data-longitude="${
+                            this.contractorData.location_longitude
+                          }"
                         ></contractor-map>
                     </div>
                     <aside class="col-xl-4 col-lg-4" id="sidebar">
