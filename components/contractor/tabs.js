@@ -1,10 +1,36 @@
 export class ContractorTabs extends HTMLElement {
-    constructor() {
-      super();
+  constructor() {
+    super();
+  }
+
+  connectedCallback() {
+    const description = this.getAttribute("data-description");
+    const company_logo = this.getAttribute("data-company_logo");
+
+    let imagesArray = [];
+    try {
+      const company_images = this.getAttribute("data-company_images");
+      imagesArray = company_images ? JSON.parse(company_images) : [];
+    } catch (error) {
+      console.error(
+        "Invalid JSON in data-company_images attribute",
+        company_images,
+        error,
+      );
+      imagesArray = [];
     }
-  
-    connectedCallback() {
-      this.innerHTML = `
+
+    const imagesArrayList = imagesArray
+      .map((image) => `
+        <div class="gallery-equal-item">
+            <img
+                src="${image}"
+                alt="Astra Logo" />
+        </div>
+      `)
+      .join("");
+
+    this.innerHTML = `
         <ul class="nav nav-tabs" id="myTab" role="tablist">
             <li class="nav-item" role="presentation">
                 <button
@@ -38,24 +64,7 @@ export class ContractorTabs extends HTMLElement {
         <div class="tab-content" id="myTabContent">
             <div class="tab-pane fade show active" id="home-tab-pane" role="tabpanel" aria-labelledby="home-tab" tabindex="0">
                 <div class="margin_30">
-                    <p>
-                        We are painting professionals specializing in interior
-                        painting for rental, residential and commercial properties.
-                    </p>
-                    <p>
-                        We service St. Louis City, St. Louis County and St. Charles
-                        County with punctuality and attention to detail.
-                    </p>
-                    <p>
-                        We are fully insured, including liability insurance and
-                        workers compensation. In the unlikely event of a mishap on
-                        the job, you can rest easy knowing that you have protection.
-                    </p>
-                    <p>
-                        We are fully licensed and registered in the State of
-                        Missouri. Our professionals are drug-free and have clean
-                        background checks. No exceptions.
-                    </p>
+                    ${description}
                 </div>
             </div>
             <div
@@ -65,39 +74,19 @@ export class ContractorTabs extends HTMLElement {
                 aria-labelledby="profile-tab"
                 tabindex="0">
                 <div class="margin_30">
-                <div class="gallery-equal">
-                    <div class="gallery-equal-item">
-                    <img
-                        src="/img/contractors/Astra-logo.jpg"
-                        alt="Astra Logo" />
+                    <div class="gallery-equal">
+                        <div class="gallery-equal-item">
+                            <img
+                                src="${company_logo}"
+                                alt="Astra Logo" />
+                        </div>
+                       ${imagesArrayList}
                     </div>
-                    <div class="gallery-equal-item">
-                    <img
-                        src="/img/contractors/Astra-1.png"
-                        alt="Astra Logo" />
-                    </div>
-                    <div class="gallery-equal-item">
-                    <img
-                        src="/img/contractors/Astra-2.png"
-                        alt="Astra Logo" />
-                    </div>
-                    <div class="gallery-equal-item">
-                    <img
-                        src="/img/contractors/Astra-4.png"
-                        alt="Astra Logo" />
-                    </div>
-                    <div class="gallery-equal-item">
-                    <img
-                        src="/img/contractors/Astra-5.png"
-                        alt="Astra Logo" />
-                    </div>
-                </div>
                 </div>
             </div>
         </div>
       `;
-    }
   }
-  
-  customElements.define("contractor-tabs", ContractorTabs);
-  
+}
+
+customElements.define("contractor-tabs", ContractorTabs);

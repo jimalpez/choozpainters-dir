@@ -73,6 +73,8 @@ class Contractor extends HTMLElement {
   }
 
   render() {
+    console.log(this.contractorData);
+
     if (this.contractorData) {
       this.innerHTML = `
         <div class="layer"></div>
@@ -95,8 +97,26 @@ class Contractor extends HTMLElement {
 
                 <div class="row">
                     <div class="col-xl-8 col-lg-8 padding_r_50_desktop">
-                        <contractor-gallery></contractor-gallery>
-                        <contractor-tabs></contractor-tabs>
+                        <contractor-gallery
+                          data-company_logo="${
+                            this.contractorData.company_logo || ""
+                          }"
+                          data-company_images='${JSON.stringify(
+                            this.contractorData.company_images || [],
+                          )}'
+                        ></contractor-gallery>
+                        <contractor-tabs
+                          data-description="${
+                            this.contractorData.description || ""
+                          }"
+                          data-company_logo="${
+                            this.contractorData.company_logo || ""
+                          }"
+                          data-company_images='${JSON.stringify(
+                            this.contractorData.company_images || [],
+                          )}'
+                        ></contractor-tabs>
+
                         <contractor-map
                           data-latitude="${
                             this.contractorData.location_latitude
