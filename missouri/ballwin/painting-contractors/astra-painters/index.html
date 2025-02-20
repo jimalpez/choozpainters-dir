@@ -53,7 +53,22 @@
   <body>
     <contractor-component></contractor-component>
 
+    <script src="/js/jquery-3.7.1.min.js"></script>
+    <script src="/js/common_scripts.min.js"></script>
+    <script src="/js/functions.js"></script>
+
+    <script src="/js/jquery.cookiebar.js"></script>
+
     <script src="/js/common_scripts.min.js"></script>
     <script src="/components/contractor/contractor.js" type="module"></script>
+
+    <script>
+      $(document).ready(function () {
+        "use strict";
+        $.cookieBar({
+          fixed: true,
+        });
+      });
+    </script>
   </body>
 </html>

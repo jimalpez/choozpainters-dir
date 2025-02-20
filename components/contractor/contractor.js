@@ -116,6 +116,9 @@ class Contractor extends HTMLElement {
                           data-services='${JSON.stringify(
                             this.contractorData.services,
                           )}'
+                          data-year_of_experience="${
+                            this.contractorData.year_of_experience
+                          }"
                         ></contractor-sidebar>
                     </aside>
                 </div>

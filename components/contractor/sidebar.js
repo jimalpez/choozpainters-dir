@@ -8,6 +8,7 @@ export class ContractorSidebar extends HTMLElement {
     const address = this.getAttribute("data-address") || "N/A";
     const company_phone = this.getAttribute("data-company_phone") || "N/A";
     const website = this.getAttribute("data-website") || "N/A";
+    const year_of_experience = this.getAttribute("data-year_of_experience");
 
     let services = [];
     try {
@@ -47,6 +48,9 @@ export class ContractorSidebar extends HTMLElement {
                             <i class="icon-link-5"></i>
                             <span>${website}</span>
                         </a>
+                    </li>
+                    <li>
+                        Years in service: ${year_of_experience}+
                     </li>
                 </ul>
             </div>
