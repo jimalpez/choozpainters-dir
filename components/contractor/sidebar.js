@@ -49,9 +49,11 @@ export class ContractorSidebar extends HTMLElement {
                             <span>${website}</span>
                         </a>
                     </li>
-                    <li>
-                        Years in service: ${year_of_experience}+
-                    </li>
+                    ${
+                      year_of_experience
+                        ? `<li>Years in service: ${year_of_experience}+</li>`
+                        : ``
+                    }
                 </ul>
             </div>
             <hr />
