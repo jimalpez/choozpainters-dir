@@ -7,13 +7,12 @@ export class ContractorMap extends HTMLElement {
     this.latitude = parseFloat(this.getAttribute("data-latitude")) || 37.0902; // Default to USA center
     this.longitude =
       parseFloat(this.getAttribute("data-longitude")) || -95.7129;
-    this.image =
-      this.getAttribute("data-image") || "https://via.placeholder.com/150";
+    this.image = this.getAttribute("data-image") || "https://via.placeholder.com/150";
 
     this.innerHTML = `
       <div class="margin_60">
         <h4 class="heading_contractor-sm">Map</h4>
-        <div id="map_profile" class="contactor_page_map"></div>
+        <div id="map_listing" class="contactor_page_map"></div>
       </div>
     `;
 
@@ -66,8 +65,8 @@ export class ContractorMap extends HTMLElement {
     };
 
     this.mapObject = new google.maps.Map(
-      this.querySelector("#map_profile"),
-      mapOptions,
+      this.querySelector("#map_listing"),
+      mapOptions
     );
 
     // Add a pinpoint marker for the location
@@ -78,7 +77,7 @@ export class ContractorMap extends HTMLElement {
     });
 
     const infoWindow = new google.maps.InfoWindow({
-      content: `<div style="text-align:center;"><h3>Selected Location</h3><img src="${this.image}" alt="Location Image" style="width:100px;height:auto;"></div>`,
+      content: `<div style="text-align:center;"><h3>Selected Location</h3><img src="${this.image}" alt="Location Image" style="width:100px;height:auto;"></div>`
     });
 
     marker.addListener("click", () => {
