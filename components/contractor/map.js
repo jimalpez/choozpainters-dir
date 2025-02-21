@@ -65,18 +65,15 @@ export class ContractorMap extends HTMLElement {
 
     this.mapObject = new google.maps.Map(
       this.querySelector("#map_listing"),
-      mapOptions,
+      mapOptions
     );
 
-    this.markers = [];
-
-    try {
-      const response = await fetch("/data/data.json");
-      const markersData = await response.json();
-      this.loadMarkers(markersData);
-    } catch (error) {
-      console.error("Error loading markers data:", error);
-    }
+    // Add a pinpoint marker for the location
+    new google.maps.Marker({
+      position: new google.maps.LatLng(this.latitude, this.longitude),
+      map: this.mapObject,
+      title: "Selected Location",
+    });
   }
 }
 customElements.define("contractor-map", ContractorMap);
