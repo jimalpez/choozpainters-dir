@@ -81,7 +81,7 @@ export class ContractorMap extends HTMLElement {
       content: `
         <div style="text-align:center;">
           <h5>${this.getAttribute("data-title")}</h5>
-          <img src="${this.getAttribute("data-company_logo")}" alt="Location Image" style="width:100px;height:auto;">
+          <img src="${this.getAttribute("data-company_logo")}" alt="Location Image" style="width:100%;height:auto;">
         </div>
       `,
     });
