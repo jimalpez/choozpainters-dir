@@ -7,11 +7,13 @@ export class ContractorMap extends HTMLElement {
     this.latitude = parseFloat(this.getAttribute("data-latitude")) || 37.0902; // Default to USA center
     this.longitude =
       parseFloat(this.getAttribute("data-longitude")) || -95.7129;
+    this.image =
+      this.getAttribute("data-image") || "https://via.placeholder.com/150";
 
     this.innerHTML = `
       <div class="margin_60">
         <h4 class="heading_contractor-sm">Map</h4>
-        <div id="map_listing" class="contactor_page_map"></div>
+        <div id="map_profile" class="contactor_page_map"></div>
       </div>
     `;
 
@@ -25,7 +27,7 @@ export class ContractorMap extends HTMLElement {
     }
 
     const mapOptions = {
-      zoom: 10, // Increased zoom for a more localized view
+      zoom: 8, // Increased zoom for a more localized view
       center: new google.maps.LatLng(this.latitude, this.longitude),
       mapTypeId: google.maps.MapTypeId.ROADMAP,
       mapTypeControl: false,
@@ -64,15 +66,23 @@ export class ContractorMap extends HTMLElement {
     };
 
     this.mapObject = new google.maps.Map(
-      this.querySelector("#map_listing"),
-      mapOptions
+      this.querySelector("#map_profile"),
+      mapOptions,
     );
 
     // Add a pinpoint marker for the location
-    new google.maps.Marker({
+    const marker = new google.maps.Marker({
       position: new google.maps.LatLng(this.latitude, this.longitude),
       map: this.mapObject,
       title: "Selected Location",
+    });
+
+    const infoWindow = new google.maps.InfoWindow({
+      content: `<div style="text-align:center;"><h3>Selected Location</h3><img src="${this.image}" alt="Location Image" style="width:100px;height:auto;"></div>`,
+    });
+
+    marker.addListener("click", () => {
+      infoWindow.open(this.mapObject, marker);
     });
   }
 }
