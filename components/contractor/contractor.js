@@ -118,6 +118,10 @@ class Contractor extends HTMLElement {
                         ></contractor-tabs>
 
                         <contractor-map
+                          data-title="${this.contractorData.title}" 
+                          data-company_logo="${
+                            this.contractorData.company_logo || ""
+                          }"
                           data-latitude="${
                             this.contractorData.location_latitude
                           }"
