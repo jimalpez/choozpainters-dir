@@ -79,7 +79,7 @@ class Contractor extends HTMLElement {
       this.innerHTML = `
         <div class="layer"></div>
       
-        <header-component></header-component>
+        <header-component class-logo="logo-contractor"></header-component>
 
         <main>
             <div class="container">

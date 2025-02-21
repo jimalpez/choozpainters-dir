@@ -1,4 +1,5 @@
-const getData = "https://nrroyfmyiff6qhks7i2xdmgcxu0erbid.lambda-url.us-east-1.on.aws/";
+const getData =
+  "https://nrroyfmyiff6qhks7i2xdmgcxu0erbid.lambda-url.us-east-1.on.aws/";
 
 class Header extends HTMLElement {
   constructor() {
@@ -34,13 +35,15 @@ class Header extends HTMLElement {
   }
 
   connectedCallback() {
+    const classLogo = this.getAttribute("class-logo") || "logo-default";
+
     this.innerHTML = `
         <header class="header_sticky">
             <div class="container">
                 <div class="row">
                     <div class="col-lg-3 col-6">
                       <a href="/">
-                          <div class="main-logo"></div>
+                          <div class="main-logo ${classLogo}"></div>
                       </a>
                     </div>
                     <nav class="col-lg-9 col-6">
