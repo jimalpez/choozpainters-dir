@@ -25,7 +25,7 @@ export class ContractorMap extends HTMLElement {
     }
 
     const mapOptions = {
-      zoom: 10, // Increased zoom for a more localized view
+      zoom: 8, // Increased zoom for a more localized view
       center: new google.maps.LatLng(this.latitude, this.longitude),
       mapTypeId: google.maps.MapTypeId.ROADMAP,
       mapTypeControl: false,
