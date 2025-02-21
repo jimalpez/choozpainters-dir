@@ -13,8 +13,8 @@
     height: 200px;
     background: linear-gradient(
       to bottom,
-      $primary-color,
-      $primary-color,
+      $primary-color-old,
+      $primary-color-old,
       #3f67bc
     );
     display: flex;
@@ -40,8 +40,8 @@
       height: 220px;
       background: linear-gradient(
         to bottom,
-        $primary-color,
-        $primary-color,
+        $primary-color-old,
+        $primary-color-old,
         #3f67bc
       );
       display: flex;

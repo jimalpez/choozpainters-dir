@@ -82,7 +82,7 @@ a {
 		left: 3px;
 		height: 41px;
 		width: 90px;
-		background-color: darken($primary-color, 10%);
+		background-color: darken($primary-color-old, 10%);
 		@include border-radius(50px);
 		@include transition-default (transform, 0.5s, ease);
 	}
@@ -214,7 +214,7 @@ a {
 				@include center(y);
 				height: 50%;
 				width: 1px;
-				background-color: lighten($primary-color, 60%);
+				background-color: lighten($primary-color-old, 60%);
 			}
 			&::after {
 				/* hide gradient layer */
@@ -270,7 +270,7 @@ a {
 	height: $header-mobile-height;
 	padding: 1em;
 	pointer-events: none;
-	background-color: $primary-color;
+	background-color: $primary-color-old;
 	color: #fff;
 	h2 {
 		margin-bottom: 3px;
@@ -391,7 +391,7 @@ a {
 				margin: 0 3px;
 			}
 			&:nth-of-type(2n+1) {
-				background-color: rgba($primary-color, .06);
+				background-color: rgba($primary-color-old, .06);
 			}
 		}
 		em {
@@ -457,7 +457,7 @@ a {
 		padding: 1.3em 3em;
 		color: #fff;
 		border-radius: 2px;
-		background-color: lighten($primary-color, 10%);
+		background-color: lighten($primary-color-old, 10%);
 		@include border-radius(5px);
 		@include fontSize(14px);
 		font-weight: 500;
@@ -465,7 +465,7 @@ a {
 		text-transform: uppercase;
 		letter-spacing: 2px;
 		.no-touch &:hover {
-			background-color: darken($primary-color, 5%);
+			background-color: darken($primary-color-old, 5%);
 			color: #fff;
 		}
 		.popular & {

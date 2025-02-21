@@ -26,8 +26,8 @@
     &-wrapper {
       background: linear-gradient(
         to bottom,
-        $primary-color,
-        $primary-color,
+        $primary-color-old,
+        $primary-color-old,
         #3f67bc
       );
       padding-top: 60px;
@@ -47,8 +47,8 @@
   &-background {
     background: linear-gradient(
       to bottom,
-      $primary-color,
-      $primary-color,
+      $primary-color-old,
+      $primary-color-old,
       #3f67bc
     );
     position: absolute;
@@ -83,10 +83,10 @@
       width: 100%;
     }
     &:hover {
-      border-color: $primary-color;
+      border-color: $primary-color-old;
     }
     &.active {
-      border-color: $primary-color;
+      border-color: $primary-color-old;
     }
   }
   &-header {
@@ -284,7 +284,7 @@
         }
       }
       &-button {
-        background-color: $primary-color;
+        background-color: $primary-color-old;
         color: #fff;
         border: none;
         @include fontSize(18px);
@@ -307,7 +307,7 @@
             margin-bottom: 20px;
           }
           i {
-            color: $primary-color;
+            color: $primary-color-old;
           }
         }
       }
@@ -343,7 +343,7 @@
       align-items: center;
       justify-content: flex-end;
       a {
-        background-color: $primary-color;
+        background-color: $primary-color-old;
         color: #fff;
         border: none;
         @include fontSize(18px);
@@ -408,7 +408,7 @@
           margin-bottom: 20px;
         }
         i {
-          color: $primary-color;
+          color: $primary-color-old;
         }
       }
     }

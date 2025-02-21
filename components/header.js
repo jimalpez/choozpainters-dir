@@ -76,6 +76,7 @@ class Header extends HTMLElement {
                                     <li><a href="/pricing.html">Pricing</a></li>
                                     <li><a href="/list.html">Listing</a></li>
                                     <li><a href="/contractor_page.html">Profile</a></li>
+                                    <li><a href="/missouri/ballwin/painting-contractors/astra-painters/">Profile Backend</a></li>
                                 </ul>
                             </li>
                           </ul>

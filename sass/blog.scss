@@ -238,7 +238,7 @@ article.blog {
 }
 .dropcaps p:first-child::first-letter {
 	color: #fff;
-	background-color: $primary-color;
+	background-color: $primary-color-old;
 	float: left;
 	@include fontSize(64px);
 	line-height: 1;

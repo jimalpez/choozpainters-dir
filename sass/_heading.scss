@@ -1,17 +1,9 @@
-.heading_contractor-sm {
-  font-size: 18px;
-  font-weight: 500;
-  margin-top: 15px;
-  margin-bottom: 16px;
-}
-.heading_contractor {
-  @include fontSize(32px);
-  font-weight: 500;
-  margin-bottom: 15px;
-}
 .contactor_address {
   margin-block-end: 10px;
   text-transform: capitalize;
+  i {
+    color: $primary-color;
+  }
 }
 
 .heading {
@@ -60,5 +52,16 @@
   }
   &_result {
     @include fontSize(18px);
+  }
+  &_contractor {
+    @include fontSize(32px);
+    font-weight: 500;
+    margin-bottom: 15px;
+    &-sm {
+      @include fontSize(18px);
+      font-weight: 500;
+      margin-top: 15px;
+      margin-bottom: 16px;
+    }
   }
 }

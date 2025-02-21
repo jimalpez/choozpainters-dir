@@ -93,26 +93,26 @@ header.header_sticky.sticky {
     height: 550px;
   }
   &.version_1 {
-    background: $primary-color
+    background: $primary-color-old
       url(../img/hero_images/choozpainters-city-header-laptop-3.png) no-repeat
       center bottom;
     @include background-size(88%);
     @include mobile {
-      background: $primary-color
+      background: $primary-color-old
         url(../img/hero_images/choozpainters-city-header-mobile-3.png) no-repeat
         center bottom;
       height: 600px;
       @include background-size(100%);
     }
     .content {
-      @include rgba(bg, $primary-color, 0);
+      @include rgba(bg, $primary-color-old, 0);
     }
   }
   &.version_gradient {
     background: linear-gradient(
       to bottom,
-      $primary-color,
-      $primary-color,
+      $primary-color-old,
+      $primary-color-old,
       #3f67bc
     );
     @include mobile {
@@ -135,7 +135,7 @@ header.header_sticky.sticky {
       }
     }
     .content {
-      @include rgba(bg, $primary-color, 0);
+      @include rgba(bg, $primary-color-old, 0);
     }
   }
   &.version_white {
@@ -151,10 +151,10 @@ header.header_sticky.sticky {
       @include background-size(100%);
     }
     .content {
-      @include rgba(bg, $primary-color, 0);
-      color: $primary-color;
+      @include rgba(bg, $primary-color-old, 0);
+      color: $primary-color-old;
       h3 {
-        color: $primary-color;
+        color: $primary-color-old;
       }
     }
   }
@@ -165,7 +165,7 @@ header.header_sticky.sticky {
     height: 720px;
     display: block;
     &:before {
-      background: $primary-color url(http://via.placeholder.com/1600x1067.jpg)
+      background: $primary-color-old url(http://via.placeholder.com/1600x1067.jpg)
         no-repeat center center fixed;
       @include background-size(cover);
       animation: pop-in 3s 0.3s cubic-bezier(0, 0.5, 0, 1) forwards;
@@ -182,7 +182,7 @@ header.header_sticky.sticky {
       height: 550px;
     }
     .content {
-      @include rgba(bg, $primary-color, 0.9);
+      @include rgba(bg, $primary-color-old, 0.9);
       padding: 0;
       display: flex;
       flex-direction: column;
@@ -197,14 +197,14 @@ header.header_sticky.sticky {
     }
   }
   &.version_3 {
-    background: $primary-color url(../img/via.placeholder.com/1600x1067.jpg)
+    background: $primary-color-old url(../img/via.placeholder.com/1600x1067.jpg)
       no-repeat center bottom;
     @include background-size(85%);
     @include mobile {
       height: 550px;
     }
     .content {
-      @include rgba(bg, $primary-color, 0);
+      @include rgba(bg, $primary-color-old, 0);
       padding: 0 25%;
       @include tablet {
         padding: 0 10%;
@@ -225,7 +225,7 @@ header.header_sticky.sticky {
     @include fontSize(21px);
     color: #fff;
     text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.25);
-    @include rgba(bg, $primary-color, 0.9);
+    @include rgba(bg, $primary-color-old, 0.9);
     @include tablet {
       padding: 100px 30px 0;
     }
