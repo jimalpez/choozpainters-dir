@@ -21,13 +21,15 @@ export class ContractorTabs extends HTMLElement {
     }
 
     const imagesArrayList = imagesArray
-      .map((image) => `
+      .map(
+        (image, index) => `
         <div class="gallery-equal-item">
             <img
                 src="${image}"
-                alt="Astra Logo" />
+                alt="Astra ${index + 1}" />
         </div>
-      `)
+      `,
+      )
       .join("");
 
     this.innerHTML = `

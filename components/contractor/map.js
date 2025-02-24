@@ -12,7 +12,7 @@ export class ContractorMap extends HTMLElement {
 
     this.innerHTML = `
       <div class="margin_60">
-        <h4 class="heading_contractor-sm">Map</h4>
+        <h3 class="heading_contractor-sm">Map</h3>
         <div id="map_listing" class="contactor_page_map"></div>
       </div>
     `;

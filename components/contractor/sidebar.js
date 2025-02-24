@@ -26,7 +26,7 @@ export class ContractorSidebar extends HTMLElement {
     this.innerHTML = `
         <div class="sidebar_content">
             <div class="sidebar_content-item">
-                <h4 class="heading_contractor-sm">Company Details</h4>
+                <h3 class="heading_contractor-sm">Company Details</h3>
                 <ul>
                     <li>
                         <a href="#" class="link">
@@ -57,7 +57,7 @@ export class ContractorSidebar extends HTMLElement {
             </div>
             <hr />
             <div class="sidebar_content-item">
-                <h4 class="heading_contractor-sm">Read Reviews From the Web</h4>
+                <h3 class="heading_contractor-sm">Read Reviews From the Web</h3>
                 <ul>
                     <li>
                         <a href="#" class="ratings-review--link">Google</a>
@@ -78,13 +78,13 @@ export class ContractorSidebar extends HTMLElement {
             </div>
             <hr />
             <div class="sidebar_content-item">
-                <h4 class="heading_contractor-sm">Services</h4>
+                <h3 class="heading_contractor-sm">Services</h3>
                 <ul class="list-disc">
                     ${servicesList}
                 </ul>
             </div>
             <div class="sidebar_content-item">
-                <h4 class="heading_contractor-sm">DISCLAIMER</h4>
+                <h3 class="heading_contractor-sm">DISCLAIMER</h3>
                 <p class="text-sm">
                     This site is a free service to assist homeowners in connecting
                     with local service contractors. All contractors are

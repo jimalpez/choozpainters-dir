@@ -98,6 +98,7 @@ class Contractor extends HTMLElement {
                 <div class="row">
                     <div class="col-xl-8 col-lg-8 padding_r_50_desktop">
                         <contractor-gallery
+                          data-title="${this.contractorData.title}" 
                           data-company_logo="${
                             this.contractorData.company_logo || ""
                           }"
