@@ -28,7 +28,7 @@
     > a {
         color: #333; 
         padding: 0 8px 17px  8px; 
-        @include fontSize(14px);
+        @include fontSize(16px);
         font-weight: 500;
     }
     &:hover > a {color: $secondary-color;}
@@ -117,7 +117,7 @@
 .main-menu ul .menu-wrapper ul:before{border:0;}
 
 .main-menu ul ul li {display: block;height: auto;padding: 0;}		
-.main-menu ul ul li a {@include fontSize(13px);color: $body-text-color;border-bottom:1px solid #ededed;display: block; padding: 15px; @include transition-default (all,0.3s, ease);}
+.main-menu ul ul li a {@include fontSize(16px);color: $body-text-color;border-bottom:1px solid #ededed;display: block; padding: 15px; @include transition-default (all,0.3s, ease);}
 .main-menu ul ul li:last-child a {border-bottom:none;}
 
 .main-menu ul ul li:hover > a {background-color:#f9f9f9;color:$secondary-color; padding-left:18px;}

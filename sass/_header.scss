@@ -1,9 +1,11 @@
 /* Header */
 header {
   background-color: #fff;
-  min-height: 55px;
+  min-height: 80px;
   padding: 10px 0;
   border-bottom: 1px solid transparent;
+  display: flex;
+  align-items: center;
   .logo-holder {
     display: block;
     display: flex;

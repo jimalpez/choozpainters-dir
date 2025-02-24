@@ -13,7 +13,7 @@ class Header extends HTMLElement {
         logo.width = "35";
       } else {
         logo.src = "/img/logo/chooz_painters_logo.png";
-        logo.width = "110";
+        logo.width = "130";
       }
 
       if (window.scrollY > 0) {
@@ -54,7 +54,7 @@ class Header extends HTMLElement {
                     <div class="col-lg-3 col-6">
                       <a href="/" class="logo-holder">
                           <!-- <div class="main-logo ${classLogo}"></div> -->
-                          <img class="logo" src="/img/logo/chooz_painters_logo.png" alt="Chooz Painters Logo" width="110" height="auto" />
+                          <img class="logo" src="/img/logo/chooz_painters_logo.png" alt="Chooz Painters Logo" width="130" height="auto" />
                       </a>
                     </div>
                     <nav class="col-lg-9 col-6">
@@ -64,6 +64,16 @@ class Header extends HTMLElement {
                       <ul id="top_access">
                           <li>
                             <a href="login.html"><i class="pe-7s-user"></i></a>
+                          </li>
+                          <li class="only-mobile">
+                            <a href="register-doctor.html">
+                              <i class="pe-7s-add-user"></i>
+                            </a>
+                          </li>
+                          <li class="only-desktop">
+                            <a href="register-doctor.html" class="btn_1 small white">
+                              <span class="plus">+</span> <span> Claim Page </span>
+                            </a>
                           </li>
                       </ul>
                       <div class="main-menu">

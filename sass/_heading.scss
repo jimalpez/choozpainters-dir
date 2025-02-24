@@ -55,11 +55,11 @@
   }
   &_contractor {
     @include fontSize(32px);
-    font-weight: 500;
     margin-bottom: 15px;
+    font-weight: 700;
     &-sm {
       @include fontSize(18px);
-      font-weight: 500;
+      font-weight: 700;
       margin-top: 15px;
       margin-bottom: 16px;
     }
