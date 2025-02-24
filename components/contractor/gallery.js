@@ -23,9 +23,11 @@ export class ContractorGallery extends HTMLElement {
           <div class="post-gallery-list-item">
             <img
               src="${image}"
-              alt="Astra ${index + 1}"
+              alt="${title} project photo ${index + 1}"
               data-index="${index}"
-              onclick="this.closest('contractor-gallery').dispatchEvent(new CustomEvent('galleryImageClick', { detail: ${index} }))"
+              data-images-array='${JSON.stringify(this.imagesArray)}'
+              class="gallery-image"
+              style="cursor: pointer;"
             />
           </div>
         `,
@@ -49,59 +51,74 @@ export class ContractorGallery extends HTMLElement {
       </div>
     `;
 
-    this.addEventListener("galleryImageClick", (e) => {
-      console.log("Image clicked, index:", e.detail); // Debugging log
-      this.imageIndex = e.detail;
-      this.showImage();
+    this.querySelectorAll(".gallery-image").forEach((img) => {
+      img.addEventListener("click", (e) => {
+        this.imageIndex = parseInt(e.target.dataset.index, 10);
+        this.showImageInModal();
+      });
     });
 
     document.addEventListener("keydown", (e) => {
       if (e.key === "ArrowLeft") {
-        this.imageIndex =
-          (this.imageIndex - 1 + this.imagesArray.length) %
-          this.imagesArray.length;
-        this.showImage();
+        this.prevImage();
       } else if (e.key === "ArrowRight") {
-        this.imageIndex = (this.imageIndex + 1) % this.imagesArray.length;
-        this.showImage();
+        this.nextImage();
       }
     });
   }
 
-  showImage() {
+  showImageInModal() {
     if (!this.imagesArray.length) return;
 
-    // Remove any existing modal before adding a new one
-    const existingModal = document.querySelector(".modal");
-    if (existingModal) {
-      existingModal.remove();
+    const modalElement = document.querySelector("#imagesModal");
+    if (!modalElement) {
+      console.error("Modal element not found!");
+      return;
     }
 
-    console.log("Showing image:", this.imagesArray[this.imageIndex]); // Debugging log
+    this.updateModalContent();
+    const modalInstance = new bootstrap.Modal(modalElement);
+    modalInstance.show();
+  }
 
-    const modal = document.createElement("div");
-    modal.classList.add("modal");
-    modal.innerHTML = `
-      <div class="modal-content">
-        <span class="modal-close">&times;</span>
-        <img src="${this.imagesArray[this.imageIndex]}" alt="${title} project photo ${
-      this.imageIndex + 1
-    }" />
+  updateModalContent() {
+    const modalBody = document.querySelector("#imagesModal .modal-body");
+    if (!modalBody) return;
+
+    modalBody.innerHTML = `
+      <div class="modal-slider" style="position: relative;">
+        <button class="modal-close" style="position: absolute; top: 10px; right: 10px; background: none; border: none; font-size: 24px; cursor: pointer;">&times;</button>
+        <button class="modal-prev">&larr;</button>
+        <img src="${this.imagesArray[this.imageIndex]}" 
+             alt="Gallery Image ${this.imageIndex + 1}" 
+             class="img-fluid"/>
+        <button class="modal-next">&rarr;</button>
       </div>
     `;
 
-    document.body.appendChild(modal);
-
-    // Close modal on click
-    modal.querySelector(".modal-close").addEventListener("click", () => {
-      modal.remove();
+    modalBody
+      .querySelector(".modal-prev")
+      .addEventListener("click", () => this.prevImage());
+    modalBody
+      .querySelector(".modal-next")
+      .addEventListener("click", () => this.nextImage());
+    modalBody.querySelector(".modal-close").addEventListener("click", () => {
+      const modalInstance = bootstrap.Modal.getInstance(
+        document.querySelector("#imagesModal"),
+      );
+      modalInstance.hide();
     });
+  }
 
-    modal.addEventListener("click", (e) => {
-      if (e.target === modal) {
-        modal.remove();
-      }
-    });
+  prevImage() {
+    this.imageIndex =
+      (this.imageIndex - 1 + this.imagesArray.length) % this.imagesArray.length;
+    this.updateModalContent();
+  }
+
+  nextImage() {
+    this.imageIndex = (this.imageIndex + 1) % this.imagesArray.length;
+    this.updateModalContent();
   }
 }
 

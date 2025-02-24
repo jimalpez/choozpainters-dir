@@ -4,6 +4,7 @@ export class ContractorTabs extends HTMLElement {
   }
 
   connectedCallback() {
+    const title = this.getAttribute("data-title");
     const description = this.getAttribute("data-description");
     const company_logo = this.getAttribute("data-company_logo");
 

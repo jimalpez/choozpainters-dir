@@ -107,6 +107,7 @@ class Contractor extends HTMLElement {
                           )}'
                         ></contractor-gallery>
                         <contractor-tabs
+                          data-title="${this.contractorData.title}" 
                           data-description="${
                             this.contractorData.description || ""
                           }"
@@ -151,9 +152,43 @@ class Contractor extends HTMLElement {
         </main>
 
         <footer-component></footer-component>
+
+        <div class="modal fade" id="imagesModal" tabindex="-1" role="dialog" aria-labelledby="imagesModalLabel" aria-hidden="true">
+          <div class="modal-dialog modal-dialog-centered" role="document">
+            <div class="modal-content">
+              <div class="modal-body"></div>
+            </div>
+          </div>
+        </div>
+
       `;
+
+      this.initModal(); // Initialize the modal
     } else {
       this.innerHTML = `<p>Contractor not found.</p>`;
+    }
+  }
+
+  initModal() {
+    const modalElement = this.querySelector("#imagesModal");
+    if (modalElement) {
+      const modal = new bootstrap.Modal(modalElement, {});
+
+      const modalButton = this.querySelector("[data-bs-toggle='modal']");
+      if (modalButton) {
+        modalButton.addEventListener("click", () => {
+          modal.show();
+        });
+      }
+
+      // Ensure aria-hidden is properly updated
+      modalElement.addEventListener("shown.bs.modal", () => {
+        modalElement.removeAttribute("aria-hidden");
+      });
+
+      modalElement.addEventListener("hidden.bs.modal", () => {
+        modalElement.setAttribute("aria-hidden", "true");
+      });
     }
   }
 }
