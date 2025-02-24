@@ -70,29 +70,18 @@ export class ContractorMap extends HTMLElement {
       mapOptions,
     );
 
-    // Define a custom global marker icon
-    const customIcon = {
-      url: "https://upload.wikimedia.org/wikipedia/commons/e/ed/Globe_icon.svg", // Global icon
-      scaledSize: new google.maps.Size(40, 40), // Adjust icon size
-      origin: new google.maps.Point(0, 0),
-      anchor: new google.maps.Point(20, 40),
-    };
-
     // Add a pinpoint marker for the location
     const marker = new google.maps.Marker({
       position: new google.maps.LatLng(this.latitude, this.longitude),
       map: this.mapObject,
       title: "Selected Location",
-      icon: customIcon, // Use the custom global icon
     });
 
     const infoWindow = new google.maps.InfoWindow({
       content: `
         <div style="text-align:center;">
           <h5>${this.getAttribute("data-title")}</h5>
-          <img src="${this.getAttribute(
-            "data-company_logo",
-          )}" alt="Location Image" style="width:100%;height:auto;">
+          <img src="${this.getAttribute("data-company_logo")}" alt="Location Image" style="width:100%;height:auto;">
         </div>
       `,
     });
