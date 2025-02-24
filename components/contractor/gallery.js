@@ -19,19 +19,27 @@ export class ContractorGallery extends HTMLElement {
       this.imagesArray = [];
     }
 
+    // Add company logo as the first image in the array
+    if (company_logo) {
+      this.imagesArray.unshift(company_logo);
+    }
+
     const imagesArrayList = this.imagesArray
       .map(
-        (image, index) => `
-          <div class="post-gallery-list-item">
-            <img
-              src="${image}"
-              alt="${title} project photo ${index + 1}"
-              data-index="${index}"
-              class="gallery-image"
-              style="cursor: pointer;"
-            />
-          </div>
-        `
+        (image, index) => {
+          if (index === 0) return '';
+          return `
+            <div class="post-gallery-list-item">
+              <img
+                src="${image}"
+                alt="${title} project photo ${index + 1}"
+                data-index="${index}"
+                class="gallery-image"
+                style="cursor: pointer;"
+              />
+            </div>
+          `;
+        },
       )
       .join("");
 
@@ -40,7 +48,7 @@ export class ContractorGallery extends HTMLElement {
           <div class="col-md-6">
               <div class="post-gallery-main">
                   <div class="post-gallery-main-item">
-                      <img src="${company_logo}" alt="${title} Logo" />
+                      <img src="${company_logo}" alt="${title} Logo" data-index="0" class="gallery-image" style="cursor: pointer;"/>
                   </div>
               </div>
           </div>

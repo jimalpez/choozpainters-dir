@@ -19,6 +19,11 @@ export class ContractorTabs extends HTMLElement {
       imagesArray = [];
     }
 
+    // Add company logo as the first image in the array
+    if (company_logo) {
+      imagesArray.unshift(company_logo);
+    }
+
     const imagesArrayList = imagesArray
       .map(
         (image, index) => `
@@ -74,14 +79,6 @@ export class ContractorTabs extends HTMLElement {
             <div class="tab-pane fade" id="profile-tab-pane" role="tabpanel" aria-labelledby="profile-tab" tabindex="0">
                 <div class="margin_30">
                     <div class="gallery-equal">
-                        <div class="gallery-equal-item">
-                            <img
-                                src="${company_logo}"
-                                alt="${title} Logo"
-                                class="gallery-photo"
-                                data-index="-1"
-                                style="cursor: pointer;" />
-                        </div>
                        ${imagesArrayList}
                     </div>
                 </div>
