@@ -1,3 +1,5 @@
+import ModalSlider from "./modalSlider.js";
+
 export class ContractorTabs extends HTMLElement {
   constructor() {
     super();
@@ -13,11 +15,7 @@ export class ContractorTabs extends HTMLElement {
       const company_images = this.getAttribute("data-company_images");
       imagesArray = company_images ? JSON.parse(company_images) : [];
     } catch (error) {
-      console.error(
-        "Invalid JSON in data-company_images attribute",
-        company_images,
-        error,
-      );
+      console.error("Invalid JSON in data-company_images attribute", error);
       imagesArray = [];
     }
 
@@ -27,7 +25,10 @@ export class ContractorTabs extends HTMLElement {
         <div class="gallery-equal-item">
             <img
                 src="${image}"
-                alt="${title} project photo ${index + 1}" />
+                alt="${title} project photo ${index + 1}"
+                data-index="${index}"
+                class="gallery-photo"
+                style="cursor: pointer;" />
         </div>
       `,
       )
@@ -70,18 +71,16 @@ export class ContractorTabs extends HTMLElement {
                     ${description}
                 </div>
             </div>
-            <div
-                class="tab-pane fade"
-                id="profile-tab-pane"
-                role="tabpanel"
-                aria-labelledby="profile-tab"
-                tabindex="0">
+            <div class="tab-pane fade" id="profile-tab-pane" role="tabpanel" aria-labelledby="profile-tab" tabindex="0">
                 <div class="margin_30">
                     <div class="gallery-equal">
                         <div class="gallery-equal-item">
                             <img
                                 src="${company_logo}"
-                                alt="Astra Logo" />
+                                alt="${title} Logo"
+                                class="gallery-photo"
+                                data-index="-1"
+                                style="cursor: pointer;" />
                         </div>
                        ${imagesArrayList}
                     </div>
@@ -89,6 +88,16 @@ export class ContractorTabs extends HTMLElement {
             </div>
         </div>
       `;
+
+    // Attach click event to open the modal on image click
+    this.querySelectorAll(".gallery-photo").forEach((img) => {
+      img.addEventListener("click", (e) => {
+        const index = parseInt(e.target.dataset.index, 10);
+        if (index >= 0) {
+          new ModalSlider("#imagesModal", imagesArray, index).show();
+        }
+      });
+    });
   }
 }
 
