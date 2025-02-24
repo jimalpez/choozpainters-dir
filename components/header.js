@@ -6,6 +6,16 @@ class Header extends HTMLElement {
     super();
     window.addEventListener("scroll", () => {
       const header = this.querySelector(".header_sticky");
+      const logo = this.querySelector(".logo");
+
+      if (window.innerWidth < 768 && window.scrollY > 0) {
+        logo.src = "/img/choozpainters-small-logo_trp_back.png";
+        logo.width = "35";
+      } else {
+        logo.src = "/img/logo/chooz_painters_logo_1.png";
+        logo.width = "110";
+      }
+
       if (window.scrollY > 0) {
         header.classList.add("sticky");
       } else {
@@ -42,8 +52,9 @@ class Header extends HTMLElement {
             <div class="container">
                 <div class="row">
                     <div class="col-lg-3 col-6">
-                      <a href="/">
-                          <div class="main-logo ${classLogo}"></div>
+                      <a href="/" class="logo-holder">
+                          <!-- <div class="main-logo ${classLogo}"></div> -->
+                          <img class="logo" src="/img/logo/chooz_painters_logo_1.png" alt="Chooz Painters Logo" width="110" height="auto" />
                       </a>
                     </div>
                     <nav class="col-lg-9 col-6">
@@ -53,16 +64,6 @@ class Header extends HTMLElement {
                       <ul id="top_access">
                           <li>
                             <a href="login.html"><i class="pe-7s-user"></i></a>
-                          </li>
-                          <li class="only-mobile">
-                            <a href="register-doctor.html">
-                              <i class="pe-7s-add-user"></i>
-                            </a>
-                          </li>
-                          <li class="only-desktop">
-                            <a href="register-doctor.html" class="btn_1 small white">
-                              <span class="plus">+</span> <span> Claim Page </span>
-                            </a>
                           </li>
                       </ul>
                       <div class="main-menu">

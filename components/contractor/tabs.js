@@ -26,7 +26,7 @@ export class ContractorTabs extends HTMLElement {
         <div class="gallery-equal-item">
             <img
                 src="${image}"
-                alt="Astra ${index + 1}" />
+                alt="${title} project photo ${index + 1}" />
         </div>
       `,
       )

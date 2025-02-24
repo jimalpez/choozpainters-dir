@@ -4,6 +4,12 @@ header {
   min-height: 55px;
   padding: 10px 0;
   border-bottom: 1px solid transparent;
+  .logo-holder {
+    display: block;
+    display: flex;
+    align-items: center;
+    height: 100%;
+  }
   &.header_sticky {
     width: 100%;
     z-index: 999;
