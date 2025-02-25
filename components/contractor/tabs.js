@@ -42,6 +42,7 @@ export class ContractorTabs extends HTMLElement {
     this.innerHTML = `
         <ul class="nav nav-tabs" id="myTab" role="tablist">
             <li class="nav-item" role="presentation">
+              <h2>
                 <button
                     class="nav-link active"
                     id="home-tab"
@@ -54,8 +55,10 @@ export class ContractorTabs extends HTMLElement {
                     <i class="bi bi-bell-fill"></i>
                     <span>Description</span>
                 </button>
+              </h2>
             </li>
             <li class="nav-item" role="presentation">
+              <h2>
                 <button
                     class="nav-link"
                     id="profile-tab"
@@ -68,6 +71,7 @@ export class ContractorTabs extends HTMLElement {
                     <i class="bi bi-image"></i>
                     <span>Photos</span>
                 </button>
+              </h2>
             </li>
         </ul>
         <div class="tab-content" id="myTabContent">

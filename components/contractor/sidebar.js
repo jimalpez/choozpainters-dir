@@ -27,7 +27,7 @@ export class ContractorSidebar extends HTMLElement {
         <div class="sidebar_content">
             <div class="sidebar_content-item">
                 <button class="btn_full" type="button" data-toggle="modal" data-target="#formProfile">Request qoute</button>
-                <h3 class="heading_contractor-sm">Company Details</h3>
+                <h2 class="heading_contractor-sm">Company Details</h2>
                 <ul>
                     <li>
                         <a href="#" class="link">
@@ -58,7 +58,7 @@ export class ContractorSidebar extends HTMLElement {
             </div>
             <hr />
             <div class="sidebar_content-item">
-                <h3 class="heading_contractor-sm">Read Reviews From the Web</h3>
+                <h2 class="heading_contractor-sm">Read Reviews From the Web</h2>
                 <ul>
                     <li>
                         <a href="#" class="ratings-review--link">Google</a>
@@ -79,7 +79,7 @@ export class ContractorSidebar extends HTMLElement {
             </div>
             <hr />
             <div class="sidebar_content-item">
-                <h3 class="heading_contractor-sm">Services</h3>
+                <h2 class="heading_contractor-sm">Services</h2>
                 <ul class="list-disc">
                     ${servicesList}
                 </ul>
