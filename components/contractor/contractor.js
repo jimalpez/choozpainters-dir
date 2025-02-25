@@ -172,15 +172,15 @@ class Contractor extends HTMLElement {
                   <h3 class="mb-4">Request a quote from Astra Painters LLC</h3>
                   <div class="form-group">
                     <label for="name">Name</label>
-                    <input type="name" class="form-control" id="name" aria-describedby="emailHelp" placeholder="Enter name">
+                    <input type="name" class="form-control" id="name" aria-describedby="emailHelp">
                   </div>
                   <div class="form-group">
                     <label for="phone">Phone</label>
-                    <input type="tel" class="form-control" id="phone" aria-describedby="emailHelp" placeholder="Enter phone">
+                    <input type="tel" class="form-control" id="phone" aria-describedby="emailHelp">
                   </div>
                   <div class="form-group">
                     <label for="email">Email</label>
-                    <input type="email" class="form-control" id="email" aria-describedby="emailHelp" placeholder="Enter email">
+                    <input type="email" class="form-control" id="email" aria-describedby="emailHelp">
                   </div>
                   <div class="form-group">
                     <label for="ContractPreference">Contract Preference</label>
