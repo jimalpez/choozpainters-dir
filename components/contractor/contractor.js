@@ -195,7 +195,7 @@ class Contractor extends HTMLElement {
                     <textarea class="form-control" id="TellUsAboutYourProject" rows="4"></textarea>
                     <small class="form-text text-muted">0 of 1000 max characters</small>
                   </div>
-                  <p>Painter Scout is a third party directory that will forward your contact form to the painting company listed above</p>
+                  <p>Chooz Painters is a third party directory that will forward your contact form to the painting company listed above</p>
                   <div class="form-check">
                     <input type="checkbox" class="form-check-input" id="IHaveReadTheDisclaimer">
                     <label class="form-check-label" for="IHaveReadTheDisclaimer">I have read the disclaimer*</label>
