@@ -161,25 +161,75 @@ class Contractor extends HTMLElement {
           </div>
         </div>
 
+        <!-- Modal -->
+        <div class="modal fade" id="formProfile" tabindex="-1" role="dialog" aria-labelledby="formProfileLabel" aria-hidden="true">
+          <div class="modal-dialog" role="document">
+            <div class="modal-content">
+              <div class="modal-body p-5">
+                <button type="button" class="btn-close position-absolute top-0 end-0 m-3" data-bs-dismiss="modal" aria-label="Close"></button>
+
+                <form>
+                  <h3 class="mb-4">Request a quote from Astra Painters LLC</h3>
+                  <div class="form-group">
+                    <label for="name">Name</label>
+                    <input type="name" class="form-control" id="name" aria-describedby="emailHelp" placeholder="Enter name">
+                  </div>
+                  <div class="form-group">
+                    <label for="phone">Phone</label>
+                    <input type="tel" class="form-control" id="phone" aria-describedby="emailHelp" placeholder="Enter phone">
+                  </div>
+                  <div class="form-group">
+                    <label for="email">Email</label>
+                    <input type="email" class="form-control" id="email" aria-describedby="emailHelp" placeholder="Enter email">
+                  </div>
+                  <div class="form-group">
+                    <label for="ContractPreference">Contract Preference</label>
+                    <select class="form-control" id="ContractPreference">
+                      <option></option>
+                      <option>Email</option>
+                      <option>Phone</option>
+                    </select>
+                  </div>
+                  <div class="form-group">
+                    <label for="TellUsAboutYourProject">Tell Us About Your Project</label>
+                    <textarea class="form-control" id="TellUsAboutYourProject" rows="4"></textarea>
+                    <small class="form-text text-muted">0 of 1000 max characters</small>
+                  </div>
+                  <p>Painter Scout is a third party directory that will forward your contact form to the painting company listed above</p>
+                  <div class="form-check">
+                    <input type="checkbox" class="form-check-input" id="IHaveReadTheDisclaimer">
+                    <label class="form-check-label" for="IHaveReadTheDisclaimer">I have read the disclaimer*</label>
+                  </div>
+                  <button type="submit" class="btn_full mt-3">Submit</button>
+                </form>
+              </div>
+            </div>
+          </div>
+        </div>
       `;
 
-      this.initModal(); // Initialize the modal
+      this.initModals(); // Initialize the modal
     } else {
       this.innerHTML = `<p>Contractor not found.</p>`;
     }
   }
 
-  initModal() {
-    const modalElement = this.querySelector("#imagesModal");
-    if (modalElement) {
+  initModals() {
+    const modalElements = this.querySelectorAll(".modal");
+
+    modalElements.forEach((modalElement) => {
       const modal = new bootstrap.Modal(modalElement, {});
 
-      const modalButton = this.querySelector("[data-bs-toggle='modal']");
-      if (modalButton) {
-        modalButton.addEventListener("click", () => {
+      // Find all buttons that trigger this modal
+      const modalButtons = this.querySelectorAll(
+        `[data-toggle="modal"][data-target="#${modalElement.id}"]`,
+      );
+
+      modalButtons.forEach((button) => {
+        button.addEventListener("click", () => {
           modal.show();
         });
-      }
+      });
 
       // Ensure aria-hidden is properly updated
       modalElement.addEventListener("shown.bs.modal", () => {
@@ -189,7 +239,7 @@ class Contractor extends HTMLElement {
       modalElement.addEventListener("hidden.bs.modal", () => {
         modalElement.setAttribute("aria-hidden", "true");
       });
-    }
+    });
   }
 }
 

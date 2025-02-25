@@ -26,6 +26,7 @@ export class ContractorSidebar extends HTMLElement {
     this.innerHTML = `
         <div class="sidebar_content">
             <div class="sidebar_content-item">
+                <button class="btn_full" type="button" data-toggle="modal" data-target="#formProfile">Request qoute</button>
                 <h3 class="heading_contractor-sm">Company Details</h3>
                 <ul>
                     <li>

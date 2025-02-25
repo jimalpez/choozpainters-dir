@@ -44,6 +44,15 @@ class Header extends HTMLElement {
     return this.getAttribute("class") || "";
   }
 
+  toggleMobileMenu() {
+    const menu = this.querySelector(".main-menu");
+    if (menu.style.left === "100%") {
+        menu.style.left = "-100%"; // Hide menu when clicked again
+    } else {
+        menu.style.left = "100%"; // Show menu
+    }
+}
+
   connectedCallback() {
     const classLogo = this.getAttribute("class-logo") || "logo-default";
 
@@ -98,6 +107,11 @@ class Header extends HTMLElement {
             </div>
         </header>
     `;
+
+    this.querySelector(".cmn-toggle-switch").addEventListener("click", (event) => {
+      event.preventDefault();
+      this.toggleMobileMenu();
+  });
   }
 }
 
