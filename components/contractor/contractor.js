@@ -73,8 +73,6 @@ class Contractor extends HTMLElement {
   }
 
   render() {
-    console.log(this.contractorData);
-
     if (this.contractorData) {
       this.innerHTML = `
         <div class="layer"></div>

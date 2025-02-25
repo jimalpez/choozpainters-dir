@@ -1,4 +1,4 @@
-import ModalSlider from "./modalSlider.js";
+import ModalSlider from "../modalSlider.js";
 
 export class ContractorTabs extends HTMLElement {
   constructor() {
