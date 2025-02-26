@@ -69,9 +69,9 @@ class Header extends HTMLElement {
                           <span>Menu mobile</span>
                       </a>
                       <ul id="top_access">
-                          <li>
+                          <!-- <li>
                             <a href="login.html"><i class="pe-7s-user"></i></a>
-                          </li>
+                          </li> -->
                           <li class="only-mobile">
                             <a href="register-doctor.html">
                               <i class="pe-7s-add-user"></i>
@@ -85,9 +85,9 @@ class Header extends HTMLElement {
                       </ul>
                       <div class="main-menu">
                           <ul>
-                            <li class="submenu">
+                            <!-- <li class="submenu">
                                 <a href="#0" class="show-submenu">Blog</a>
-                            </li>
+                            </li> -->
                             <li class="submenu">
                                 <a href="#" class="show-submenu">Pages</a>
                                 <ul class="submenu-dropdown">

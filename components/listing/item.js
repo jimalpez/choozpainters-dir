@@ -49,7 +49,7 @@ export class ListingItem extends HTMLElement {
                   <figure>
                       <img class="gallery-image" src="${company_logo}" alt="${title} logo" data-index="0" data-toggle="modal" data-target="#ImagesModal1" />
                   </figure>
-                  <div class="listing_main_content">
+                  <div class="listing_main_content w-full">
                       <h3 class="heading_listing">${title}</h3>
                       <ul>
                           <li>
@@ -63,7 +63,8 @@ export class ListingItem extends HTMLElement {
                               <span>${website}</span>
                           </li>
                       </ul>
-                      <div class="listing_main_content_buttons">
+                  </div>
+                  <div class="listing_main_content_buttons" style="width: 100% !important;">
                           <a href="#" class="btn_1" id="show-number">
                               <i class="bi bi-telephone-fill"></i>
                               <span>Show Number</span>
@@ -72,8 +73,7 @@ export class ListingItem extends HTMLElement {
                               <i class="bi bi-envelope-fill"></i>
                               <span>Show Email</span>
                           </a>
-                      </div>
-                  </div>
+                    </div>
               </div>
               <div class="listing_footer">
                   <div class="listing_footer_images">

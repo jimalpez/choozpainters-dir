@@ -47,6 +47,7 @@
       &_buttons {
         display: flex;
         gap: 15px;
+        align-items: flex-start;
         .btn_1 {
           flex: 1;
           padding: 15px 20px;

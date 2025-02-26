@@ -17,8 +17,8 @@
     }
   }
   &_primary {
-    @include fontSize(48px);
-    font-weight: 500;
+    @include fontSize(42px);
+    font-weight: 700;
     margin-bottom: 15px;
     @include mobile {
       @include fontSize(32px);

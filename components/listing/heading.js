@@ -58,12 +58,22 @@ export class ListingHeading extends HTMLElement {
         <!-- /results -->
 
         <div class="container margin_t_60">
-            <h1 class="heading heading_primary">
-            Painting Companies in St. Louis Missouri
+            <h1 class="heading heading_primary margin_b_30">
+                St. Louis, MO Painting Contractors
             </h1>
-            <h4 class="heading_result">
-            <strong>Showing 10</strong> of 140 results
-            </h4>
+            <div class="d-flex justify-content-between align-items-center">
+                <p class="heading_result mb-0">
+                    <strong>Showing 3</strong> painters in St. Louis, MO
+                </p>
+                <div class="d-flex align-items-center gap-2">
+                    <label class="m-0 d-inline-block text-nowrap" for="sort-by">Sort by:</label>
+                    <select id="sort-by" class="form-select" aria-label="Sort by" style="width: 200px;">
+                        <option value="best-match" selected>Best Match</option>
+                        <option value="rating">Rating</option>
+                        <option value="distance">Distance</option>
+                    </select>
+                </div>
+            </div>
         </div>
     `;
   }
