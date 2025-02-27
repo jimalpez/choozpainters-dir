@@ -94,6 +94,14 @@ export class Listing extends HTMLElement {
 
       <div id="toTop"></div>
 
+      <div class="modal fade" id="imagesModal" tabindex="-1" role="dialog" aria-labelledby="imagesModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered" role="document">
+          <div class="modal-content">
+            <div class="modal-body"></div>
+          </div>
+          </div>
+      </div>
+
       <!-- Dynamic Modal -->
       <div class="modal fade" id="formProfileListing" tabindex="-1" role="dialog" aria-labelledby="formProfileListingLabel" aria-hidden="true">
         <div class="modal-dialog" role="document">
