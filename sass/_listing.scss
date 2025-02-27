@@ -47,6 +47,9 @@
             color: #464e5a;
             &.link {
               color: #1b73f0;
+              i {
+                color: #464e5a;
+              }
             }
             &.btn-blue {
               background-color: #395fb0;
@@ -105,18 +108,16 @@
     &_images {
       position: relative;
       width: 36%;
-      padding-right: 15px;
+      padding-right: 50px;
       text-align: center;
-      border-right: 2px solid #e4e5e7;
       display: grid;
       grid-template-columns: repeat(2, 1fr);
       grid-template-rows: repeat(2, 1fr);
       gap: 15px;
       @include mobile {
         width: 100%;
-        border-right: none;
-        border-bottom: 2px solid #e4e5e7;
         padding-bottom: 30px;
+        padding-right: 0;
       }
       img {
         width: 100%;
@@ -144,17 +145,27 @@
       }
     }
     &_reviews {
-      padding: 10px 20px;
+      padding: 10px 50px;
       flex: 1;
+      border-left: 2px solid #e4e5e7;
+      border-right: 2px solid #e4e5e7;
       @include mobile {
-        padding-top: 30px;
+        padding-top: 10px;
+        padding-right: 20px;
+        padding-left: 20px;
+        border-left: none;
+        border-right: none;
+        border-top: 2px solid #e4e5e7;
+        border-bottom: 2px solid #e4e5e7;
       }
     }
     &_services {
-      padding: 10px 20px;
+      padding: 10px 50px;
       flex: 1;
       @include mobile {
-        padding-top: 30px;
+        padding-top: 10px;
+        padding-right: 20px;
+        padding-left: 20px;
       }
       .list-disc {
         list-style-type: disc;

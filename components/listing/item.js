@@ -79,15 +79,15 @@ export class ListingItem extends HTMLElement {
                             </a>
                         </li>
                         <li>
-                            <a href="tel:${company_phone}" class="btn-blue">
-                                <i class="bi bi-telephone-fill"></i>
-                                <span>${company_phone}</span>
-                            </a>
-                        </li>
-                        <li>
                             <a href="${website}" class="link" target="_blank">
                                 <i class="icon-link-5"></i>
                                 <span>${website}</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="tel:${company_phone}" class="btn-blue">
+                                <i class="bi bi-telephone-fill"></i>
+                                <span>${company_phone}</span>
                             </a>
                         </li>
                     </ul>
@@ -98,12 +98,28 @@ export class ListingItem extends HTMLElement {
                     </button>
                     
                     <a href="/${region}/${city}/${category}/${slug}/" class="btn_1 transparent" id="show-email">
-                      <i class="bi bi-person-fill"></i>
                       <span>View Profile</span>
                     </a>
                   </div>
               </div>
               <div class="listing_footer">
+                <div class="listing_footer_images">
+                    ${imagesArrayList}
+                    ${
+                      this.imagesArray.length > 5
+                        ? `
+                        <button
+                        type="button"
+                        class="listing_footer_images_button"
+                        data-toggle="modal"
+                        data-target="#ImagesModal1">
+                        +${this.imagesArray.length - 5}
+                        </button>
+                    `
+                        : ""
+                    }
+                </div>
+
                 <div class="listing_footer_reviews">
                   <h2 class="heading_contractor-sm">Read Reviews From the Web</h2>
                   <ul>
@@ -124,27 +140,12 @@ export class ListingItem extends HTMLElement {
                       </li>
                   </ul>
                 </div>
+                
                 <div class="listing_footer_services">
                   <h2 class="heading_contractor-sm">Services</h2>
                   <ul class="list-disc">
                       ${servicesList}
                   </ul>
-                </div>
-                <div class="listing_footer_images">
-                    ${imagesArrayList}
-                    ${
-                      this.imagesArray.length > 5
-                        ? `
-                        <button
-                        type="button"
-                        class="listing_footer_images_button"
-                        data-toggle="modal"
-                        data-target="#ImagesModal1">
-                        +${this.imagesArray.length - 5}
-                        </button>
-                    `
-                        : ""
-                    }
                 </div>
               </div>
           </div>

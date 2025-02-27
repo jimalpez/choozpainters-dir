@@ -47,10 +47,9 @@ export class ListingHeading extends HTMLElement {
                         class="list_search_bar_group_search"
                         placeholder="Saint Louis, MO" />
                     </div>
-                    <input
-                    type="button"
-                    value="Find Painters"
-                    class="list_search_bar_group_search_button" />
+                    <button class="list_search_bar_group_search_button">
+                        <i class="bi bi-search"></i>
+                    </button>
                 </div>
                 </div>
             </div>
@@ -61,20 +60,24 @@ export class ListingHeading extends HTMLElement {
         <!-- /results -->
 
         <div class="container margin_t_60">
-            <h1 class="heading heading_primary margin_b_30">
-                St. Louis, MO Painting Contractors
-            </h1>
-            <div class="d-flex justify-content-between align-items-center">
-                <p class="heading_result mb-0">
-                    <strong>Showing ${length}</strong> painters in St. Louis, MO
-                </p>
-                <div class="d-flex align-items-center gap-2">
-                    <label class="m-0 d-inline-block text-nowrap" for="sort-by">Sort by:</label>
-                    <select id="sort-by" class="form-select" aria-label="Sort by" style="width: 200px;">
-                        <option value="best-match" selected>Best Match</option>
-                        <option value="rating">Rating</option>
-                        <option value="distance">Distance</option>
-                    </select>
+            <div class="row">
+                <div class="col-12">
+                    <h1 class="heading heading_primary margin_b_30">
+                        St. Louis, MO Painting Contractors
+                    </h1>
+                    <div class="d-flex justify-content-between align-items-center">
+                        <p class="heading_result mb-0">
+                            <strong>Showing ${length}</strong> painters in St. Louis, MO
+                        </p>
+                        <div class="d-flex align-items-center gap-2">
+                            <label class="m-0 d-inline-block text-nowrap" for="sort-by">Sort by:</label>
+                            <select id="sort-by" class="form-select" aria-label="Sort by" style="width: 200px;">
+                                <option value="best-match" selected>Best Match</option>
+                                <option value="rating">Rating</option>
+                                <option value="distance">Distance</option>
+                            </select>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>

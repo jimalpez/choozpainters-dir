@@ -58,7 +58,7 @@ export class Listing extends HTMLElement {
           this.contractorData.length
         }"></listing-heading>
 
-        <div class="container mt-2">
+        <div class="container mt-4">
           <div class="row">
             <div class="col-12">
               ${this.contractorData
