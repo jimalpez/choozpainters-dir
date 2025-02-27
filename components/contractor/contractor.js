@@ -167,7 +167,7 @@ class Contractor extends HTMLElement {
                 <button type="button" class="btn-close position-absolute top-0 end-0 m-3" data-bs-dismiss="modal" aria-label="Close"></button>
 
                 <form>
-                  <h3 class="mb-4">Request a quote from Astra Painters LLC</h3>
+                  <h3 class="mb-4">Request a quote from ${this.contractorData.title}</h3>
                   <div class="form-group">
                     <label for="name">Name</label>
                     <input type="name" class="form-control" id="name" aria-describedby="emailHelp">

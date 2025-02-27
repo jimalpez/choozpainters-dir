@@ -18,6 +18,7 @@ export class ListingItem extends HTMLElement {
     const city = this.getAttribute("data-city");
     const category = this.getAttribute("data-category");
     const slug = this.getAttribute("data-slug");
+    const index = this.getAttribute("data-index");
 
     let services = [];
     try {
@@ -92,7 +93,10 @@ export class ListingItem extends HTMLElement {
                     </ul>
                   </div>
                   <div class="listing_main_content_buttons">
-                    <button class="btn_full" type="button" data-toggle="modal" data-target="#formProfileListing">Request qoute</button>
+                    <button class="btn_full request-quote-btn" data-index="${index}" data-title="${title}" data-bs-toggle="modal" data-bs-target="#formProfileListing">
+                      Request a Quote
+                    </button>
+                    
                     <a href="/${region}/${city}/${category}/${slug}/" class="btn_1 transparent" id="show-email">
                       <i class="bi bi-person-fill"></i>
                       <span>View Profile</span>
@@ -146,11 +150,27 @@ export class ListingItem extends HTMLElement {
           </div>
       `;
 
+    this.initQuoteButtonListener();
+
     this.querySelectorAll(".gallery-image").forEach((img) => {
       img.addEventListener("click", (e) => {
         const index = parseInt(e.target.dataset.index, 10);
         new ModalSlider("#imagesModal", this.imagesArray, index).show();
       });
+    });
+  }
+
+  initQuoteButtonListener() {
+    const button = this.querySelector(".request-quote-btn");
+    if (!button) return;
+
+    button.addEventListener("click", () => {
+      const modalTitle = document.querySelector("#modalContractorTitle");
+      const contractorTitle = button.getAttribute("data-title");
+
+      if (modalTitle) {
+        modalTitle.textContent = `Request a quote from ${contractorTitle}`;
+      }
     });
   }
 }

@@ -54,14 +54,16 @@ export class Listing extends HTMLElement {
       <header-component></header-component>
 
       <main>
-        <listing-heading></listing-heading>
+        <listing-heading data-length="${
+          this.contractorData.length
+        }"></listing-heading>
 
         <div class="container mt-2">
           <div class="row">
             <div class="col-12">
               ${this.contractorData
                 .map(
-                  (contractor) => `
+                  (contractor, index) => `
                     <listing-item 
                         data-title="${contractor.title}"
                         data-company_logo="${contractor.company_logo}"
@@ -76,19 +78,14 @@ export class Listing extends HTMLElement {
                         data-city="${contractor.city}"
                         data-category="${contractor.category}"
                         data-slug="${contractor.slug}"
-                        data-services='${JSON.stringify(
-                          contractor.services,
-                        )}'
+                        data-services='${JSON.stringify(contractor.services)}'
+                        data-index="${index}"
                     ></listing-item>
                 `,
                 )
                 .join("")}
               <listing-pagination></listing-pagination>
             </div>
-
-            <!-- <aside class="col-lg-5" id="sidebar">
-              <listing-map></listing-map>
-            </aside> -->
           </div>
         </div>
       </main>
@@ -97,39 +94,30 @@ export class Listing extends HTMLElement {
 
       <div id="toTop"></div>
 
-      <div class="modal fade" id="imagesModal" tabindex="-1" role="dialog" aria-labelledby="imagesModalLabel" aria-hidden="true">
-        <div class="modal-dialog modal-dialog-centered" role="document">
-          <div class="modal-content">
-            <div class="modal-body"></div>
-          </div>
-          </div>
-      </div>
-
-      <!-- Modal -->
+      <!-- Dynamic Modal -->
       <div class="modal fade" id="formProfileListing" tabindex="-1" role="dialog" aria-labelledby="formProfileListingLabel" aria-hidden="true">
         <div class="modal-dialog" role="document">
           <div class="modal-content">
             <div class="modal-body p-5">
               <button type="button" class="btn-close position-absolute top-0 end-0 m-3" data-bs-dismiss="modal" aria-label="Close"></button>
 
-              <form>
-                <h3 class="mb-4">Request a quote from Astra Painters LLC</h3>
+              <form id="quoteForm">
+                <h3 class="mb-4" id="modalContractorTitle">Request a quote</h3>
                 <div class="form-group">
                   <label for="name">Name</label>
-                  <input type="name" class="form-control" id="name" aria-describedby="emailHelp">
+                  <input type="name" class="form-control" id="name" required>
                 </div>
                 <div class="form-group">
                   <label for="phone">Phone</label>
-                  <input type="tel" class="form-control" id="phone" aria-describedby="emailHelp">
+                  <input type="tel" class="form-control" id="phone" required>
                 </div>
                 <div class="form-group">
                   <label for="email">Email</label>
-                  <input type="email" class="form-control" id="email" aria-describedby="emailHelp">
+                  <input type="email" class="form-control" id="email" required>
                 </div>
                 <div class="form-group">
-                  <label for="ContractPreference">Contract Preference</label>
+                  <label for="ContractPreference">Contact Preference</label>
                   <select class="form-control" id="ContractPreference">
-                    <option></option>
                     <option>Email</option>
                     <option>Phone</option>
                   </select>
@@ -139,9 +127,9 @@ export class Listing extends HTMLElement {
                   <textarea class="form-control" id="TellUsAboutYourProject" rows="4"></textarea>
                   <small class="form-text text-muted">0 of 1000 max characters</small>
                 </div>
-                <p>Chooz Painters is a third party directory that will forward your contact form to the painting company listed above</p>
+                <p>Chooz Painters is a third-party directory that will forward your contact form to the painting company listed above.</p>
                 <div class="form-check">
-                  <input type="checkbox" class="form-check-input" id="IHaveReadTheDisclaimer">
+                  <input type="checkbox" class="form-check-input" id="IHaveReadTheDisclaimer" required>
                   <label class="form-check-label" for="IHaveReadTheDisclaimer">I have read the disclaimer*</label>
                 </div>
                 <button type="submit" class="btn_full mt-3">Submit</button>
@@ -152,33 +140,21 @@ export class Listing extends HTMLElement {
       </div>
     `;
 
-    this.initModals();
+    this.initModalListeners();
   }
 
-  initModals() {
-    const modalElements = this.querySelectorAll(".modal");
+  initModalListeners() {
+    const buttons = this.querySelectorAll(".request-quote-btn");
+    const modalTitle = this.querySelector("#modalContractorTitle");
 
-    modalElements.forEach((modalElement) => {
-      const modal = new bootstrap.Modal(modalElement, {});
+    buttons.forEach((button) => {
+      button.addEventListener("click", () => {
+        const contractorIndex = button.getAttribute("data-index");
+        const contractor = this.contractorData[contractorIndex];
 
-      // Find all buttons that trigger this modal
-      const modalButtons = this.querySelectorAll(
-        `[data-toggle="modal"][data-target="#${modalElement.id}"]`,
-      );
-
-      modalButtons.forEach((button) => {
-        button.addEventListener("click", () => {
-          modal.show();
-        });
-      });
-
-      // Ensure aria-hidden is properly updated
-      modalElement.addEventListener("shown.bs.modal", () => {
-        modalElement.removeAttribute("aria-hidden");
-      });
-
-      modalElement.addEventListener("hidden.bs.modal", () => {
-        modalElement.setAttribute("aria-hidden", "true");
+        if (contractor) {
+          modalTitle.textContent = `Request a quote from ${contractor.title}`;
+        }
       });
     });
   }

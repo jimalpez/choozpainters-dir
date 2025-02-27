@@ -4,6 +4,8 @@ export class ListingHeading extends HTMLElement {
   }
 
   connectedCallback() {
+    const length = this.getAttribute("data-length");
+
     this.innerHTML = `
         <div id="breadcrumb">
             <div class="container">
@@ -64,7 +66,7 @@ export class ListingHeading extends HTMLElement {
             </h1>
             <div class="d-flex justify-content-between align-items-center">
                 <p class="heading_result mb-0">
-                    <strong>Showing 3</strong> painters in St. Louis, MO
+                    <strong>Showing ${length}</strong> painters in St. Louis, MO
                 </p>
                 <div class="d-flex align-items-center gap-2">
                     <label class="m-0 d-inline-block text-nowrap" for="sort-by">Sort by:</label>
