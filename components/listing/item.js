@@ -12,8 +12,25 @@ export class ListingItem extends HTMLElement {
     const company_logo = this.getAttribute("data-company_logo");
     const address = this.getAttribute("data-address");
     const website = this.getAttribute("data-website");
-    const phone = this.getAttribute("data-phone");
+    const company_phone = this.getAttribute("data-company_phone");
     const email = this.getAttribute("data-email");
+    const region = this.getAttribute("data-region");
+    const city = this.getAttribute("data-city");
+    const category = this.getAttribute("data-category");
+    const slug = this.getAttribute("data-slug");
+
+    let services = [];
+    try {
+      const servicesAttr = this.getAttribute("data-services");
+      services = servicesAttr ? JSON.parse(servicesAttr) : [];
+      if (!Array.isArray(services)) throw new Error("Services is not an array");
+    } catch (error) {
+      console.error("Invalid JSON in data-services attribute", error);
+      services = ["N/A"];
+    }
+    const servicesList = services
+      .map((service) => `<li>${service}</li>`)
+      .join("");
 
     try {
       const company_images = this.getAttribute("data-company_images");
@@ -49,70 +66,82 @@ export class ListingItem extends HTMLElement {
                   <figure>
                       <img class="gallery-image" src="${company_logo}" alt="${title} logo" data-index="0" data-toggle="modal" data-target="#ImagesModal1" />
                   </figure>
-                  <div class="listing_main_content w-full">
+                  <div class="listing_main_content">
                       <h3 class="heading_listing">${title}</h3>
                       <ul>
-                          <li>
-                              <i class="bi bi-geo-alt-fill"></i>
-                              <span>
-                              ${address}
-                              </span>
-                          </li>
-                          <li>
-                              <i class="icon-link-5"></i>
-                              <span>${website}</span>
-                          </li>
-                      </ul>
+                        <li>
+                            <a href="#" class="">
+                                <i class="bi bi-geo-alt-fill"></i>
+                                <span>
+                                    Address: ${address}
+                                </span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="tel:${company_phone}" class="btn-blue">
+                                <i class="bi bi-telephone-fill"></i>
+                                <span>${company_phone}</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="mailto:${email}" class="link">
+                                <i class="icon-link-5"></i>
+                                <span>${email}</span>
+                            </a>
+                        </li>
+                    </ul>
                   </div>
-                  <div class="listing_main_content_buttons" style="width: 100% !important;">
-                          <a href="#" class="btn_1" id="show-number">
-                              <i class="bi bi-telephone-fill"></i>
-                              <span>Show Number</span>
-                          </a>
-                          <a href="#" class="btn_1" id="show-email">
-                              <i class="bi bi-envelope-fill"></i>
-                              <span>Show Email</span>
-                          </a>
-                    </div>
+                  <div class="listing_main_content_buttons">
+                    <button class="btn_full" type="button" data-toggle="modal" data-target="#formProfileListing">Request qoute</button>
+                    <a href="/${region}/${city}/${category}/${slug}/" class="btn_1 transparent" id="show-email">
+                      <i class="bi bi-person-fill"></i>
+                      <span>View Profile</span>
+                    </a>
+                  </div>
               </div>
               <div class="listing_footer">
-                  <div class="listing_footer_images">
-                      ${imagesArrayList}
-                      ${
-                        this.imagesArray.length > 5
-                          ? `
-                          <button
-                          type="button"
-                          class="listing_footer_images_button"
-                          data-toggle="modal"
-                          data-target="#ImagesModal1">
-                          +${this.imagesArray.length - 5}
-                          </button>
-                      `
-                          : ""
-                      }
-                  </div>
-                  <div class="listing_footer_reviews">
-                      <h5>Review Sources</h5>
-                      <ul>
+                <div class="listing_footer_reviews">
+                  <h2 class="heading_contractor-sm">Read Reviews From the Web</h2>
+                  <ul>
                       <li>
-                          <span class="rating_placeholder">Google</span>
-                          <span class="ratings">
-                          <span class="ratings_rate">5.0</span>
-                          <i class="icon_star voted"></i>
-                          <span class="ratings_total">(9)</span>
+                          <a href="#" class="ratings-review--link">Google</a>
+                          <div class="ratings-review">
+                          <span class="ratings-review--number">5.0</span>
+                          <span class="ratings-review--stars">
+                              <i class="bi bi-star-fill"></i>
+                              <i class="bi bi-star-fill"></i>
+                              <i class="bi bi-star-fill"></i>
+                              <i class="bi bi-star-fill"></i>
+                              <i class="bi bi-star-fill"></i>
                           </span>
+                          <span class="ratings-review--text">4 reviews</span>
+                          </div>
+                          <p class="ratings-review--date">(As of 11-20-2024)</p>
                       </li>
-                      <li>
-                          <span class="rating_placeholder">Facebook</span>
-                          <span class="ratings">
-                          <span class="ratings_rate">5.0</span>
-                          <i class="icon_star voted"></i>
-                          <span class="ratings_total">(9)</span>
-                          </span>
-                      </li>
-                      </ul>
-                  </div>
+                  </ul>
+                </div>
+                <div class="listing_footer_services">
+                  <h2 class="heading_contractor-sm">Services</h2>
+                  <ul class="list-disc">
+                      ${servicesList}
+                  </ul>
+                </div>
+                <div class="listing_footer_images">
+                    ${imagesArrayList}
+                    ${
+                      this.imagesArray.length > 5
+                        ? `
+                        <button
+                        type="button"
+                        class="listing_footer_images_button"
+                        data-toggle="modal"
+                        data-target="#ImagesModal1">
+                        +${this.imagesArray.length - 5}
+                        </button>
+                    `
+                        : ""
+                    }
+                </div>
               </div>
           </div>
       `;
@@ -123,34 +152,6 @@ export class ListingItem extends HTMLElement {
         new ModalSlider("#imagesModal", this.imagesArray, index).show();
       });
     });
-
-    this.querySelector("#show-number").addEventListener("click", (e) => {
-      e.preventDefault();
-      this.showNumber(phone);
-    });
-
-    this.querySelector("#show-email").addEventListener("click", (e) => {
-      e.preventDefault();
-      this.showEmail(email);
-    });
-  }
-
-  showNumber(number) {
-    const button = this.querySelector("#show-number");
-    const span = button.querySelector("span");
-    span.textContent = number;
-    setTimeout(() => {
-      span.textContent = "Show Number";
-    }, 5000);
-  }
-
-  showEmail(email) {
-    const button = this.querySelector("#show-email");
-    const span = button.querySelector("span");
-    span.textContent = email;
-    setTimeout(() => {
-      span.textContent = "Show Email";
-    }, 5000);
   }
 }
 
