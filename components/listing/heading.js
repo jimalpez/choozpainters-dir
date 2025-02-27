@@ -9,8 +9,9 @@ export class ListingHeading extends HTMLElement {
             <div class="container">
             <ul>
                 <li><a href="#">Home</a></li>
-                <li><a href="#">Category</a></li>
-                <li>Page active</li>
+                <li><a href="#">Missouri</a></li>
+                <li><a href="#">Saint Louis</a></li>
+                <li>Painting Contractors</li>
             </ul>
             </div>
         </div>

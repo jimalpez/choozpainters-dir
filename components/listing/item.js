@@ -67,7 +67,7 @@ export class ListingItem extends HTMLElement {
                       <img class="gallery-image" src="${company_logo}" alt="${title} logo" data-index="0" data-toggle="modal" data-target="#ImagesModal1" />
                   </figure>
                   <div class="listing_main_content">
-                      <h3 class="heading_listing">${title}</h3>
+                      <h2 class="heading_listing">${title}</h2>
                       <ul>
                         <li>
                             <a href="#" class="">
@@ -84,9 +84,9 @@ export class ListingItem extends HTMLElement {
                             </a>
                         </li>
                         <li>
-                            <a href="mailto:${email}" class="link">
+                            <a href="${website}" class="link" target="_blank">
                                 <i class="icon-link-5"></i>
-                                <span>${email}</span>
+                                <span>${website}</span>
                             </a>
                         </li>
                     </ul>
