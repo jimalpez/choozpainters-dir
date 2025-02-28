@@ -93,13 +93,29 @@ export class ListingItem extends HTMLElement {
                     </ul>
                   </div>
                   <div class="listing_main_content_buttons">
-                    <button class="btn_full request-quote-btn" data-index="${index}" data-title="${title}" data-bs-toggle="modal" data-bs-target="#formProfileListing">
+                    <a href="tel:${company_phone}" class="btn-bg-blue">
+                        Call for a FREE consultation
+                        <span>${company_phone}</span>
+                    </a>
+                    <div class="d-flex gap-3">
+                      <a href="/${region}/${city}/${category}/${slug}/" class="btn_1 transparent" id="show-email">
+                        <i class="bi bi-person-fill"></i>
+                        <span>Profile</span>
+                      </a>
+                      <a href="/${region}/${city}/${category}/${slug}/" class="btn_1 transparent" id="show-email">
+                        <i class="bi bi-envelope-fill"></i>
+                        <span>Message</span>
+                      </a>
+                    </div>
+
+
+                    <!--<button class="btn_full request-quote-btn" data-index="${index}" data-title="${title}" data-bs-toggle="modal" data-bs-target="#formProfileListing">
                       Request a Quote
                     </button>
                     
                     <a href="/${region}/${city}/${category}/${slug}/" class="btn_1 transparent" id="show-email">
                       <span>View Profile</span>
-                    </a>
+                    </a> -->
                   </div>
               </div>
               <div class="listing_footer">
@@ -121,26 +137,26 @@ export class ListingItem extends HTMLElement {
                 </div>
 
                 <div class="listing_footer_reviews">
-                  <h2 class="heading_contractor-sm">Read Reviews From the Web</h2>
+                  <h2 class="heading_contractor-sm">Reviews From the Web</h2>
                   <ul>
                       <li>
                           <a href="#" class="ratings-review--link">Google</a>
                           <div class="ratings-review">
-                          <span class="ratings-review--number">5.0</span>
-                          <span class="ratings-review--stars">
-                              <i class="bi bi-star-fill"></i>
-                              <i class="bi bi-star-fill"></i>
-                              <i class="bi bi-star-fill"></i>
-                              <i class="bi bi-star-fill"></i>
-                              <i class="bi bi-star-fill"></i>
-                          </span>
-                          <span class="ratings-review--text">4 reviews</span>
+                            <span class="ratings-review--number">5.0</span>
+                            <span class="ratings-review--stars">
+                                <i class="bi bi-star-fill"></i>
+                                <i class="bi bi-star-fill"></i>
+                                <i class="bi bi-star-fill"></i>
+                                <i class="bi bi-star-fill"></i>
+                                <i class="bi bi-star-fill"></i>
+                            </span>
+                            <span class="ratings-review--text">4 reviews</span>
                           </div>
                           <p class="ratings-review--date">(As of 11-20-2024)</p>
                       </li>
                   </ul>
                 </div>
-                
+
                 <div class="listing_footer_services">
                   <h2 class="heading_contractor-sm">Services</h2>
                   <ul class="list-disc">
