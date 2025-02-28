@@ -84,17 +84,11 @@ export class ListingItem extends HTMLElement {
                                 <span>${website}</span>
                             </a>
                         </li>
-                        <li>
-                            <a href="tel:${company_phone}" class="btn-blue">
-                                <i class="bi bi-telephone-fill"></i>
-                                <span>${company_phone}</span>
-                            </a>
-                        </li>
                     </ul>
                   </div>
                   <div class="listing_main_content_buttons">
                     <a href="tel:${company_phone}" class="btn-bg-blue">
-                        Call for a FREE consultation
+                        <i class="bi bi-telephone-fill"></i>
                         <span>${company_phone}</span>
                     </a>
                     <div class="d-flex gap-3">
@@ -102,10 +96,10 @@ export class ListingItem extends HTMLElement {
                         <i class="bi bi-person-fill"></i>
                         <span>Profile</span>
                       </a>
-                      <a href="/${region}/${city}/${category}/${slug}/" class="btn_1 transparent" id="show-email">
+                      <button class="btn_1 transparent request-quote-btn" data-index="${index}" data-title="${title}" data-bs-toggle="modal" data-bs-target="#formProfileListing">
                         <i class="bi bi-envelope-fill"></i>
                         <span>Message</span>
-                      </a>
+                      </button>
                     </div>
 
 
