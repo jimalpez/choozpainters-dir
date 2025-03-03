@@ -12,7 +12,7 @@ class Header extends HTMLElement {
         logo.src = "/img/choozpainters-small-logo_trp_back.png";
         logo.width = "35";
       } else {
-        logo.src = "/img/logo/chooz_painters_logo.png";
+        logo.src = "/img/logo/chooz_painters_big_multicolored_logo-1.png";
         logo.width = "130";
       }
 
@@ -61,7 +61,7 @@ class Header extends HTMLElement {
                     <div class="col-lg-3 col-6">
                       <a href="/" class="logo-holder">
                           <!-- <div class="main-logo ${classLogo}"></div> -->
-                          <img class="logo" src="/img/logo/chooz_painters_logo.png" alt="Chooz Painters Logo" width="130" height="auto" />
+                          <img class="logo" src="/img/logo/chooz_painters_big_multicolored_logo-1.png" alt="Chooz Painters Logo" width="130" height="auto" />
                       </a>
                     </div>
                     <nav class="col-lg-9 col-6">
