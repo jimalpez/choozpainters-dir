@@ -371,7 +371,7 @@
     }
     .pricing-price-text {
       h3 {
-        @include fontSize(25px);
+        @include fontSize(30px);
         color: #080808;
       }
       p {
@@ -383,6 +383,7 @@
         @include fontSize(40px);
         font-weight: 400;
         line-height: 100%;
+        color: #080808
       }
       &-duration {
         @include fontSize(24px);
