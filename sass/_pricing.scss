@@ -380,7 +380,7 @@
     }
     .price {
       &-value {
-        @include fontSize(50px);
+        @include fontSize(40px);
         font-weight: 400;
         line-height: 100%;
       }
