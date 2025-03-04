@@ -53,12 +53,6 @@ class HeroSection extends HTMLElement {
                         src="/img/floating_images/choozpainters-balloon-2.png"
                         alt="Hot Air Balloon"
                         class="float-hot-air-ballon" />
-
-                    <!-- Mobile Right Images -->
-                    <img
-                        src="/img/floating_images/choozpainters-balloon-2.png"
-                        alt="Hot Air Balloon"
-                        class="float-hot-air-ballon float-hot-air-ballon-mobile-right" />
                 </div>
             </div>
         </div>
