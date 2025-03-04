@@ -11,7 +11,7 @@ class Footer extends HTMLElement {
                 <div class="col-lg-6">
                     <div class="row">
                     <div class="col-md-5">
-                        <img class="footer-logo" src="/img/logo/choozpainters-logo_white.png" alt="Logo Footer">
+                        <img class="footer-logo" src="/img/logo/chooz_painters_logo_white-1.png" alt="Logo Footer">
                         <ul class="footer-list">
                         <li>
                             <i class="bi bi-envelope"></i>
@@ -68,23 +68,23 @@ class Footer extends HTMLElement {
                     <div class="post-item">
                         <img src="/img/painter-scout-bg-home1.jpg" alt="" />
                         <div class="post-item-info">
-                        <h5>Finding Trusted Painters in Your Area</h5>
-                        <p>
-                            When it comes to transforming your home or office, a fresh
-                            coat of paint can make all…
-                        </p>
-                        <ul>
-                            <li>
-                            <i class="bi bi-calendar"></i>
-                            <span>July 10</span>
-                            </li>
-                            <li>
-                            <i class="bi bi-chat"></i>
-                            <span>1 comment</span>
-                            </li>
-                        </ul>
+                            <h5>Finding Trusted Painters in Your Area</h5>
+                            <p>
+                                When it comes to transforming your home or office, a fresh
+                                coat of paint can make all…
+                            </p>
+                            <ul>
+                                <li>
+                                <i class="bi bi-calendar"></i>
+                                <span>July 10</span>
+                                </li>
+                                <li>
+                                <i class="bi bi-chat"></i>
+                                <span>1 comment</span>
+                                </li>
+                            </ul>
+                            </div>
                         </div>
-                    </div>
                     </div>
                 </div>
                 </div>
