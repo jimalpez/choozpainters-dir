@@ -163,43 +163,31 @@ class Contractor extends HTMLElement {
         <div class="modal fade" id="formProfile" tabindex="-1" role="dialog" aria-labelledby="formProfileLabel" aria-hidden="true">
           <div class="modal-dialog" role="document">
             <div class="modal-content">
-              <div class="modal-body p-5">
+              <div class="modal-body p-0">
                 <button type="button" class="btn-close position-absolute top-0 end-0 m-3" data-bs-dismiss="modal" aria-label="Close"></button>
 
-                <form>
-                  <h3 class="mb-4">Request a quote from ${this.contractorData.title}</h3>
-                  <div class="form-group">
-                    <label for="name">Name</label>
-                    <input type="name" class="form-control" id="name" aria-describedby="emailHelp">
-                  </div>
-                  <div class="form-group">
-                    <label for="phone">Phone</label>
-                    <input type="tel" class="form-control" id="phone" aria-describedby="emailHelp">
-                  </div>
-                  <div class="form-group">
-                    <label for="email">Email</label>
-                    <input type="email" class="form-control" id="email" aria-describedby="emailHelp">
-                  </div>
-                  <div class="form-group">
-                    <label for="ContractPreference">Contract Preference</label>
-                    <select class="form-control" id="ContractPreference">
-                      <option></option>
-                      <option>Email</option>
-                      <option>Phone</option>
-                    </select>
-                  </div>
-                  <div class="form-group">
-                    <label for="TellUsAboutYourProject">Tell Us About Your Project</label>
-                    <textarea class="form-control" id="TellUsAboutYourProject" rows="4"></textarea>
-                    <small class="form-text text-muted">0 of 1000 max characters</small>
-                  </div>
-                  <p>Chooz Painters is a third party directory that will forward your contact form to the painting company listed above</p>
-                  <div class="form-check">
-                    <input type="checkbox" class="form-check-input" id="IHaveReadTheDisclaimer">
-                    <label class="form-check-label" for="IHaveReadTheDisclaimer">I have read the disclaimer*</label>
-                  </div>
-                  <button type="submit" class="btn_full mt-3">Submit</button>
-                </form>
+                <iframe
+              src="https://api.leadconnectorhq.com/widget/form/EW6N1a3RC0W2io5fvMUB"
+              style="
+                width: 100%;
+                height: 100%;
+                border: none;
+                border-radius: 4px;
+              "
+              id="inline-EW6N1a3RC0W2io5fvMUB"
+              data-layout="{id:'INLINE'}"
+              data-trigger-type="alwaysShow"
+              data-trigger-value=""
+              data-activation-type="alwaysActivated"
+              data-activation-value=""
+              data-deactivation-type="neverDeactivate"
+              data-deactivation-value=""
+              data-form-name="Chooz Painters - Profile Page Customer Submission"
+              data-height="1341"
+              data-layout-iframe-id="inline-EW6N1a3RC0W2io5fvMUB"
+              data-form-id="EW6N1a3RC0W2io5fvMUB"
+              title="Chooz Painters - Profile Page Customer Submission">
+            </iframe>
               </div>
             </div>
           </div>
