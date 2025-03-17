@@ -73,12 +73,12 @@ class Header extends HTMLElement {
                             <a href="login.html"><i class="pe-7s-user"></i></a>
                           </li> -->
                           <li class="only-mobile">
-                            <a href="register-doctor.html">
+                            <a href="/claim-painting-contractor-profile">
                               <i class="pe-7s-add-user"></i>
                             </a>
                           </li>
                           <li class="only-desktop">
-                            <a href="register-doctor.html" class="btn_1 small white">
+                            <a href="/claim-painting-contractor-profile" class="btn_1 small white">
                               <span class="plus">+</span> <span> Claim Page </span>
                             </a>
                           </li>
