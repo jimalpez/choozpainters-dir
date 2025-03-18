@@ -45,11 +45,11 @@ class Header extends HTMLElement {
   toggleMobileMenu() {
     const menu = this.querySelector(".main-menu");
     if (menu.style.left === "100%") {
-        menu.style.left = "-100%"; // Hide menu when clicked again
+      menu.style.left = "-100%"; // Hide menu when clicked again
     } else {
-        menu.style.left = "100%"; // Show menu
+      menu.style.left = "100%"; // Show menu
     }
-}
+  }
 
   connectedCallback() {
     const classLogo = this.getAttribute("class-logo") || "logo-default";
@@ -94,7 +94,7 @@ class Header extends HTMLElement {
                                     <li><a href="/pricing.html">Pricing</a></li>
                                     <li><a href="/list.html">Listing</a></li>
                                     <li><a href="/contractor_page.html">Profile</a></li>
-                                    <li><a href="/painting-contractors/missouri/63021/ballwin/">Profile Backend</a></li>
+                                    <li><a href="/painting-contractors/missouri/63021/ballwin/astra-painters-llc/">Profile Backend</a></li>
                                     <li><a href="/mo/saint-louis/painting-contractors/">Listings Backend</a></li>
                                 </ul>
                             </li>
@@ -107,10 +107,13 @@ class Header extends HTMLElement {
         </header>
     `;
 
-    this.querySelector(".cmn-toggle-switch").addEventListener("click", (event) => {
-      event.preventDefault();
-      this.toggleMobileMenu();
-  });
+    this.querySelector(".cmn-toggle-switch").addEventListener(
+      "click",
+      (event) => {
+        event.preventDefault();
+        this.toggleMobileMenu();
+      },
+    );
   }
 }
 
