@@ -35,10 +35,10 @@ class Contractor extends HTMLElement {
       queryParams = { region: pathSegments[1], slug: pathSegments[2] };
     } else if (pathSegments.length === 4) {
       queryParams = {
-        region: pathSegments[0],
-        city: pathSegments[1],
-        category: pathSegments[2],
-        slug: pathSegments[3],
+        category: pathSegments[0],
+        region: pathSegments[1],
+        post_code: pathSegments[2],
+        city: pathSegments[3],
       };
     } else {
       console.error("Invalid contractor URL format.");
