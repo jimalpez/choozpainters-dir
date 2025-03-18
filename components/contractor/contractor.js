@@ -33,7 +33,7 @@ class Contractor extends HTMLElement {
 
     if (pathSegments.length === 3 && pathSegments[0] === "contractor") {
       queryParams = { region: pathSegments[1], slug: pathSegments[2] };
-    } else if (pathSegments.length === 4) {
+    } else if (pathSegments.length === 5) {
       queryParams = {
         category: pathSegments[0],
         region: pathSegments[1],
