@@ -39,6 +39,7 @@ class Contractor extends HTMLElement {
         region: pathSegments[1],
         post_code: pathSegments[2],
         city: pathSegments[3],
+        slug: pathSegments[4],
       };
     } else {
       console.error("Invalid contractor URL format.");
