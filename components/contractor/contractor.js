@@ -74,7 +74,7 @@ class Contractor extends HTMLElement {
   }
 
   setContractorNameField() {
-    const nameField = this.querySelector('input[name="b38HkyMU84dQLTV4lKEM"]');
+    const nameField = this.querySelector('input[data-q="contractor_name"]');
     if (nameField && this.contractorData?.title) {
       nameField.value = this.contractorData.title;
     }
