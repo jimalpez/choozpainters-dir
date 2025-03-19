@@ -73,6 +73,13 @@ class Contractor extends HTMLElement {
     }
   }
 
+  setContractorNameField() {
+    const nameField = this.querySelector('input[name="b38HkyMU84dQLTV4lKEM"]');
+    if (nameField && this.contractorData?.title) {
+      nameField.value = this.contractorData.title;
+    }
+  }
+
   render() {
     if (this.contractorData) {
       this.innerHTML = `
@@ -166,35 +173,41 @@ class Contractor extends HTMLElement {
             <div class="modal-content">
               <div class="modal-body p-0">
                 <button type="button" class="btn-close position-absolute top-0 end-0 m-3" data-bs-dismiss="modal" aria-label="Close"></button>
-
+                
+                <div style="padding: 76px 76px 0; margin-bottom: -50px;">
+                  <h4 style="font-size: 30px;;">Request a quote from ${
+                    this.contractorData.title
+                  }</h4>
+                </div>
                 <iframe
-              src="https://api.leadconnectorhq.com/widget/form/EW6N1a3RC0W2io5fvMUB"
-              style="
-                width: 100%;
-                height: 100%;
-                border: none;
-                border-radius: 4px;
-              "
-              id="inline-EW6N1a3RC0W2io5fvMUB"
-              data-layout="{id:'INLINE'}"
-              data-trigger-type="alwaysShow"
-              data-trigger-value=""
-              data-activation-type="alwaysActivated"
-              data-activation-value=""
-              data-deactivation-type="neverDeactivate"
-              data-deactivation-value=""
-              data-form-name="Chooz Painters - Profile Page Customer Submission"
-              data-height="1341"
-              data-layout-iframe-id="inline-EW6N1a3RC0W2io5fvMUB"
-              data-form-id="EW6N1a3RC0W2io5fvMUB"
-              title="Chooz Painters - Profile Page Customer Submission">
-            </iframe>
+                  src="https://api.leadconnectorhq.com/widget/form/EW6N1a3RC0W2io5fvMUB"
+                  style="
+                    width: 100%;
+                    height: 100%;
+                    border: none;
+                    border-radius: 4px;
+                  "
+                  id="inline-EW6N1a3RC0W2io5fvMUB"
+                  data-layout="{id:'INLINE'}"
+                  data-trigger-type="alwaysShow"
+                  data-trigger-value=""
+                  data-activation-type="alwaysActivated"
+                  data-activation-value=""
+                  data-deactivation-type="neverDeactivate"
+                  data-deactivation-value=""
+                  data-form-name="Chooz Painters - Profile Page Customer Submission"
+                  data-height="1341"
+                  data-layout-iframe-id="inline-EW6N1a3RC0W2io5fvMUB"
+                  data-form-id="EW6N1a3RC0W2io5fvMUB"
+                  title="Chooz Painters - Profile Page Customer Submission">
+                </iframe>
               </div>
             </div>
           </div>
         </div>
       `;
 
+      this.setContractorNameField();
       this.initModals(); // Initialize the modal
     } else {
       this.innerHTML = `<p>Contractor not found.</p>`;
