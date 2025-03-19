@@ -105,6 +105,7 @@ class Contractor extends HTMLElement {
                   data-facebook="${this.contractorData.facebook}"
                   data-google_bp="${this.contractorData.google_bp}"
                   data-category="${this.contractorData.category}"
+                  data-post_code="${this.contractorData.post_code}"
                 ></contractor-heading>
 
                 <div class="row">

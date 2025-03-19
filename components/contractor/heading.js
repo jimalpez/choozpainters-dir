@@ -14,15 +14,17 @@ export class ContractorHeading extends HTMLElement {
     const facebook = this.getAttribute("data-facebook") || "N/A";
     const google_bp = this.getAttribute("data-google_bp") || "N/A";
     const category = this.getAttribute("data-category") || "Category";
+    const post_code = this.getAttribute("data-post_code") || "N/A";
 
     this.innerHTML = `
         <div id="breadcrumb">
             <div class="container">
                 <ul>
-                    <li><a href="/">Home</a></li>
+                <li><a href="/">Home</a></li>
+                <li><a href="#">${category.replace(/-/g, ' ')}</a></li>
                     <li><a href="#">${region}</a></li>
+                    <li><a href="#">${post_code}</a></li>
                     <li><a href="#">${city}</a></li>
-                    <li><a href="#">${category.replace(/-/g, ' ')}</a></li>
                     <li>${title}</li>
                 </ul>
             </div>
