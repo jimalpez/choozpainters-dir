@@ -74,9 +74,15 @@ class Contractor extends HTMLElement {
   }
 
   setContractorNameField() {
-    const nameField = this.querySelector('input[data-q="contractor_name"]');
-    if (nameField && this.contractorData?.title) {
-      nameField.value = this.contractorData.title;
+    const formIframe = document.getElementById("inline-EW6N1a3RC0W2io5fvMUB");
+
+    if (formIframe && this.contractorData?.title) {
+      const formUrl = new URL(formIframe.src);
+
+      // Append contractor_name as a query parameter
+      formUrl.searchParams.set("contractor_name", this.contractorData.title);
+
+      formIframe.src = formUrl.toString(); // Reload iframe with the updated URL
     }
   }
 
