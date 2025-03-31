@@ -29,46 +29,30 @@ class Contractor extends HTMLElement {
   async fetchContractorData() {
     const pathSegments = window.location.pathname.split("/").filter(Boolean);
 
-    let queryParams = {};
+    if (pathSegments.length === 5) {
+      const [category, state, post_code, city, slug] = pathSegments;
 
-    if (pathSegments.length === 3 && pathSegments[0] === "contractor") {
-      queryParams = { region: pathSegments[1], slug: pathSegments[2] };
-    } else if (pathSegments.length === 5) {
-      queryParams = {
-        category: pathSegments[0],
-        region: pathSegments[1],
-        post_code: pathSegments[2],
-        city: pathSegments[3],
-        slug: pathSegments[4],
-      };
+      // Construct the correct API endpoint
+      const apiUrl = `https://choozpainters-api.vercel.app/${category}/${state}/${post_code}/${city}/${slug}`;
+
+      console.log("Fetching data from:", apiUrl); // Debugging URL
+
+      try {
+        const response = await fetch(apiUrl);
+        console.log("Response status:", response.status);
+
+        if (!response.ok) {
+          throw new Error(`API Error: ${response.status}`);
+        }
+
+        this.contractorData = await response.json();
+        console.log("Contractor Data:", this.contractorData);
+      } catch (error) {
+        console.error("Error fetching contractor data:", error);
+        this.contractorData = null;
+      }
     } else {
       console.error("Invalid contractor URL format.");
-      return;
-    }
-
-    try {
-      const queryString = new URLSearchParams(queryParams).toString();
-      const response = await fetch(
-        `https://nrroyfmyiff6qhks7i2xdmgcxu0erbid.lambda-url.us-east-1.on.aws/?${queryString}`,
-      );
-
-      if (!response.ok) {
-        throw new Error("Failed to fetch contractor data");
-      }
-
-      const contractors = await response.json();
-      this.contractorData = contractors.find((contractor) =>
-        Object.keys(queryParams).every(
-          (key) =>
-            contractor[key]?.toLowerCase() === queryParams[key].toLowerCase(),
-        ),
-      );
-
-      if (!this.contractorData) {
-        console.error("Contractor not found.");
-      }
-    } catch (error) {
-      console.error("Error fetching contractor data:", error);
       this.contractorData = null;
     }
   }
@@ -78,11 +62,8 @@ class Contractor extends HTMLElement {
 
     if (formIframe && this.contractorData?.title) {
       const formUrl = new URL(formIframe.src);
-
-      // Append contractor_name as a query parameter
       formUrl.searchParams.set("contractor_name", this.contractorData.title);
-
-      formIframe.src = formUrl.toString(); // Reload iframe with the updated URL
+      formIframe.src = formUrl.toString();
     }
   }
 
@@ -90,15 +71,13 @@ class Contractor extends HTMLElement {
     if (this.contractorData) {
       this.innerHTML = `
         <div class="layer"></div>
-      
         <header-component class-logo="logo-contractor"></header-component>
-
         <main>
             <div class="container">
                 <contractor-heading 
                   data-title="${this.contractorData.title}" 
                   data-city="${this.contractorData.city}" 
-                  data-region="${this.contractorData.region}" 
+                  data-region="${this.contractorData.state}" 
                   data-country="${this.contractorData.country}" 
                   data-company_phone="${this.contractorData.company_phone}"
                   data-website="${this.contractorData.website}"
@@ -165,57 +144,10 @@ class Contractor extends HTMLElement {
         </main>
 
         <footer-component></footer-component>
-
-        <div class="modal fade" id="imagesModal" tabindex="-1" role="dialog" aria-labelledby="imagesModalLabel" aria-hidden="true">
-          <div class="modal-dialog modal-dialog-centered" role="document">
-            <div class="modal-content">
-              <div class="modal-body"></div>
-            </div>
-          </div>
-        </div>
-
-        <!-- Modal -->
-        <div class="modal fade" id="formProfile" tabindex="-1" role="dialog" aria-labelledby="formProfileLabel" aria-hidden="true">
-          <div class="modal-dialog" role="document">
-            <div class="modal-content">
-              <div class="modal-body p-0">
-                <button type="button" class="btn-close position-absolute top-0 end-0 m-3" data-bs-dismiss="modal" aria-label="Close"></button>
-                
-                <div style="padding: 76px 76px 0; margin-bottom: -50px;">
-                  <h4 style="font-size: 30px;;">Request a quote from ${
-                    this.contractorData.title
-                  }</h4>
-                </div>
-                <iframe
-                  src="https://api.leadconnectorhq.com/widget/form/EW6N1a3RC0W2io5fvMUB"
-                  style="
-                    width: 100%;
-                    height: 100%;
-                    border: none;
-                    border-radius: 4px;
-                  "
-                  id="inline-EW6N1a3RC0W2io5fvMUB"
-                  data-layout="{id:'INLINE'}"
-                  data-trigger-type="alwaysShow"
-                  data-trigger-value=""
-                  data-activation-type="alwaysActivated"
-                  data-activation-value=""
-                  data-deactivation-type="neverDeactivate"
-                  data-deactivation-value=""
-                  data-form-name="Chooz Painters - Profile Page Customer Submission"
-                  data-height="1341"
-                  data-layout-iframe-id="inline-EW6N1a3RC0W2io5fvMUB"
-                  data-form-id="EW6N1a3RC0W2io5fvMUB"
-                  title="Chooz Painters - Profile Page Customer Submission">
-                </iframe>
-              </div>
-            </div>
-          </div>
-        </div>
       `;
 
       this.setContractorNameField();
-      this.initModals(); // Initialize the modal
+      this.initModals();
     } else {
       this.innerHTML = `<p>Contractor not found.</p>`;
     }
@@ -226,8 +158,6 @@ class Contractor extends HTMLElement {
 
     modalElements.forEach((modalElement) => {
       const modal = new bootstrap.Modal(modalElement, {});
-
-      // Find all buttons that trigger this modal
       const modalButtons = this.querySelectorAll(
         `[data-toggle="modal"][data-target="#${modalElement.id}"]`,
       );
@@ -238,7 +168,6 @@ class Contractor extends HTMLElement {
         });
       });
 
-      // Ensure aria-hidden is properly updated
       modalElement.addEventListener("shown.bs.modal", () => {
         modalElement.removeAttribute("aria-hidden");
       });
