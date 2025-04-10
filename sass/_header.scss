@@ -93,7 +93,7 @@ header.header_sticky.sticky {
 
 /*-------- 2.1 Home--------*/
 .hero_home {
-  height: 750px;
+  height: 700px;
   width: 100%;
   display: table;
   position: relative;
@@ -137,10 +137,10 @@ header.header_sticky.sticky {
       background-size: contain;
       background-position: center bottom;
       background-repeat: no-repeat;
-      @include mobile {
-        width: 100%;
-        background-image: url(../img/hero_images/choozpainters-city-header-mobile-4.png);
-      }
+      // @include mobile {
+      //   width: 100%;
+      //   background-image: url(../img/hero_images/choozpainters-city-header-mobile-4.png);
+      // }
     }
     .content {
       @include rgba(bg, $primary-color-old, 0);
