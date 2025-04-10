@@ -137,10 +137,10 @@ header.header_sticky.sticky {
       background-size: contain;
       background-position: center bottom;
       background-repeat: no-repeat;
-      // @include mobile {
-      //   width: 100%;
-      //   background-image: url(../img/hero_images/choozpainters-city-header-mobile-4.png);
-      // }
+      @include mobile {
+        width: 100%;
+        background-image: url(../img/hero_images/14123123.png);
+      }
     }
     .content {
       @include rgba(bg, $primary-color-old, 0);
